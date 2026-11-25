@@ -8,7 +8,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500;600&family=Figtree:wght@500;600;700;800&display=swap">
 <style>
 :root{
-  --navy:#14234c; --deep:#072d62; --blue:#3b71b9; --teal:#4cc3c9; --coral:#f06667; --gold:#e0a93b;
+  --navy:#14234c; --deep:#072d62; --blue:#3b71b9; --teal:#4cc3c9; --coral:#f06667; --coral-ink:#c94446; --gold:#e0a93b;
   --ink:#1d2940; --muted:#5a6884; --line:#d9e2ef; --tint:#eef3fa; --tint2:#dde8f5; --paper:#f7fafd; --white:#fff;
   --g2:#0e1b3d; --b1:#cfe0f4; --b2:#8db8e3; --b4:#1f4a8f;
   --head:"Obvia","Figtree",system-ui,sans-serif; --body:"IBM Plex Sans",system-ui,sans-serif; --mono:"IBM Plex Mono",ui-monospace,monospace;
@@ -114,7 +114,7 @@ table{border-collapse:collapse;width:100%}
 .ms-stats b{font-family:var(--mono);font-size:28px;color:#fff;line-height:1}
 .ms-stats span{font-size:13px;line-height:1.4}
 .ms-else{border-top:1px solid var(--b4);padding-top:14px;font-size:13px;line-height:1.5}
-.ms-else span{display:block;font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--b2);margin-bottom:4px}
+.ms-else span{display:block;font-family:var(--mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;color:var(--b2);margin-bottom:4px}
 .ms-else p{color:var(--b1)}
 .map-wrap{display:flex;align-items:center;justify-content:center;padding:16px}
 .dmap{width:100%;max-height:760px;height:auto;display:block}
@@ -122,7 +122,7 @@ table{border-collapse:collapse;width:100%}
 .dmap .land{fill:#24376b;stroke:#33498a;stroke-width:.6}
 .dmap .eq{stroke:#2a3f78;stroke-dasharray:3 5}
 .dmap .rev circle{fill:var(--teal);fill-opacity:.9;stroke:var(--navy);stroke-width:1.5}
-.dmap .rev text{font:700 11px var(--mono);fill:var(--navy);text-anchor:middle;pointer-events:none}
+.dmap .rev text{font:700 12px var(--mono);fill:var(--navy);text-anchor:middle;pointer-events:none}
 .dmap .pipe{fill:none;stroke:var(--gold);stroke-width:2;stroke-dasharray:4 3}
 .dmap .tst rect{fill:#fff;stroke:var(--navy);stroke-width:1.5}
 .dmap .tst.now rect{fill:#fff;stroke:var(--teal);stroke-width:2.5}
@@ -151,13 +151,13 @@ table{border-collapse:collapse;width:100%}
 /* flow matrix */
 .fmx-wrap{overflow-x:auto;background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:8px 4px}
 .fmx{display:block;max-width:none}
-.fmx .gh{font:600 11px var(--mono);fill:var(--muted);text-transform:uppercase;letter-spacing:.06em}
+.fmx .gh{font:600 12px var(--mono);fill:var(--muted);text-transform:uppercase;letter-spacing:.06em}
 .fmx .ch{font:500 12px var(--body);fill:var(--navy)}
 .fmx .vg{stroke:var(--tint);stroke-width:1}
 .fmx .rg{stroke:var(--line);stroke-width:1}
 .fmx .rl{font:400 12.5px var(--body);fill:var(--muted)}
 .fmx .rl .rc{font-weight:600;fill:var(--navy)}
-.fmx .rn{font:400 11px var(--mono);fill:var(--muted)}
+.fmx .rn{font:400 12px var(--mono);fill:var(--muted)}
 .fmx .rn .b{font-weight:700;font-size:13px;fill:var(--navy)}
 .fmx .hit{fill:transparent}
 .fmx .fr{cursor:pointer;outline:none}
@@ -183,12 +183,12 @@ table{border-collapse:collapse;width:100%}
 .fd-l .chip{justify-self:start}
 .cov-r{display:grid;grid-template-columns:360px minmax(0,1fr) 44px;gap:14px;align-items:center;padding:4px 0}
 .cov-r .k{font-size:14px;color:var(--navy);font-weight:500}
-.cov-r .k small{font-family:var(--mono);font-size:11px;color:var(--muted);margin-left:6px}
+.cov-r .k small{font-family:var(--mono);font-size:12px;color:var(--muted);margin-left:6px}
 .cov-r .bar{height:12px;border-radius:99px;background:var(--tint);overflow:hidden}
 .cov-r .bar span{display:block;height:100%;border-radius:99px;background:var(--blue)}
 .cov-r.mig .bar span{background:var(--b2)}
 .cov-r .v{font-family:var(--mono);font-size:13px;color:var(--navy);text-align:right}
-.cov-sep{border-top:1px dashed var(--line);margin:8px 0;padding-top:6px;font-family:var(--mono);font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
+.cov-sep{border-top:1px dashed var(--line);margin:8px 0;padding-top:6px;font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
 .fl-tools{display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;margin:28px 0 14px}
 .fl-legend{display:flex;gap:18px;flex-wrap:wrap;font-size:13px;color:var(--ink)}
 .fl-legend span{display:flex;gap:7px;align-items:center}
@@ -207,8 +207,8 @@ table{border-collapse:collapse;width:100%}
 .fl .nm b{font-family:var(--head);font-size:15px;color:var(--navy)}
 .fl .nm span{font-size:13px;color:var(--muted)}
 .route{position:relative;display:flex;flex-wrap:wrap;gap:6px 0;align-items:center}
-.chip{display:inline-flex;align-items:center;font-family:var(--mono);font-size:11.5px;font-weight:600;line-height:1;padding:6px 8px;border-radius:6px;color:var(--navy);white-space:nowrap}
-.chip.s{background:var(--teal)}.chip.c{background:var(--b2)}.chip.p{background:var(--gold)}.chip.d{background:var(--coral);color:#fff}
+.chip{display:inline-flex;align-items:center;font-family:var(--mono);font-size:12px;font-weight:600;line-height:1;padding:6px 8px;border-radius:6px;color:var(--navy);white-space:nowrap}
+.chip.s{background:var(--teal)}.chip.c{background:var(--b2)}.chip.p{background:var(--gold)}.chip.d{background:var(--coral-ink);color:#fff}
 .chip.mig{background:#fff!important;border:1.5px dashed;padding:4.5px 7px}
 .chip.mig.s{border-color:var(--teal)}.chip.mig.c{border-color:var(--blue)}.chip.mig.p{border-color:var(--gold)}.chip.mig.d{border-color:var(--coral);color:var(--navy)}
 .route .ar{width:14px;height:2px;background:var(--line);margin:0 2px}
@@ -226,7 +226,7 @@ table{border-collapse:collapse;width:100%}
 .evo-s.mid{background:#fff;border-color:var(--b2)}
 .evo-s.new{background:var(--navy);border-color:var(--navy);color:#fff}
 .evo-s p{font-size:15px;line-height:1.55;margin-top:6px}
-.evo-l{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.evo-l{font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .evo-s.new .evo-l{color:var(--teal)}
 .evo-a{display:flex;align-items:center;justify-content:center;font-family:var(--mono);font-weight:700;color:var(--teal);font-size:20px}
 .causes{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);padding:22px 24px}
@@ -238,20 +238,20 @@ table{border-collapse:collapse;width:100%}
 .cz-t{min-width:980px;border-collapse:separate;border-spacing:3px}
 .cz-t th,.cz-t td{padding:0;border:0;text-align:center;vertical-align:middle}
 .cz-t thead th{vertical-align:bottom;height:auto;padding:0 2px 8px;border:0}
-.cz-t thead th span{display:block;writing-mode:horizontal-tb;transform:none;font:600 11.5px var(--body);line-height:1.25;color:var(--navy);max-height:none;text-align:center}
+.cz-t thead th span{display:block;writing-mode:horizontal-tb;transform:none;font:600 12px var(--body);line-height:1.25;color:var(--navy);max-height:none;text-align:center}
 .cz-t tbody th{text-align:left;white-space:nowrap;padding:6px 14px 6px 4px;background:transparent}
 .cz-t tbody th b{display:block;font-family:var(--head);font-size:14px;color:var(--navy)}
-.cz-t tbody th small{font-family:var(--mono);font-size:11px;color:var(--muted)}
+.cz-t tbody th small{font-family:var(--mono);font-size:12px;color:var(--muted)}
 .cz-t tr.eg th b{color:#1f7f84}
 .cz-t tr.au th b{color:#b06d00}
-.tile{display:flex;align-items:center;justify-content:center;height:40px;border-radius:4px;font:600 11px var(--mono);color:var(--navy)}
+.tile{display:flex;align-items:center;justify-content:center;height:40px;border-radius:4px;font:600 12px var(--mono);color:var(--navy)}
 .tile.y{background:var(--teal)}
 .tile.m{background:repeating-linear-gradient(135deg,#bfe8ea 0 6px,#e3f5f6 6px 12px);color:#1f5d61}
-.tile.e{background:var(--coral);color:#fff}
+.tile.e{background:var(--coral-ink);color:#fff}
 .tile.o{background:var(--paper);color:#b9c7dc;border:1px dashed var(--line)}
 .tile.sm{display:inline-block;width:22px;height:14px;border-radius:3px}
 .cz-t td.all{padding-left:8px}
-.cz-t td.all span{display:flex;align-items:center;justify-content:center;height:40px;border-radius:99px;padding:0 12px;font:600 11.5px var(--mono);white-space:nowrap}
+.cz-t td.all span{display:flex;align-items:center;justify-content:center;height:40px;border-radius:99px;padding:0 12px;font:600 12px var(--mono);white-space:nowrap}
 .ay{background:var(--navy);color:#fff!important}.an{background:var(--tint);color:var(--muted)}
 .cz-note{font-size:15px;line-height:1.6;margin-top:16px;max-width:980px}
 .wgrid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
@@ -270,7 +270,7 @@ table{border-collapse:collapse;width:100%}
 .vbar .tabs{margin-bottom:0}
 .vnote{font-size:15px;color:var(--ink);background:var(--tint);border-radius:8px;padding:12px 16px}
 .chg-q{background:linear-gradient(90deg,#fff8ea,rgba(255,248,234,0) 60%)}
-.chg-pill{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:10.5px;line-height:1.4;font-weight:600;color:var(--navy);background:#fbe7bf;border-left:3px solid var(--gold);border-radius:3px;padding:3px 6px}
+.chg-pill{display:inline-block;margin-top:8px;font-family:var(--mono);font-size:12px;line-height:1.4;font-weight:600;color:var(--navy);background:#fbe7bf;border-left:3px solid var(--gold);border-radius:3px;padding:3px 6px}
 .q ol.cols{columns:2;column-gap:32px}
 .code-pill{font-family:var(--mono);font-weight:600;font-size:13px;color:#fff;background:var(--navy);border-radius:6px;padding:2px 9px}
 .lab-s{font-family:var(--mono);font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.05em}
@@ -278,10 +278,10 @@ table{border-collapse:collapse;width:100%}
 .qtext{font-family:var(--head);font-weight:600;font-size:17px;line-height:1.45;color:var(--navy)}
 .small-note{font-size:14px;color:var(--muted)}
 .ev{width:100%;font-size:14px}
-.ev th{font-family:var(--mono);font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;padding:6px 0;border-bottom:1px solid var(--line)}
+.ev th{font-family:var(--mono);font-size:12px;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:var(--muted);text-align:left;padding:6px 0;border-bottom:1px solid var(--line)}
 .ev td{padding:7px 10px 7px 0;border-bottom:1px solid var(--tint);vertical-align:top}
 .ev td:last-child{white-space:nowrap}
-.evl{font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px}
+.evl{font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px}
 .evl.s{background:var(--teal);color:var(--navy)}.evl.g{background:var(--b2);color:var(--navy)}.evl.i{background:var(--gold);color:var(--navy)}.evl.r{background:var(--tint2);color:var(--navy)}.evl.t{background:#fdeaea;color:var(--navy);border:1px solid var(--coral)}
 .cvbar{display:flex;align-items:center;gap:14px;flex-wrap:wrap;margin:-12px 0 24px;font-size:14px;color:var(--muted)}
 
@@ -299,7 +299,7 @@ table{border-collapse:collapse;width:100%}
 .links .lnd{fill:#9fb3d1}.links .lnd.on{fill:var(--coral)}
 .paper{background:#fffdf7;border:1px solid #e4dccb;box-shadow:0 10px 30px rgba(20,35,76,.12);border-radius:3px;padding:26px 24px;font-family:"Times New Roman",Georgia,serif;color:#222}
 .pp-head{display:flex;flex-direction:column;gap:4px;border-bottom:2px solid #222;padding-bottom:12px;margin-bottom:6px}
-.pp-org{font:600 11px var(--mono);letter-spacing:.08em;color:#666}
+.pp-org{font:600 12px var(--mono);letter-spacing:.08em;color:#666}
 .pp-title{font:700 19px "Times New Roman",Georgia,serif;letter-spacing:.03em}
 .pp-sub{font-size:13px;font-style:italic;color:#555;line-height:1.4}
 .pi{position:relative;display:grid;grid-template-columns:56px minmax(0,1fr);gap:10px;padding:10px 6px;border-bottom:1px solid #e4dccb;transition:background .15s,opacity .15s}
@@ -308,7 +308,7 @@ table{border-collapse:collapse;width:100%}
 .pi .pv{font:12px var(--mono);color:#444;margin-top:5px;line-height:1.5}
 .pi .pv b{color:#b3261e}
 .pi.nomatch{background:repeating-linear-gradient(135deg,#fff 0 8px,#f6efe2 8px 16px)}
-.pi.nomatch::after{content:"No question like this in the revision";position:absolute;right:6px;bottom:4px;font:600 10px var(--mono);color:#b06d00}
+.pi.nomatch::after{content:"No question like this in the revision";position:absolute;right:6px;bottom:4px;font:600 12px var(--mono);color:#b06d00}
 .tablet{background:#1b2a55;border-radius:24px;padding:14px;box-shadow:0 14px 36px rgba(20,35,76,.25)}
 .tb-bar{display:flex;align-items:center;gap:8px;color:#cfe0f4;font:600 12px var(--mono);padding:4px 8px 12px}
 .tb-dot{width:8px;height:8px;border-radius:99px;background:var(--teal)}
@@ -317,12 +317,12 @@ table{border-collapse:collapse;width:100%}
 .ti .tr{display:flex;justify-content:space-between;gap:8px;align-items:center;margin-bottom:4px}
 .tc{font:700 12px var(--mono);background:var(--navy);color:#fff;border-radius:5px;padding:2px 7px}
 .tc.ref{background:var(--teal);color:var(--navy)}.tc.idp{background:var(--gold);color:var(--navy)}
-.tro{font:11px var(--mono);color:var(--blue)}
+.tro{font:12px var(--mono);color:var(--blue)}
 .ti p{font-family:var(--head);font-weight:600;font-size:14.5px;line-height:1.4;color:var(--navy);margin:0}
 .tbox{margin-top:6px;font-size:13px;line-height:1.6;color:var(--ink);background:var(--tint);border-radius:6px;padding:6px 10px}
-.tin{display:block;margin-top:5px;font:11px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.tin{display:block;margin-top:5px;font:12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
 .ti.new{border:2px solid var(--teal)}
-.ti.new::after{content:"New";position:absolute;right:10px;bottom:8px;font:700 10px var(--mono);color:#1f7f84}
+.ti.new::after{content:"New";position:absolute;right:10px;bottom:8px;font:700 12px var(--mono);color:#1f7f84}
 .ti.unused{opacity:.55}
 .pi.hl{background:#fff1d6}.ti.hl{opacity:1;box-shadow:0 0 0 3px var(--coral)}
 .pi.fade,.ti.fade{opacity:.35}
@@ -437,7 +437,7 @@ details.more[open]>summary::after{content:"−"}
 .qf-a{font:700 12px var(--mono);color:var(--muted)}
 .qf-b.yes span:last-child{background:#e2f6f6;border:1px solid var(--teal);border-radius:6px;padding:8px 10px;font-weight:600;color:var(--navy)}
 .qf-split{display:flex;gap:3px;height:44px}
-.qf-stop{background:var(--coral);color:#fff;border-radius:6px 0 0 6px;display:flex;align-items:center;padding:0 10px;font-size:12.5px;white-space:nowrap;overflow:hidden}
+.qf-stop{background:var(--coral-ink);color:#fff;border-radius:6px 0 0 6px;display:flex;align-items:center;padding:0 10px;font-size:12.5px;white-space:nowrap;overflow:hidden}
 .qf-rec{background:var(--teal);color:var(--navy);border-radius:0 6px 6px 0;display:flex;align-items:center;justify-content:center;font-size:12px;white-space:nowrap;padding:0 4px}
 .qf-stop b,.qf-rec b{font-family:var(--mono);font-size:15px;margin-right:5px}
 .ranges{display:flex;flex-direction:column;gap:10px}
@@ -446,7 +446,7 @@ details.more[open]>summary::after{content:"−"}
 .rg-bar{position:relative;height:14px;background:var(--tint);border-radius:99px}
 .rg-bar i{position:absolute;top:0;bottom:0;background:linear-gradient(90deg,rgba(240,102,103,.55),var(--coral));border-radius:99px}
 .rg-v{font:700 14px var(--mono);color:var(--navy);text-align:right}
-.rg-axis{display:grid;grid-template-columns:minmax(0,1fr) 140px 64px;font:10.5px var(--mono);color:var(--muted)}
+.rg-axis{display:grid;grid-template-columns:minmax(0,1fr) 140px 64px;font:12px var(--mono);color:var(--muted)}
 .rg-axis span:nth-child(1){grid-column:2;justify-self:start}
 .rg-axis{position:relative}
 .rg-axis span:nth-child(2){grid-column:2;grid-row:1;justify-self:center}
@@ -488,10 +488,10 @@ details.more[open]>summary::after{content:"−"}
 .ob i{display:block;height:100%;background:var(--teal);border-radius:99px}
 tr.au .ob i{background:var(--gold)}
 .cz-t tr.cz-div td{padding:14px 4px 6px;text-align:left}
-.cz-t tr.cz-div span{font:600 11px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+.cz-t tr.cz-div span{font:600 12px var(--mono);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .cz-t tr.au th{border-left:4px solid var(--gold);padding-left:10px}
 .cz-t tr.au-note td{text-align:left;padding:8px 12px 12px;font-size:14px;line-height:1.5;color:var(--ink);background:#fff8ea;border-radius:0 0 8px 8px}
-.aun{display:inline-block;font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;background:var(--gold);color:var(--navy);border-radius:4px;padding:2px 8px;margin-right:6px}
+.aun{display:inline-block;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;background:var(--gold);color:var(--navy);border-radius:4px;padding:2px 8px;margin-right:6px}
 @media (prefers-reduced-motion: no-preference){
   .js .cz-t tr.au,.js .cz-t tr.au-note{opacity:0;transform:translateY(24px)}
   .js .cz-t.in tr.au,.js .cz-t.in tr.au-note{opacity:1;transform:none;transition:opacity .6s ease,transform .6s cubic-bezier(.2,0,.1,1)}
@@ -517,7 +517,7 @@ tr.au .ob i{background:var(--gold)}
 .wh tr.eg .wh-c{color:#1f7f84}
 .wh tr.eg td{background:#f3fbfb}
 .wh-steps{display:flex;flex-wrap:wrap;gap:3px 2px;align-items:center;margin-bottom:8px}
-.wh-steps .st{font:600 10.5px var(--mono);background:var(--tint);color:var(--navy);border-radius:4px;padding:2px 5px}
+.wh-steps .st{font:600 12px var(--mono);background:var(--tint);color:var(--navy);border-radius:4px;padding:2px 5px}
 .wh tr.eg .wh-steps .st{background:#d9f1f2}
 .wh-steps .ar{color:#b9c7dc;font-size:12px}
 .wh-out{display:flex;gap:7px;align-items:flex-start;font-size:13px;line-height:1.35;font-weight:500;color:var(--navy)}
@@ -552,14 +552,14 @@ tr.au .ob i{background:var(--gold)}
 .fs-r{font:12px var(--mono);color:var(--blue)}
 .fs-q{font-family:var(--head);font-weight:600;font-size:17px;line-height:1.45;color:var(--navy)}
 .fs-o{font-size:14px;line-height:1.55;color:var(--ink)}
-.fs-i{font:11.5px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
+.fs-i{font:12px var(--mono);color:var(--muted);text-transform:uppercase;letter-spacing:.03em}
 /* walker */
 .walk{background:var(--navy);border-radius:16px;padding:22px 24px;color:var(--b1);min-height:360px;display:flex;flex-direction:column;gap:16px}
 .wk-path{display:flex;flex-wrap:wrap;gap:6px;align-items:center;min-height:34px;padding-bottom:14px;border-bottom:1px solid var(--b4)}
 .wk-hint{font:12px var(--mono);color:var(--b2)}
 .wk-c{display:flex;flex-direction:column;align-items:flex-start;gap:1px;max-width:180px;background:#24376b;border:1px solid #33498a;border-radius:6px;padding:4px 8px;color:#fff;cursor:pointer;text-align:left;animation:wkin .3s ease}
-.wk-c b{font:700 11px var(--mono);color:var(--teal)}
-.wk-c span{font-size:11.5px;color:var(--b1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:164px}
+.wk-c b{font:700 12px var(--mono);color:var(--teal)}
+.wk-c span{font-size:12px;color:var(--b1);white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:164px}
 .wk-c:hover{border-color:var(--teal)}
 .wk-ar{color:var(--b2)}
 .wk-q{display:flex;flex-direction:column;gap:12px;animation:wkin .35s ease}
@@ -569,13 +569,13 @@ tr.au .ob i{background:var(--gold)}
 .wk-t{font:600 20px/1.45 var(--head);color:#fff;max-width:900px}
 .wk-a{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:8px}
 .wk-b{display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-height:52px;text-align:left;background:#fff;color:var(--navy);border:2px solid transparent;border-radius:8px;padding:10px 14px;font:600 14.5px var(--body);cursor:pointer;transition:transform .12s ease,border-color .12s ease}
-.wk-b span{font:500 11px var(--mono);color:var(--blue)}
+.wk-b span{font:500 12px var(--mono);color:var(--blue)}
 .wk-b:hover,.wk-b:focus-visible{border-color:var(--teal);transform:translateY(-1px)}
 .wk-note{font-size:13px;color:var(--b2);font-style:italic}
 .wk-end{border-radius:12px;padding:20px 22px;animation:wkin .4s ease}
 .wk-end.ok{background:var(--teal);color:var(--navy)}
 .wk-end.na{background:#24376b;color:#fff}
-.wk-l{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.75}
+.wk-l{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;opacity:.75}
 .wk-end h4{font-size:26px;color:inherit;margin:4px 0 6px}
 .wk-end p{font-size:15px;line-height:1.55}
 .wk-meta{font:12px var(--mono);opacity:.75;margin-top:6px}
@@ -590,7 +590,7 @@ tr.au .ob i{background:var(--gold)}
 .ff .ff-tabs button[aria-selected="true"]{background:var(--teal);border-color:var(--teal);color:var(--navy)}
 .ff-q{font:600 16px/1.5 var(--head)!important;color:#fff;margin:0 0 10px!important}
 .ffq{width:100%;border-collapse:collapse;font-size:14px}
-.ffq th{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--teal);text-align:left;padding:4px 8px;border-bottom:1px solid #33498a}
+.ffq th{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--teal);text-align:left;padding:4px 8px;border-bottom:1px solid #33498a}
 .ffq th:nth-child(n+2),.ffq td:nth-child(n+2){text-align:center;width:64px}
 .ffq td{padding:8px;border-bottom:1px solid #24376b;color:#fff;line-height:1.4}
 .yn{display:inline-block;min-width:40px;padding:3px 8px;border:1.5px solid #5b77b8;border-radius:5px;font:600 12px var(--mono);color:var(--b1)}
@@ -612,7 +612,7 @@ tr.au .ob i{background:var(--gold)}
 .iter p{font-size:14px;color:var(--muted)}
 /* causes table marker */
 .cz-t tr.au th{position:relative}
-.here{display:inline-block;margin-bottom:5px;font:700 10.5px var(--mono);text-transform:uppercase;letter-spacing:.05em;background:var(--gold);color:var(--navy);border-radius:4px;padding:3px 8px;white-space:nowrap}
+.here{display:inline-block;margin-bottom:5px;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;background:var(--gold);color:var(--navy);border-radius:4px;padding:3px 8px;white-space:nowrap}
 .here::after{content:" ▸"}
 @media (prefers-reduced-motion: no-preference){
   .js .cz-t .here{opacity:0;transform:translateX(-24px)}
@@ -629,7 +629,7 @@ tr.au .ob i{background:var(--gold)}
 .trc-grid{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,1fr);gap:28px}
 .tr-row{display:grid;grid-template-columns:200px auto minmax(0,1fr);gap:16px;align-items:center;padding:12px 0;border-bottom:1px solid var(--tint)}
 .tr-q b{display:block;font:700 14px var(--head);color:var(--navy)}
-.tr-q small{font:11px var(--mono);color:var(--muted)}
+.tr-q small{font:12px var(--mono);color:var(--muted)}
 .ppl{display:flex;gap:4px}
 .pp{display:inline-block;width:18px;height:24px;border-radius:9px 9px 4px 4px;position:relative}
 .pp::before{content:"";position:absolute;left:4px;top:-9px;width:10px;height:10px;border-radius:99px;background:inherit}
@@ -649,7 +649,7 @@ tr.au .ob i{background:var(--gold)}
 .tm-bar{position:relative;display:block;height:14px;background:#fff;border-radius:99px}
 .tm-range{position:absolute;top:0;bottom:0;background:var(--b2);border-radius:99px}
 .tm-avg{position:absolute;top:-4px;width:4px;height:22px;margin-left:-2px;background:var(--navy);border-radius:2px}
-.tm-ax{display:flex;justify-content:space-between;font:10.5px var(--mono);color:var(--muted);margin-top:4px}
+.tm-ax{display:flex;justify-content:space-between;font:12px var(--mono);color:var(--muted);margin-top:4px}
 .trc-q{margin:0;background:var(--navy);color:#fff;border-radius:10px;padding:16px 18px;font:600 18px/1.4 var(--head)}
 .trc-q cite{display:block;font:12px var(--body);font-style:normal;color:var(--b2);margin-top:6px}
 @media (prefers-reduced-motion: no-preference){
@@ -667,18 +667,18 @@ tr.au .ob i{background:var(--gold)}
 .scn-lanes{display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr)}
 .lane{padding:14px 18px 16px;display:flex;flex-direction:column;gap:8px}
 .lane.eg{background:#f3fbfb;border-left:1px solid var(--line)}
-.lane-h{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.lane-h{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .lane.eg .lane-h{color:#1f7f84}
 .sc-mod{display:grid;grid-template-columns:118px minmax(0,1fr);gap:4px 10px;align-items:center}
 .sc-mn{font:700 12.5px var(--head);color:var(--navy)}
 .sc-st{display:flex;flex-wrap:wrap;gap:3px 2px;align-items:center}
-.sc-st .st{font:600 10.5px var(--mono);background:var(--tint);color:var(--navy);border-radius:4px;padding:2px 5px}
+.sc-st .st{font:600 12px var(--mono);background:var(--tint);color:var(--navy);border-radius:4px;padding:2px 5px}
 .lane.eg .sc-st .st{background:#d9f1f2}
 .sc-st .ar{color:#b9c7dc;font-size:12px}
 .sc-me{grid-column:2;font-size:12px;color:var(--muted)}
 .lane-r{display:flex;flex-wrap:wrap;gap:4px 8px;align-items:center;margin-top:auto;padding-top:10px;border-top:1px dashed var(--line);font-size:13.5px}
 .lane-r b{color:var(--navy)}
-.lane-r span{font:11.5px var(--mono);color:var(--muted);flex-basis:100%;padding-left:20px}
+.lane-r span{font:12px var(--mono);color:var(--muted);flex-basis:100%;padding-left:20px}
 @media (prefers-reduced-motion: no-preference){
   .js .scn .st,.js .scn .ar{opacity:0;transition:opacity .25s ease}
   .js .scn.in .st,.js .scn.in .ar{opacity:1}
@@ -694,8 +694,8 @@ tr.au .ob i{background:var(--gold)}
 .pt-logo img{max-height:32px;max-width:100%;object-fit:contain}
 .pt-logo img.tint{filter:brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(2200%) hue-rotate(205deg)}
 .pt-word{font:800 12px var(--head);color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:3px 6px;white-space:nowrap}
-.pt b{font:600 11px var(--body);color:var(--navy);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
-.pt-note{font-size:11px;color:var(--muted);margin-top:8px}
+.pt b{font:600 12px var(--body);color:var(--navy);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.pt-note{font-size:12px;color:var(--muted);margin-top:8px}
 @media (max-width:640px){.pt-strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
 /* two cases */
 .cs-leg{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;margin-bottom:14px}
@@ -703,7 +703,7 @@ tr.au .ob i{background:var(--gold)}
 .oc.nc{background:#9fb0c8}
 .case{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
 .case-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:14px 20px;background:var(--navy)}
-.case-n{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}
+.case-n{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}
 .case-h h4{color:#fff;font-size:19px}
 .case-h p{font-size:13.5px;color:var(--b1)}
 .case-w{overflow-x:auto;padding:6px 6px 4px}
@@ -717,8 +717,8 @@ tr.au .ob i{background:var(--gold)}
 .csv .sep{stroke:var(--line);stroke-dasharray:3 3}
 .csv .cl{fill:none;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;opacity:.85}
 .csv .cd{fill:#fff;stroke-width:2.2}
-.csv .co text{font:700 11px var(--mono);fill:var(--navy)}
-.csv .top .co text{font-size:11.5px}
+.csv .co text{font:700 12px var(--mono);fill:var(--navy)}
+.csv .top .co text{font-size:12px}
 @media (prefers-reduced-motion: no-preference){
   .js .csv .cl{stroke-dasharray:1;stroke-dashoffset:1}
   .js .csv .cd,.js .csv .co{opacity:0}
@@ -732,7 +732,7 @@ tr.au .ob i{background:var(--gold)}
 .ds{background:var(--navy);border-radius:12px;padding:16px 18px;color:var(--b1);display:flex;flex-direction:column;gap:6px}
 .ds b{font:600 34px var(--mono);color:#fff;line-height:1}
 .ds p{font-size:13.5px}
-.dtag{align-self:flex-start;display:inline-block;font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;border-radius:99px;padding:3px 10px}
+.dtag{align-self:flex-start;display:inline-block;font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;border-radius:99px;padding:3px 10px}
 .dtag.who{background:var(--teal);color:var(--navy)}.dtag.ask{background:var(--gold);color:var(--navy)}.dtag.route{background:var(--b2);color:var(--navy)}
 .diffs{display:flex;flex-direction:column;gap:18px;margin-bottom:28px}
 .drow{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
@@ -741,7 +741,7 @@ tr.au .ob i{background:var(--gold)}
 .dh h3{font-size:18px;flex:1}
 .dgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr) minmax(0,1fr);align-items:stretch}
 .dside{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
-.dl{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.dl{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
 .paper-s{background:#fffdf7;font-family:"Times New Roman",Georgia,serif;color:#222;border-right:1px solid var(--line)}
 .paper-s .pi{border-bottom:1px solid #e4dccb;padding:8px 2px}
 .paper-s .pi:last-child{border-bottom:0}
@@ -754,7 +754,7 @@ tr.au .ob i{background:var(--gold)}
 .dm-b,.dm-a{border-radius:8px;padding:10px 12px}
 .dm-b{background:#fff;border:1px solid var(--line)}
 .dm-a{background:#e2f6f6;border:1px solid var(--teal)}
-.dm-b span,.dm-a span{font:700 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.dm-b span,.dm-a span{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
 .dm-a span{color:#1f7f84}
 .dm-b p,.dm-a p{font-size:14px;line-height:1.5;margin-top:3px}
 .dm-arrow{align-self:center;color:var(--teal);font:700 18px var(--mono);transform:rotate(90deg)}
@@ -767,10 +767,10 @@ tr.au .ob i{background:var(--gold)}
 .yn-t{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;overflow:hidden}
 .yn-h,.yn-r{display:grid;grid-template-columns:minmax(0,1fr) 52px 52px;align-items:center;gap:0}
 .ev4 .yn-h,.ev4 .yn-r{grid-template-columns:minmax(0,1fr) 52px 52px 170px}
-.yn-h{background:var(--tint);font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:6px 12px}
+.yn-h{background:var(--tint);font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:6px 12px}
 .yn-h span:nth-child(n+2){text-align:center}
 .yn-r{padding:8px 12px;border-top:1px solid var(--tint)}
-.yn-r em,.rd em{font:500 11px var(--mono);font-style:normal;color:var(--blue);margin-left:8px}
+.yn-r em,.rd em{font:500 12px var(--mono);font-style:normal;color:var(--blue);margin-left:8px}
 .bx{justify-self:center;width:18px;height:18px;border:1.8px solid #8aa0c4;border-radius:4px;background:#fff}
 .ev4 .evl{justify-self:start;margin-left:10px}
 .ck,.rd{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px 16px}
@@ -779,11 +779,11 @@ tr.au .ob i{background:var(--gold)}
 .rb{flex:0 0 16px;height:16px;border:1.8px solid #8aa0c4;border-radius:99px;background:#fff}
 .rec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .rec label{display:flex;flex-direction:column;gap:4px}
-.rec span{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.rec span{font:600 12px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
 .rec .ln{display:block;height:30px;border:1.5px solid #b9c7dc;border-radius:6px;background:#fff}
 .grp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px}
 .gp{display:flex;flex-direction:column;gap:5px}
-.gh{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:2px}
+.gh{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:2px}
 .fs-n{font-size:12.5px;color:var(--muted);margin-top:4px}
 .fcol .ck,.fcol .rd{grid-template-columns:minmax(0,1fr)}
 /* section 4 in the same style as the flee card */
@@ -828,8 +828,8 @@ tr.au .ob i{background:var(--gold)}
 .hs{display:grid;grid-template-columns:128px repeat(12,190px);column-gap:0;width:max-content;position:relative}
 .hs-lab{position:sticky;left:0;z-index:3;padding:12px 14px;display:flex;flex-direction:column;gap:3px}
 .hs-lab b{font:700 15px var(--head)}
-.hs-lab span{font:11.5px/1.4 var(--mono)}
-.hs-lab em{font:11px var(--mono);font-style:normal;opacity:.7;margin-top:6px}
+.hs-lab span{font:12px/1.4 var(--mono)}
+.hs-lab em{font:12px var(--mono);font-style:normal;opacity:.7;margin-top:6px}
 .hs-lab.eg{background:var(--navy);color:#fff;border-radius:12px 0 0 12px}
 .hs-lab.eg span{color:#9fe3e6}
 .hs-lab.ch{background:var(--bg,#f5f7fa);justify-content:center}
@@ -843,25 +843,25 @@ tr.au .ob i{background:var(--gold)}
 .hs-eg .tc{font:700 12px var(--mono);background:var(--gc);color:#fff;padding:2px 7px;border-radius:4px}
 .hs-eg.g-new .tc{background:var(--teal);color:var(--navy)}
 .hs-no{font:700 12px var(--mono);color:#9fe3e6}
-.hs-ro{font:11px var(--mono);color:#aebbd6}
+.hs-ro{font:12px var(--mono);color:#aebbd6}
 .hs-eg p{margin:0;font-size:13.5px;line-height:1.45}
 .hs-ans{margin-top:auto;font-size:12px;line-height:1.55;color:#d7e0f0;background:rgba(255,255,255,.07);border-radius:6px;padding:7px 9px}
-.hs-ans span{display:block;font:11px var(--mono);color:#9fe3e6;margin-top:4px}
+.hs-ans span{display:block;font:12px var(--mono);color:#9fe3e6;margin-top:4px}
 .hs-eg.g-new{box-shadow:inset 0 0 0 2px var(--teal)}
 .hs-ch{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 8px 10px;text-align:center}
 .hs-ar{display:block;width:2px;height:26px;background:var(--gc);position:relative;transform-origin:top}
 .hs-ar::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border:6px solid transparent;border-top:7px solid var(--gc);border-bottom:0}
 .hs-ch span{font-size:12px;font-weight:600;color:var(--navy);background:color-mix(in srgb,var(--gc) 14%,#fff);border:1px solid color-mix(in srgb,var(--gc) 45%,#fff);border-radius:99px;padding:3px 10px;margin-top:4px}
 .hs-xl{background:#fdfaf1;border:1px solid #d9d0b8;border-radius:0 4px 4px 0}
-.hs-let{font:11px var(--mono);color:#8b8068;text-align:center;padding:4px 0;background:#f1ebdb;border-right:1px solid #ded5bd;border-bottom:1px solid #d9d0b8;z-index:1}
-.hs-gh{font:700 11.5px/1.3 var(--mono);letter-spacing:.04em;color:#3a3326;text-align:center;padding:7px 6px;border-right:1px solid #d9d0b8;border-bottom:1px solid #d9d0b8;background:#f7f1e2;z-index:1}
+.hs-let{font:12px var(--mono);color:#8b8068;text-align:center;padding:4px 0;background:#f1ebdb;border-right:1px solid #ded5bd;border-bottom:1px solid #d9d0b8;z-index:1}
+.hs-gh{font:700 12px/1.3 var(--mono);letter-spacing:.04em;color:#3a3326;text-align:center;padding:7px 6px;border-right:1px solid #d9d0b8;border-bottom:1px solid #d9d0b8;background:#f7f1e2;z-index:1}
 .hs-gh.blank{background:transparent}
-.hs-top{font:700 11px/1.3 var(--mono);color:#3a3326;padding:8px 10px;border-right:1px solid #e4dcc6;border-bottom:1px solid #e4dcc6;border-top:4px solid var(--gc);background:color-mix(in srgb,var(--gc) 8%,#fdfaf1);z-index:1}
+.hs-top{font:700 12px/1.3 var(--mono);color:#3a3326;padding:8px 10px;border-right:1px solid #e4dcc6;border-bottom:1px solid #e4dcc6;border-top:4px solid var(--gc);background:color-mix(in srgb,var(--gc) 8%,#fdfaf1);z-index:1}
 .hs-q{font:14px/1.45 Georgia,serif;color:#2a2418;padding:10px;border-right:1px solid #e4dcc6;border-bottom:1px solid #e4dcc6;z-index:1}
 .hs-q b{font-family:var(--mono);font-size:12.5px}
-.hs-v{font:11.5px/1.55 var(--mono);color:#6b604a;margin-top:8px}
+.hs-v{font:12px/1.55 var(--mono);color:#6b604a;margin-top:8px}
 .hs-v b{color:#c0392b}
-.hs-ref{font:11px var(--mono);color:#8b8068;padding:6px 10px;border-right:1px solid #e4dcc6;z-index:1}
+.hs-ref{font:12px var(--mono);color:#8b8068;padding:6px 10px;border-right:1px solid #e4dcc6;z-index:1}
 .hs-none{margin:8px;border:2px dashed var(--teal);border-radius:8px;background:#e9f8f8;color:var(--navy);font-size:13px;line-height:1.5;padding:12px;z-index:1;align-self:start}
 .hs-none span{display:block;font-weight:700;margin-bottom:4px}
 .hs .hot{outline:2px solid var(--gc);outline-offset:-2px}
@@ -870,6 +870,66 @@ tr.au .ob i{background:var(--gold)}
   .js .hs-ar{transform:scaleY(0);transition:transform .4s ease;transition-delay:calc(var(--i) * 70ms + 250ms)}
   .js .hs-scroll.in .hs-eg,.js .hs-scroll.in .hs-ch{opacity:1;transform:none}
   .js .hs-scroll.in .hs-ar{transform:scaleY(1)}
+}
+/* line comparison */
+.hl{position:relative;display:grid;grid-template-columns:100px minmax(0,1fr);grid-template-rows:auto 150px auto;column-gap:12px}
+.hl-side{display:flex;flex-direction:column;justify-content:center;gap:3px}
+.hl-side b{font:700 14px var(--head);color:var(--navy)}
+.hl-side span{font:12px/1.35 var(--mono);color:var(--muted)}
+.hl-side.eg{grid-row:1}.hl-side.th{grid-row:3}
+.hl-row{display:grid;grid-template-columns:repeat(var(--n),minmax(0,1fr));gap:5px}
+.hl-row.eg{grid-column:2;grid-row:1}.hl-row.th{grid-column:2;grid-row:3}
+.hl-svg{grid-column:2;grid-row:2;width:100%;height:100%;overflow:visible}
+.hl-c{all:unset;box-sizing:border-box;cursor:pointer;display:flex;flex-direction:column;gap:4px;min-height:96px;padding:8px 5px;border-radius:8px;border-top:4px solid var(--gc);transition:opacity .2s,transform .2s,box-shadow .2s}
+.hl-row.eg .hl-c{background:var(--navy);color:#fff}
+.hl-row.th .hl-c{background:#fdfaf1;color:#2a2418;border:1px solid #ddd3ba;border-top:4px solid var(--gc);border-bottom:0;border-radius:0 0 8px 8px}
+.hl-row.eg .hl-c{border-radius:8px 8px 0 0}
+.hl-n{font:700 12px var(--mono);opacity:.6}
+.hl-c .tc{font:700 11px var(--mono);color:inherit;background:none;padding:0;border:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.hl-row.eg .hl-c .tc{color:#9fe3e6}
+.hl-s{font-size:12px;line-height:1.3}
+.hl-row.th .hl-s{font-family:Georgia,serif}
+.hl-c.g-idp{opacity:.55}
+.hl-c.g-new{box-shadow:inset 0 0 0 2px var(--teal)}
+.hl-c:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
+.hl.sel .hl-c{opacity:.35}
+.hl.sel .hl-c.on{opacity:1;transform:translateY(-2px);box-shadow:0 6px 16px rgba(20,35,76,.18)}
+.hl-ln{fill:none;stroke-width:2.2;opacity:.75;transition:opacity .2s,stroke-width .2s}
+.hl-ln.d{stroke-dasharray:5 5}
+.hl.sel .hl-ln{opacity:.1}.hl.sel .hl-ln.on{opacity:1;stroke-width:3.2}
+.hl-key{display:flex;flex-wrap:wrap;gap:16px;align-items:center;margin:14px 0 0 112px;font:12px var(--mono);color:var(--muted)}
+.hl-key i{display:inline-block;width:26px;height:0;border-top:2.5px solid #5b6b8c;vertical-align:middle;margin-right:6px}
+.hl-key i.k0{border-top-style:dashed}.hl-key i.k2{border-top-color:transparent;width:12px;height:12px;background:#9aaac4;opacity:.6;border-radius:3px}
+.hl-tip{margin-left:auto;color:var(--navy)}
+.hl-det{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px;margin-top:16px}
+.hl-p{border-radius:12px;padding:16px 18px;border-top:5px solid var(--gc)}
+.hl-p.eg{background:var(--navy);color:#fff}
+.hl-p.th{background:#fdfaf1;border:1px solid #ddd3ba;border-top:5px solid var(--gc);color:#2a2418}
+.hl-p .hl-h{display:block;margin:0 0 4px;font:700 12px var(--mono);letter-spacing:.04em;text-transform:uppercase;opacity:.75}
+.hl-p .hl-q{margin:10px 0 0}
+.hl-p .hl-q b{font:700 12.5px var(--mono);margin-right:6px}
+.hl-p.eg .q b{color:#9fe3e6}
+.hl-p .hl-q p{margin:3px 0 0;font-size:14.5px;line-height:1.5}
+.hl-p.th .q p{font-family:Georgia,serif}
+.hl-p .hl-q small{display:block;margin-top:4px;font:12px/1.5 var(--mono);opacity:.75}
+.hl-p .ro{font:12px var(--mono);color:#aebbd6}
+.hl-note{grid-column:1 / -1;background:#e2f6f6;border-radius:10px;padding:10px 14px;color:var(--navy);font-size:14.5px}
+.hl-note b{font-family:var(--head)}
+.hl-none{opacity:.7;font-style:italic;margin-top:10px}
+@media (prefers-reduced-motion:no-preference){
+  .js .hl-ln{stroke-dasharray:var(--len);stroke-dashoffset:var(--len);transition:stroke-dashoffset .9s ease,opacity .2s,stroke-width .2s}
+  .js .hl-ln.d{stroke-dasharray:5 5;stroke-dashoffset:0;opacity:0}
+  .js .hl.in .hl-ln{stroke-dashoffset:0}
+  .js .hl.in .hl-ln.d{opacity:.75}
+}
+@media (max-width:900px){
+  .hl{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);grid-template-rows:auto auto}
+  .hl-side.eg{grid-column:1;grid-row:1}.hl-side.th{grid-column:3;grid-row:1}
+  .hl-row{grid-template-columns:minmax(0,1fr)}
+  .hl-row.eg{grid-column:1;grid-row:2}.hl-row.th{grid-column:3;grid-row:2;align-self:start}
+  .hl-svg{grid-column:2;grid-row:2}
+  .hl-c{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:baseline;border-radius:8px!important;border-top-width:1px!important;border-left:4px solid var(--gc)}
+  .hl-key{margin-left:0}.hl-det{grid-template-columns:minmax(0,1fr)}
 }
 .grp-leg{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}
 .gl{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:99px;padding:5px 12px 5px 8px}
@@ -902,7 +962,7 @@ tr.au .ob i{background:var(--gold)}
 @media(max-width:760px){.al-pos{grid-template-columns:minmax(0,1fr)}}
 .wc{display:grid;grid-template-columns:170px minmax(0,1fr) 28px minmax(0,1fr);gap:12px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
 .wc-t b{display:block;font:700 15px var(--head);color:var(--navy)}
-.wc-t span{font:11.5px var(--mono);color:var(--muted)}
+.wc-t span{font:12px var(--mono);color:var(--muted)}
 .wc-o{font-size:14.5px;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(240,102,103,.6)}
 .wc-a{color:var(--teal);font:700 18px var(--mono);text-align:center}
 .wc-n{font-size:14.5px;color:var(--navy);font-weight:600;background:#e2f6f6;border-radius:6px;padding:6px 10px}
@@ -971,7 +1031,7 @@ tr.au .ob i{background:var(--gold)}
 .row .none{font-size:15px;color:var(--muted);font-style:italic}
 .row .diff{grid-column:1/-1;border-top:1px solid var(--line);padding:14px 24px;font-size:15px;display:flex;gap:14px;align-items:baseline}
 .row .diff b{font-family:var(--mono);font-size:12px;color:var(--navy);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
-.pill{display:inline-block;font-family:var(--mono);font-size:11px;font-weight:600;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:2px}
+.pill{display:inline-block;font-family:var(--mono);font-size:12px;font-weight:600;padding:2px 8px;border-radius:99px;margin-left:6px;vertical-align:2px}
 .pill.new{background:#e2f6f6;color:var(--navy);border:1px solid var(--teal)}
 .pill.gone{background:#fdeaea;color:var(--navy);border:1px solid var(--coral)}
 .pill.same{background:var(--tint);color:var(--navy);border:1px solid var(--b2)}
@@ -1063,6 +1123,17 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   section{padding:40px 0;break-inside:auto}
   .row,.card,.chg{break-inside:avoid}
 }
+
+details.fold{margin-top:22px;border:1px solid var(--line);border-radius:12px;background:var(--white)}
+details.fold>summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:12px;padding:16px 20px;font:700 17px var(--head);color:var(--navy)}
+details.fold>summary::-webkit-details-marker{display:none}
+details.fold>summary::before{content:"+";display:inline-grid;place-items:center;width:28px;height:28px;border-radius:50%;background:var(--teal);color:var(--navy);font:700 18px var(--mono);flex:none;transition:transform .2s}
+details.fold[open]>summary::before{content:"−"}
+details.fold>summary i{margin-left:auto;font:400 12px var(--mono);font-style:normal;color:var(--muted)}
+details.fold>summary:hover{background:#f3fbfb;border-radius:12px}
+details.fold[open]{padding-bottom:16px}
+details.fold>:not(summary){margin-left:20px;margin-right:20px}
+details.fold.big{margin-top:40px}
 </style>
 </head>
 <body>
@@ -1075,6 +1146,7 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       <a href="#desk">Desk review</a>
       <a href="#testing">Testing</a>
       <a href="#latest">Revised questions</a>
+      <a href="#draft">Your draft</a>
       <a href="#sidebyside">Side by side</a>
       <a href="#discussion">Discussion</a>
     </nav>
@@ -1258,11 +1330,11 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
           <div class="ff-p" data-ff="y" hidden><p class="ff-q">Have you ever had to leave a home for any of the following reasons: armed conflict, widespread violence, persecution, a natural disaster or a different threat to you or your family’s safety?</p><table class="ffq one"><tbody><tr><td>One answer for all reasons together</td><td><span class="yn">Yes</span></td><td><span class="yn">No</span></td></tr></tbody></table><p class="ff-n">A single yes or no, closest to your RF3A and ID1 but with the reasons named. In versions v01 and v02; dropped for the Nigeria testing.</p></div>
         </div>
         </div>
-        <div class="causes">
+        <details class="fold"><summary><span>Show which causes each questionnaire lets people give</span><i>Table, 23 questionnaires</i></summary><div class="causes">
           <div class="cz-h"><h4>Which causes each questionnaire lets people give</h4><div class="cz-leg"><span><i class="tile y sm"></i>Own answer code</span><span><i class="tile m sm"></i>Grouped with another cause</span><span><i class="tile e sm"></i>Answer ends the module</span><span><i class="tile o sm"></i>Not offered</span></div></div>
           <div class="cz-wrap"><table class="cz-t" id="cz-t"></table></div>
           <p class="cz-note"><strong>What this shows.</strong> Conflict, persecution and disasters appear almost everywhere, but are grouped differently each time, so the same person can be classified differently depending on the survey. Eviction is counted as forced displacement in some surveys and ends the module in others, yours included. Nearly all surveys accept one main reason only; the revised module and the Honduras survey accept every reason that applies.</p>
-        </div>
+        </div></details>
       </div>
 
       <div class="cmp" id="pa-cross" role="tabpanel" aria-labelledby="ta-cross">
@@ -1288,7 +1360,7 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       </div>
     </div>
 
-    <div class="flows-block">
+    <details class="fold big"><summary><span>Show a refugee and an IDP, followed through every questionnaire</span><i>Two line charts</i></summary><div class="flows-block">
       <div class="sec-head" style="margin:72px 0 22px">
         <h3 style="font-size:28px">A refugee and an IDP, through every questionnaire</h3>
         <p class="lede" style="font-size:17px">For each questionnaire, the line runs through the questions that bear on that person, in the order they are asked, and ends with what the questionnaire identifies them as. The revised EGRISS module and your module are at the top.</p>
@@ -1297,7 +1369,7 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       <div class="case" id="case-ref"><div class="case-h"><span class="case-n">Case 1</span><h4>A refugee</h4><p>Fled conflict in another country; applied and was recognised as a refugee here</p></div><div class="case-w"></div></div>
       <div class="case" id="case-idp"><div class="case-h"><span class="case-n">Case 2</span><h4>An IDP</h4><p>Fled violence inside the country; never left it</p></div><div class="case-w"></div></div>
       <p class="src">Questions: EGRISS identification questions question bank (November 2026), matched to the revised items. Outcomes: the task team’s coding in the desk review (January 2026) of whether each survey identifies refugees, or IDPs in their place of displacement; point at a result to read the reviewer’s note. For your module and the EGRISS module, the line follows the printed routing for this person.</p>
-    </div>
+    </div></details>
   </div>
 </section>
 
@@ -1399,106 +1471,10 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   </div>
 </section>
 
-<section id="sidebyside" class="alt">
+<section id="draft">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">5 · Side by side</div>
-      <h2>Your refugee module and ours, side by side</h2>
-      <div class="rule"></div>
-      <p class="lede">Your refugee sheet as laid out in your workbook, with the 2027 EGRISS question that replaces each column sitting on top of it. Matching parts share a colour.</p>
-    </div>
-
-    <div class="grp-leg" aria-label="Matching parts">
-      <span class="gl g-res">Residence and citizenship</span><span class="gl g-flee">Fleeing and why</span><span class="gl g-new">Country of the home fled · new</span><span class="gl g-cross">Crossing a border</span><span class="gl g-time">Time abroad</span><span class="gl g-app">Applying for refugee status</span><span class="gl g-doc">Document</span>
-    </div>
-    <div class="hs-tools"><span class="hs-hint">Scroll sideways to follow the sheet</span><button type="button" class="hs-nav" data-d="-1" aria-label="Scroll left">←</button><button type="button" class="hs-nav" data-d="1" aria-label="Scroll right">→</button></div>
-<div class="hs-scroll" id="hs" tabindex="0" aria-label="EGRISS 2027 questions above the STATAFRIC refugee module"><div class="hs">
-<div class="hs-lab eg" style="grid-column:1;grid-row:1"><b>EGRISS</b><span>2027 edition<br>(revised)</span><em>#&nbsp;= order asked</em></div>
-<div class="hs-eg g-res" style="grid-column:2 / span 1;grid-row:1;--i:0"><div class="hs-eh"><span class="tc">LocLiv</span><span class="hs-no">#5</span></div><span class="hs-ro">If a valid reason</span><p>Before you fled this home, had you always lived in {country fled}? Please do not think of short or temporary absence or travels.</p><div class="hs-ans">◯ Yes → Apply &nbsp;◯ No → CitLoc</div></div>
-<div class="hs-eg g-res" style="grid-column:3 / span 1;grid-row:1;--i:1"><div class="hs-eh"><span class="tc">CitLoc</span><span class="hs-no">#6</span></div><span class="hs-ro">If LocLiv = No</span><p>Were you a citizen of {country fled} when you fled your home there?</p><div class="hs-ans">◯ Yes &nbsp;◯ No</div></div>
-<div class="hs-eg g-flee" style="grid-column:4 / span 2;grid-row:1;--i:2"><div class="hs-eh"><span class="tc">FrcFl</span><span class="hs-no">#1</span></div><span class="hs-ro">Ask all</span><p>The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><div class="hs-ans">☐ Threat of armed conflict or widespread violence<br>☐ Threat of persecution or human rights violations<br>☐ Natural or man-made disasters<br>☐ A different threat to your safety<br>☐ None of the above<span>Read out · code all that apply</span></div></div>
-<div class="hs-eg g-flee" style="grid-column:6 / span 1;grid-row:1;--i:3"><div class="hs-eh"><span class="tc">FrcOth</span><span class="hs-no">#2</span></div><span class="hs-ro">If a different threat</span><p>What was the other threat to your safety that meant you had to leave a home?</p><div class="hs-ans">11 codes, not read out: forced recruitment, eviction, violent crime, civil unrest, famine, family violence…</div></div>
-<div class="hs-eg g-new" style="grid-column:7 / span 1;grid-row:1;--i:4"><div class="hs-eh"><span class="tc">FleeLoc</span><span class="hs-no">#3</span></div><span class="hs-ro">If a valid reason</span><p>In which country was the home you had to flee from?</p><div class="hs-ans">◯ [Survey country] → IDP route<br>◯ Other country → refugee route</div></div>
-<div class="hs-eg g-cross" style="grid-column:8 / span 1;grid-row:1;--i:5"><div class="hs-eh"><span class="tc">FleeCross</span><span class="hs-no">#7</span></div><span class="hs-ro">If home in survey country</span><p>After you fled your home, did you ever move to another country even if this was only temporary?</p><div class="hs-ans">◯ Yes → 12Mnths &nbsp;◯ No → IDPPost</div></div>
-<div class="hs-eg g-time" style="grid-column:9 / span 1;grid-row:1;--i:6"><div class="hs-eh"><span class="tc">12Mnths</span><span class="hs-no">#9</span></div><span class="hs-ro">If FleeCross = Yes</span><p>How long did you stay abroad after fleeing your home?</p><div class="hs-ans">◯ Less than 12 months<br>◯ 12 months or more</div></div>
-<div class="hs-eg g-app" style="grid-column:10 / span 1;grid-row:1;--i:7"><div class="hs-eh"><span class="tc">Apply</span><span class="hs-no">#10</span></div><span class="hs-ro">If home abroad, or moved abroad</span><p>While living abroad did you ever apply for refugee status?</p><div class="hs-ans">◯ Yes → Outcome &nbsp;◯ No → IntApply</div></div>
-<div class="hs-eg g-app" style="grid-column:11 / span 1;grid-row:1;--i:8"><div class="hs-eh"><span class="tc">IntApply</span><span class="hs-no">#11</span></div><span class="hs-ro">If Apply = No</span><p>Did you ever plan to apply for refugee status?</p><div class="hs-ans">◯ Yes &nbsp;◯ No</div></div>
-<div class="hs-eg g-app" style="grid-column:12 / span 1;grid-row:1;--i:9"><div class="hs-eh"><span class="tc">Outcome</span><span class="hs-no">#12</span></div><span class="hs-ro">If Apply = Yes</span><p>What was the response to your application for refugee status?</p><div class="hs-ans">◯ Granted ◯ Denied<br>◯ Still being decided ◯ Withdrew</div></div>
-<div class="hs-eg g-doc" style="grid-column:13 / span 1;grid-row:1;--i:10"><div class="hs-eh"><span class="tc">Legal</span><span class="hs-no">#13</span></div><span class="hs-ro">Ask all</span><p>Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><div class="hs-ans">Your code list headings, plus national ID card, passport and other citizenship documents</div></div>
-<div class="hs-lab ch" style="grid-column:1;grid-row:2"><span>What changes</span></div>
-<div class="hs-ch g-res" style="grid-column:2 / span 1;grid-row:2;--i:0"><i class="hs-ar"></i><span>Asked about the country fled</span></div>
-<div class="hs-ch g-res" style="grid-column:3 / span 1;grid-row:2;--i:1"><i class="hs-ar"></i><span>Citizenship when they fled</span></div>
-<div class="hs-ch g-flee" style="grid-column:4 / span 2;grid-row:2;--i:2"><i class="hs-ar"></i><span>Fleeing defined; one question</span></div>
-<div class="hs-ch g-flee" style="grid-column:6 / span 1;grid-row:2;--i:4"><i class="hs-ar"></i><span>All reasons, not the main one</span></div>
-<div class="hs-ch g-new" style="grid-column:7 / span 1;grid-row:2;--i:5"><i class="hs-ar"></i><span>New: splits the two routes</span></div>
-<div class="hs-ch g-cross" style="grid-column:8 / span 1;grid-row:2;--i:6"><i class="hs-ar"></i><span>Any move abroad, even short</span></div>
-<div class="hs-ch g-time" style="grid-column:9 / span 1;grid-row:2;--i:7"><i class="hs-ar"></i><span>Same</span></div>
-<div class="hs-ch g-app" style="grid-column:10 / span 1;grid-row:2;--i:8"><i class="hs-ar"></i><span>“Refugee status”</span></div>
-<div class="hs-ch g-app" style="grid-column:11 / span 1;grid-row:2;--i:9"><i class="hs-ar"></i><span>Same idea</span></div>
-<div class="hs-ch g-app" style="grid-column:12 / span 1;grid-row:2;--i:10"><i class="hs-ar"></i><span>Adds “withdrew”</span></div>
-<div class="hs-ch g-doc" style="grid-column:13 / span 1;grid-row:2;--i:11"><i class="hs-ar"></i><span>Asked of everyone</span></div>
-<div class="hs-lab th" style="grid-column:1;grid-row:3 / span 5"><b>STATAFRIC</b><span>STG 8 · Draft 0<br>Module Refugees</span></div>
-<div class="hs-xl" style="grid-column:2 / span 12;grid-row:3 / span 5"></div>
-<div class="hs-let" style="grid-column:2 / span 1;grid-row:3">E</div>
-<div class="hs-let" style="grid-column:3 / span 1;grid-row:3">F</div>
-<div class="hs-let" style="grid-column:4 / span 1;grid-row:3">H</div>
-<div class="hs-let" style="grid-column:5 / span 1;grid-row:3">I</div>
-<div class="hs-let" style="grid-column:6 / span 1;grid-row:3">J</div>
-<div class="hs-let" style="grid-column:7 / span 1;grid-row:3"></div>
-<div class="hs-let" style="grid-column:8 / span 1;grid-row:3">K</div>
-<div class="hs-let" style="grid-column:9 / span 1;grid-row:3">L</div>
-<div class="hs-let" style="grid-column:10 / span 1;grid-row:3">M</div>
-<div class="hs-let" style="grid-column:11 / span 1;grid-row:3">N</div>
-<div class="hs-let" style="grid-column:12 / span 1;grid-row:3">O</div>
-<div class="hs-let" style="grid-column:13 / span 1;grid-row:3">Q</div>
-<div class="hs-gh" style="grid-column:2 / span 1;grid-row:4">MIGRATION HISTORY</div>
-<div class="hs-gh" style="grid-column:3 / span 1;grid-row:4">CITIZENSHIP</div>
-<div class="hs-gh" style="grid-column:4 / span 3;grid-row:4">FORCED TO FLEE</div>
-<div class="hs-gh blank" style="grid-column:7 / span 1;grid-row:4"></div>
-<div class="hs-gh" style="grid-column:8 / span 2;grid-row:4">MIGRATION HISTORY</div>
-<div class="hs-gh" style="grid-column:10 / span 4;grid-row:4">LEGAL STATUS</div>
-<div class="hs-top g-res" style="grid-column:2 / span 1;grid-row:5">ALWAYS LIVED IN [COUNTRY]</div>
-<div class="hs-q g-res" style="grid-column:2 / span 1;grid-row:6"><b>RF1.</b> Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.<div class="hs-v">01 = Yes<br>02 = No<br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:2 / span 1;grid-row:7">IRRS Q1</div>
-<div class="hs-top g-res" style="grid-column:3 / span 1;grid-row:5">CITIZENSHIP</div>
-<div class="hs-q g-res" style="grid-column:3 / span 1;grid-row:6"><b>RF2.</b> Of which country are you a citizen?<div class="hs-v">01 = [Survey country]<br>02 = Other country (specify) → RF3B<br>03 = Stateless <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:3 / span 1;grid-row:7">IRRS Q2</div>
-<div class="hs-top g-flee" style="grid-column:4 / span 1;grid-row:5">FLED IN [COUNTRY]</div>
-<div class="hs-q g-flee" style="grid-column:4 / span 1;grid-row:6"><b>RF3A.</b> While living in [survey country], have you ever had to flee home?<div class="hs-v">01 = Yes → RF4<br>02 = No <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:4 / span 1;grid-row:7">IRRS Q3a</div>
-<div class="hs-top g-flee" style="grid-column:5 / span 1;grid-row:5">FLED IN OTHER COUNTRY</div>
-<div class="hs-q g-flee" style="grid-column:5 / span 1;grid-row:6"><b>RF3B.</b> While living in [OTHER COUNTRY], have you ever had to flee home? (Asked only if RF1 = 02)<div class="hs-v">01 = Yes<br>02 = No <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:5 / span 1;grid-row:7">IRRS Q3b</div>
-<div class="hs-top g-flee" style="grid-column:6 / span 1;grid-row:5">MAIN REASON FOR FLEEING</div>
-<div class="hs-q g-flee" style="grid-column:6 / span 1;grid-row:6"><b>RF4.</b> What is the main reason why you had to flee home?<div class="hs-v">01 = Security reasons, armed conflict, generalized violence<br>02 = Fear of persecution<br>03 = Human rights violation<br>04 = Natural or man-made disaster<br>05 = Eviction <b>→ END</b><br>06 = Personal reasons <b>→ END</b><br>98, 99 <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:6 / span 1;grid-row:7">IRRS Q4</div>
-<div class="hs-none g-new" style="grid-column:7 / span 1;grid-row:5 / span 3"><span>No column in your sheet.</span> In 2027, fleeing is asked once, then this question sends people to the refugee or IDP route.</div>
-<div class="hs-top g-cross" style="grid-column:8 / span 1;grid-row:5">CROSSED AN INTERNATIONAL BORDER</div>
-<div class="hs-q g-cross" style="grid-column:8 / span 1;grid-row:6"><b>RF5.</b> After you were forced to leave home, did you cross an international border?<div class="hs-v">01 = Yes<br>02 = No <b>→ END</b><br>98, 99 <b>→ END</b><br>CHECK: RF1 = 02 → RF7; otherwise → RF6</div></div>
-<div class="hs-ref" style="grid-column:8 / span 1;grid-row:7">IRRS Q5</div>
-<div class="hs-top g-time" style="grid-column:9 / span 1;grid-row:5">DURATION OF STAY ABROAD</div>
-<div class="hs-q g-time" style="grid-column:9 / span 1;grid-row:6"><b>RF6.</b> How long did you stay abroad? Less than 12 months, or 12 months or more?<div class="hs-v">01 = Less than 12 months<br>02 = 12 months or more → RF9<br>98, 99 <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:9 / span 1;grid-row:7">IRRS Q6</div>
-<div class="hs-top g-app" style="grid-column:10 / span 1;grid-row:5">APPLIED FOR INTERNATIONAL PROTECTION</div>
-<div class="hs-q g-app" style="grid-column:10 / span 1;grid-row:6"><b>RF7.</b> While in [OTHER COUNTRY] / [survey country], did you apply for international protection?<div class="hs-v">01 = Yes → RF8B<br>02 = No → RF8A<br>98, 99 <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:10 / span 1;grid-row:7">IRRS Q7</div>
-<div class="hs-top g-app" style="grid-column:11 / span 1;grid-row:5">INTENTION TO APPLY</div>
-<div class="hs-q g-app" style="grid-column:11 / span 1;grid-row:6"><b>RF8A.</b> While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?<div class="hs-v">01 = Yes → RF9<br>02 = No → RF9<br>98, 99 <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:11 / span 1;grid-row:7">IRRS Q8a</div>
-<div class="hs-top g-app" style="grid-column:12 / span 1;grid-row:5">OUTCOME OF APPLICATION</div>
-<div class="hs-q g-app" style="grid-column:12 / span 1;grid-row:6"><b>RF8B.</b> What is the outcome of your application for international protection?<div class="hs-v">01 = Refugee status granted <b>→ END</b><br>02 = Refugee status denied<br>03 = Still waiting for response<br>96 = Other (specify)<br>98, 99</div></div>
-<div class="hs-ref" style="grid-column:12 / span 1;grid-row:7">IRRS Q8b</div>
-<div class="hs-top g-doc" style="grid-column:13 / span 1;grid-row:5">PRIMARY DOCUMENT IN [COUNTRY]</div>
-<div class="hs-q g-doc" style="grid-column:13 / span 1;grid-row:6"><b>RF9.</b> What is the primary document that allows you to stay in [survey country]?<div class="hs-v">See code list “PRIMARY DOCUMENT” (13 codes) <b>→ END</b></div></div>
-<div class="hs-ref" style="grid-column:13 / span 1;grid-row:7">IRRS Q9</div>
-</div></div>
-  </div>
-</section>
-
-<section id="draft" class="alt">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">6 · From your draft</div>
+      <div class="eyebrow">5 · From your draft</div>
       <h2>Already close to the EGRISS questions</h2>
       <div class="rule"></div>
       <p class="lede">Your modules build on the 2023 questions, so bringing them in line with the revised version is a small step.</p>
@@ -1509,6 +1485,54 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       <div class="al-c rv"><i>✓</i><b>Both groups covered</b><p>Separate refugee and IDP modules already reach both populations.</p></div>
     </div>
     <div class="al-step rv"><span class="al-l">To align, mostly rewording</span><span class="al-t">Define “flee” and read out the threats</span><span class="al-t">“Move to another country”</span><span class="al-t">“Refugee status”</span><span class="al-t">Document question for everyone</span></div>
+  </div>
+</section>
+
+<section id="sidebyside" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="eyebrow">6 · Side by side</div>
+      <h2>Your refugee module and ours, side by side</h2>
+      <div class="rule"></div>
+      <p class="lede">Both modules in their own order: ours on top, yours below. Each line shows where a question of yours sits in ours; matching parts share a colour.</p>
+    </div>
+
+    <div class="grp-leg" aria-label="Matching parts">
+      <span class="gl g-res">Residence and citizenship</span><span class="gl g-flee">Fleeing and why</span><span class="gl g-new">Country of the home fled · new</span><span class="gl g-cross">Crossing a border</span><span class="gl g-time">Time abroad</span><span class="gl g-app">Applying for refugee status</span><span class="gl g-doc">Document</span>
+    </div>
+    <div class="hl" id="hl">
+<div class="hl-side eg"><b>EGRISS 2027</b><span>13 questions, in the order asked</span></div>
+<div class="hl-row eg" style="--n:13">
+<button type="button" class="hl-c g-flee" data-k="FrcFl"><span class="hl-n">1</span><span class="tc">FrcFl</span><span class="hl-s">Ever fled a home, and why</span></button>
+<button type="button" class="hl-c g-flee" data-k="FrcOth"><span class="hl-n">2</span><span class="tc">FrcOth</span><span class="hl-s">Other threat</span></button>
+<button type="button" class="hl-c g-new" data-k="FleeLoc"><span class="hl-n">3</span><span class="tc">FleeLoc</span><span class="hl-s">Country of the home fled</span></button>
+<button type="button" class="hl-c g-idp" data-k="IDPLoc"><span class="hl-n">4</span><span class="tc">IDPLoc</span><span class="hl-s">Where lived before fleeing</span></button>
+<button type="button" class="hl-c g-res" data-k="LocLiv"><span class="hl-n">5</span><span class="tc">LocLiv</span><span class="hl-s">Always lived in country fled</span></button>
+<button type="button" class="hl-c g-res" data-k="CitLoc"><span class="hl-n">6</span><span class="tc">CitLoc</span><span class="hl-s">Citizen when fled</span></button>
+<button type="button" class="hl-c g-cross" data-k="FleeCross"><span class="hl-n">7</span><span class="tc">FleeCross</span><span class="hl-s">Moved abroad after fleeing</span></button>
+<button type="button" class="hl-c g-idp" data-k="IDPPost"><span class="hl-n">8</span><span class="tc">IDPPost</span><span class="hl-s">Where moved first</span></button>
+<button type="button" class="hl-c g-time" data-k="12Mnths"><span class="hl-n">9</span><span class="tc">12Mnths</span><span class="hl-s">Time abroad</span></button>
+<button type="button" class="hl-c g-app" data-k="Apply"><span class="hl-n">10</span><span class="tc">Apply</span><span class="hl-s">Applied for refugee status</span></button>
+<button type="button" class="hl-c g-app" data-k="IntApply"><span class="hl-n">11</span><span class="tc">IntApply</span><span class="hl-s">Planned to apply</span></button>
+<button type="button" class="hl-c g-app" data-k="Outcome"><span class="hl-n">12</span><span class="tc">Outcome</span><span class="hl-s">Response to application</span></button>
+<button type="button" class="hl-c g-doc" data-k="Legal"><span class="hl-n">13</span><span class="tc">Legal</span><span class="hl-s">Document to stay</span></button>
+</div><svg class="hl-svg" id="hl-svg" aria-hidden="true"></svg>
+<div class="hl-side th"><b>STATAFRIC Draft 0</b><span>Module Refugees, 11 questions, in the order asked</span></div>
+<div class="hl-row th" style="--n:11">
+<button type="button" class="hl-c g-res" data-k="RF1"><span class="hl-n">1</span><span class="tc">RF1</span><span class="hl-s">Always lived in country</span></button>
+<button type="button" class="hl-c g-res" data-k="RF2"><span class="hl-n">2</span><span class="tc">RF2</span><span class="hl-s">Citizenship</span></button>
+<button type="button" class="hl-c g-flee" data-k="RF3A"><span class="hl-n">3</span><span class="tc">RF3A</span><span class="hl-s">Fled in this country</span></button>
+<button type="button" class="hl-c g-flee" data-k="RF3B"><span class="hl-n">4</span><span class="tc">RF3B</span><span class="hl-s">Fled in other country</span></button>
+<button type="button" class="hl-c g-flee" data-k="RF4"><span class="hl-n">5</span><span class="tc">RF4</span><span class="hl-s">Main reason for fleeing</span></button>
+<button type="button" class="hl-c g-cross" data-k="RF5"><span class="hl-n">6</span><span class="tc">RF5</span><span class="hl-s">Crossed a border</span></button>
+<button type="button" class="hl-c g-time" data-k="RF6"><span class="hl-n">7</span><span class="tc">RF6</span><span class="hl-s">Time abroad</span></button>
+<button type="button" class="hl-c g-app" data-k="RF7"><span class="hl-n">8</span><span class="tc">RF7</span><span class="hl-s">Applied for protection</span></button>
+<button type="button" class="hl-c g-app" data-k="RF8A"><span class="hl-n">9</span><span class="tc">RF8A</span><span class="hl-s">Intended to apply</span></button>
+<button type="button" class="hl-c g-app" data-k="RF8B"><span class="hl-n">10</span><span class="tc">RF8B</span><span class="hl-s">Outcome of application</span></button>
+<button type="button" class="hl-c g-doc" data-k="RF9"><span class="hl-n">11</span><span class="tc">RF9</span><span class="hl-s">Primary document</span></button>
+</div></div>
+<div class="hl-key"><span><i class="k1"></i>replaces</span><span><i class="k0"></i>partly replaces</span><span><i class="k2"></i>no line: IDP route only</span><span class="hl-tip">Point at any question to read both versions in full</span></div>
+<div class="hl-det" id="hl-det" aria-live="polite"></div>
   </div>
 </section>
 
@@ -2215,6 +2239,67 @@ document.querySelectorAll('.ff').forEach(function (box) {
     });
     el.addEventListener('mouseleave', function () { sc.querySelectorAll('.hot').forEach(function (c) { c.classList.remove('hot'); }); });
   });
+})();
+
+/* ---------- line comparison ---------- */
+(function () {
+  var box = document.getElementById('hl'); if (!box) return;
+  var D = {"eg": {"FrcFl": {"g": "flee", "ro": "Ask all", "t": "The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to… Threat of armed conflict or widespread violence? · Threat of persecution or human rights violations? · Natural or man-made disasters? · A different threat to your safety? · None of the above", "a": "Read out · code all that apply"}, "FrcOth": {"g": "flee", "ro": "If a different threat", "t": "What was the other threat to your safety that meant you had to leave a home?", "a": "11 codes, not read out: forced recruitment, eviction, violent crime, civil unrest, famine, family violence…"}, "FleeLoc": {"g": "new", "ro": "If a valid reason", "t": "In which country was the home you had to flee from?", "a": "[Survey country] → IDP route · Other country → refugee route"}, "IDPLoc": {"g": "idp", "ro": "If home in survey country", "t": "Please tell me where you were living right before you were forced to flee home for the first time.", "a": "Village or town · county · province"}, "LocLiv": {"g": "res", "ro": "If a valid reason", "t": "Before you fled this home, had you always lived in {country fled}? Please do not think of short or temporary absence or travels.", "a": "Yes → Apply · No → CitLoc"}, "CitLoc": {"g": "res", "ro": "If LocLiv = No", "t": "Were you a citizen of {country fled} when you fled your home there?", "a": "Yes · No"}, "FleeCross": {"g": "cross", "ro": "If home in survey country", "t": "After you fled your home, did you ever move to another country even if this was only temporary?", "a": "Yes → 12Mnths · No → IDPPost"}, "IDPPost": {"g": "idp", "ro": "If FleeCross = No", "t": "When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.", "a": "Village or town · county · province"}, "12Mnths": {"g": "time", "ro": "If FleeCross = Yes", "t": "How long did you stay abroad after fleeing your home?", "a": "Less than 12 months · 12 months or more"}, "Apply": {"g": "app", "ro": "If home abroad, or moved abroad", "t": "While living abroad did you ever apply for refugee status?", "a": "Yes → Outcome · No → IntApply"}, "IntApply": {"g": "app", "ro": "If Apply = No", "t": "Did you ever plan to apply for refugee status?", "a": "Yes · No"}, "Outcome": {"g": "app", "ro": "If Apply = Yes", "t": "What was the response to your application for refugee status?", "a": "Granted · Denied · Still being decided · Withdrew"}, "Legal": {"g": "doc", "ro": "Ask all", "t": "Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?", "a": "Your code list headings, plus national ID card, passport and other citizenship documents"}}, "th": {"RF1": {"g": "res", "t": "Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.", "v": "01 Yes · 02 No · 98 Don’t know → END · 99 Refused → END"}, "RF2": {"g": "res", "t": "Of which country are you a citizen?", "v": "01 [Survey country] · 02 Other country (specify) → RF3B · 03 Stateless → END · 98, 99 → END"}, "RF3A": {"g": "flee", "t": "While living in [survey country], have you ever had to flee home?", "v": "01 Yes → RF4 · 02 No → END · 98, 99 → END"}, "RF3B": {"g": "flee", "t": "While living in [OTHER COUNTRY], have you ever had to flee home? (Asked only if RF1 = 02)", "v": "01 Yes · 02 No → END · 98, 99 → END"}, "RF4": {"g": "flee", "t": "What is the main reason why you had to flee home?", "v": "01 Security reasons, armed conflict, generalized violence · 02 Fear of persecution · 03 Human rights violation · 04 Natural or man-made disaster · 05 Eviction → END · 06 Personal reasons → END · 98, 99 → END"}, "RF5": {"g": "cross", "t": "After you were forced to leave home, did you cross an international border?", "v": "01 Yes · 02 No → END · 98, 99 → END · CHECK: RF1 = 02 → RF7; otherwise → RF6"}, "RF6": {"g": "time", "t": "How long did you stay abroad? Less than 12 months, or 12 months or more?", "v": "01 Less than 12 months · 02 12 months or more → RF9 · 98, 99 → END"}, "RF7": {"g": "app", "t": "While in [OTHER COUNTRY] / [survey country], did you apply for international protection?", "v": "01 Yes → RF8B · 02 No → RF8A · 98, 99 → END"}, "RF8A": {"g": "app", "t": "While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?", "v": "01 Yes → RF9 · 02 No → RF9 · 98, 99 → END"}, "RF8B": {"g": "app", "t": "What is the outcome of your application for international protection?", "v": "01 Refugee status granted → END · 02 Denied · 03 Still waiting for response · 96 Other (specify) · 98, 99"}, "RF9": {"g": "doc", "t": "What is the primary document that allows you to stay in [survey country]?", "v": "Code list PRIMARY DOCUMENT, 13 codes → END"}}, "L": [["FrcFl", "RF3A", 1], ["FrcFl", "RF3B", 1], ["FrcFl", "RF4", 1], ["FrcOth", "RF4", 1], ["FleeLoc", "RF3A", 0], ["FleeLoc", "RF3B", 0], ["LocLiv", "RF1", 1], ["CitLoc", "RF2", 1], ["FleeCross", "RF5", 1], ["12Mnths", "RF6", 1], ["Apply", "RF7", 1], ["IntApply", "RF8A", 1], ["Outcome", "RF8B", 1], ["Legal", "RF9", 1]], "note": {"FrcFl": "Fleeing is defined and the threats are read out; one question replaces fleeing here (RF3A), fleeing elsewhere (RF3B) and the main reason (RF4). Every threat that applies is coded.", "FrcOth": "Takes the reasons not read out in FrcFl; which ones count as forced displacement can be set by each country. Your RF4 keeps only the main reason.", "FleeLoc": "New. Asking where the home was replaces your split into RF3A and RF3B, and sends people to the refugee or the IDP route.", "IDPLoc": "IDP route. In your IDP module this is ID3.", "LocLiv": "Your RF1 asks about the survey country; the revised question asks about the country the person fled, and comes after fleeing.", "CitLoc": "Citizenship at the time of fleeing, instead of today. “Stateless” no longer ends the module.", "FleeCross": "IDP route. “Any move to another country, even if temporary” replaces “cross an international border”.", "IDPPost": "IDP route. In your IDP module this is ID6.", "12Mnths": "Same question, now tied to fleeing.", "Apply": "“Refugee status” replaces “international protection”.", "IntApply": "Same idea, in plainer words.", "Outcome": "Adds “I withdrew my application”.", "Legal": "“Main document that shows you are allowed to stay”, asked of everyone so it can be compared."}, "col": {"res": "#3b71b9", "flee": "#2aa5ab", "new": "#14234c", "cross": "#d69a1e", "time": "#8a63c9", "app": "#e0575a", "doc": "#2e9e7b", "idp": "#9aaac4"}};
+  var svg = document.getElementById('hl-svg'), det = document.getElementById('hl-det');
+  function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  function el(side, k) { return box.querySelector('.hl-row.' + side + ' [data-k="' + k + '"]'); }
+  function draw() {
+    var r0 = svg.getBoundingClientRect(), s = '';
+    var vert = window.matchMedia('(max-width:900px)').matches;
+    D.L.forEach(function (l, i) {
+      var a = el('eg', l[0]).getBoundingClientRect(), b = el('th', l[1]).getBoundingClientRect(), d;
+      if (!vert) {
+        var x1 = a.left + a.width / 2 - r0.left, x2 = b.left + b.width / 2 - r0.left, y2 = r0.height;
+        d = 'M' + x1 + ' 0 C' + x1 + ' ' + y2 * .5 + ' ' + x2 + ' ' + y2 * .5 + ' ' + x2 + ' ' + y2;
+      } else {
+        var y1 = a.top + a.height / 2 - r0.top, yb = b.top + b.height / 2 - r0.top, w = r0.width;
+        d = 'M0 ' + y1 + ' C' + w * .5 + ' ' + y1 + ' ' + w * .5 + ' ' + yb + ' ' + w + ' ' + yb;
+      }
+      s += '<path class="hl-ln' + (l[2] ? '' : ' d') + '" data-a="' + l[0] + '" data-b="' + l[1] + '" style="stroke:' + D.col[D.eg[l[0]].g] + ';transition-delay:' + i * 60 + 'ms" d="' + d + '"/>';
+    });
+    svg.innerHTML = s;
+    svg.querySelectorAll('.hl-ln').forEach(function (p) { p.style.setProperty('--len', Math.ceil(p.getTotalLength())); });
+    mark();
+  }
+  var cur = null;
+  function show(side, k) {
+    var egs = [], ths = [];
+    if (side === 'eg') { egs = [k]; D.L.forEach(function (l) { if (l[0] === k) ths.push(l[1]); }); }
+    else { ths = [k]; D.L.forEach(function (l) { if (l[1] === k) egs.push(l[0]); }); }
+    cur = {egs: egs, ths: ths}; mark();
+    var g = (side === 'eg' ? D.eg[k] : D.th[k]).g, col = D.col[g];
+    var h = '<div class="hl-p eg" style="--gc:' + col + '"><span class="hl-h">EGRISS 2027</span>' + (egs.length ? egs.map(function (c) { var q = D.eg[c]; return '<div class="hl-q"><b>' + c + '</b><span class="ro">' + esc(q.ro) + '</span><p>' + esc(q.t) + '</p><small>' + esc(q.a) + '</small></div>'; }).join('') : '<p class="hl-none">No matching question.</p>') + '</div>';
+    h += '<div class="hl-p th" style="--gc:' + col + '"><span class="hl-h">STATAFRIC Draft 0</span>' + (ths.length ? ths.map(function (c) { var q = D.th[c]; return '<div class="hl-q"><b>' + c + '</b><p>' + esc(q.t) + '</p><small>' + esc(q.v) + '</small></div>'; }).join('') : '<p class="hl-none">No question in your refugee module.</p>') + '</div>';
+    var notes = egs.map(function (c) { return D.note[c] ? '<b>' + c + ':</b> ' + esc(D.note[c]) : ''; }).filter(Boolean);
+    if (notes.length) h += '<div class="hl-note">' + notes.join('<br>') + '</div>';
+    det.innerHTML = h;
+  }
+  function mark() {
+    box.classList.toggle('sel', !!cur);
+    if (!cur) { box.querySelectorAll('.on').forEach(function (e) { e.classList.remove('on'); }); return; }
+    box.querySelectorAll('.hl-row.eg .hl-c').forEach(function (c) { c.classList.toggle('on', cur.egs.indexOf(c.getAttribute('data-k')) >= 0); });
+    box.querySelectorAll('.hl-row.th .hl-c').forEach(function (c) { c.classList.toggle('on', cur.ths.indexOf(c.getAttribute('data-k')) >= 0); });
+    svg.querySelectorAll('.hl-ln').forEach(function (p) { p.classList.toggle('on', cur.egs.indexOf(p.getAttribute('data-a')) >= 0 && cur.ths.indexOf(p.getAttribute('data-b')) >= 0); });
+  }
+  box.querySelectorAll('.hl-c').forEach(function (c) {
+    var side = c.parentNode.classList.contains('eg') ? 'eg' : 'th', k = c.getAttribute('data-k');
+    c.addEventListener('mouseenter', function () { show(side, k); });
+    c.addEventListener('focus', function () { show(side, k); });
+    c.addEventListener('click', function () { show(side, k); });
+  });
+  draw(); show('eg', 'FrcFl'); cur = null; mark();
+  box.addEventListener('mouseleave', function () { cur = null; mark(); });
+  window.addEventListener('resize', draw);
+  if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { box.classList.add('in'); io.disconnect(); } }); }, {threshold: .3});
+    io.observe(box);
+  } else box.classList.add('in');
 })();
 </script>
 </body>
