@@ -762,6 +762,61 @@ tr.au .ob i{background:var(--gold)}
   .js .drow .dm-a{opacity:0;transform:translateY(8px);transition:opacity .5s ease .4s,transform .5s ease .4s}
   .js .drow.in .dm-a{opacity:1;transform:none}
 }
+/* answer formats */
+.ans{margin-top:6px;font-size:14px;color:var(--ink)}
+.yn-t{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.yn-h,.yn-r{display:grid;grid-template-columns:minmax(0,1fr) 52px 52px;align-items:center;gap:0}
+.ev4 .yn-h,.ev4 .yn-r{grid-template-columns:minmax(0,1fr) 52px 52px 170px}
+.yn-h{background:var(--tint);font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted);padding:6px 12px}
+.yn-h span:nth-child(n+2){text-align:center}
+.yn-r{padding:8px 12px;border-top:1px solid var(--tint)}
+.yn-r em,.rd em{font:500 11px var(--mono);font-style:normal;color:var(--blue);margin-left:8px}
+.bx{justify-self:center;width:18px;height:18px;border:1.8px solid #8aa0c4;border-radius:4px;background:#fff}
+.ev4 .evl{justify-self:start;margin-left:10px}
+.ck,.rd{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:6px 16px}
+.ck label,.rd label,.grp label{display:flex;align-items:center;gap:9px;line-height:1.35}
+.cb{flex:0 0 16px;height:16px;border:1.8px solid #8aa0c4;border-radius:3px;background:#fff}
+.rb{flex:0 0 16px;height:16px;border:1.8px solid #8aa0c4;border-radius:99px;background:#fff}
+.rec{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.rec label{display:flex;flex-direction:column;gap:4px}
+.rec span{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.04em;color:var(--muted)}
+.rec .ln{display:block;height:30px;border:1.5px solid #b9c7dc;border-radius:6px;background:#fff}
+.grp{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px 18px}
+.gp{display:flex;flex-direction:column;gap:5px}
+.gh{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--navy);border-bottom:1px solid var(--line);padding-bottom:3px;margin-bottom:2px}
+.fs-n{font-size:12.5px;color:var(--muted);margin-top:4px}
+.fcol .ck,.fcol .rd{grid-template-columns:minmax(0,1fr)}
+/* section 4 in the same style as the flee card */
+#latest .fstep.full{background:var(--navy);border-color:var(--navy);color:#fff;padding:18px 20px;gap:8px}
+#latest .fstep.full .c{background:var(--teal);color:var(--navy)}
+#latest .fstep.full .c.ref{background:#7df3f7}
+#latest .fstep.full .c.idp{background:var(--gold)}
+#latest .fs-r{color:var(--teal)}
+#latest .fs-q{color:#fff;font-size:17px}
+#latest .fs-i{color:var(--b2)}
+#latest .fs-n{color:var(--b1)}
+#latest .fcol{background:transparent;padding:0}
+#latest .fcol h4{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--navy);margin:6px 0 2px}
+#latest .ans{color:#fff}
+#latest .yn-t,.variants .yn-t{border-color:#33498a}
+#latest .yn-h{background:transparent;color:var(--teal);border-bottom:1px solid #33498a}
+#latest .yn-r{border-top:1px solid #24376b}
+#latest .yn-r .yn,.variants .yn-r .yn{justify-self:center}
+#latest .yn-r em,#latest .rd em{color:var(--teal)}
+#latest .rd label,#latest .ck label{background:#24376b;border:1px solid #33498a;border-radius:8px;padding:9px 12px}
+#latest .rb,#latest .cb{background:transparent;border-color:#8db8e3}
+#latest .rec span{color:var(--b2)}
+#latest .rec .ln{background:#24376b;border-color:#33498a}
+#latest .gh{color:var(--teal);border-color:#33498a}
+#latest .grp label{color:#fff}
+.variants .yn-r .yn{color:var(--navy);border-color:#8aa0c4}
+.route-l{font:700 12px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted);margin:6px 0 -2px}
+#latest .fcol h4.route-h{display:flex;flex-direction:column;gap:2px;border-radius:10px;padding:12px 16px;margin:4px 0 4px;font-family:var(--body);text-transform:none;letter-spacing:0}
+#latest .route-h b{font:700 18px var(--head);color:var(--navy)}
+#latest .route-h span{font:12px var(--mono);color:var(--navy);opacity:.75}
+#latest .route-h.ref{background:#7df3f7}
+#latest .route-h.idp{background:var(--gold)}
+@media (min-width:640px){#latest .fbr{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 /* testing */
 .mission{display:flex;flex-direction:column;gap:14px}
 .mission .tag{align-self:flex-start;font-family:var(--mono);font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--tint);color:var(--navy);border:1px solid var(--tint2)}
@@ -850,6 +905,9 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   .hero h1{font-size:38px}
   .hero-grid,.three{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kf-cover{grid-column:1/-1}
+  .rec,.grp{grid-template-columns:minmax(0,1fr)}
+  .ev4 .yn-h,.ev4 .yn-r{grid-template-columns:minmax(0,1fr) 44px 44px}
+  .ev4 .evl,.ev4 .yn-h span:last-child{grid-column:1/-1;margin:4px 0 0}
   .dgrid,.dsum{grid-template-columns:minmax(0,1fr)}
   .paper-s{border-right:0}.tab-s{border-left:0}
   .iter-s{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}
@@ -1195,25 +1253,6 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       </div>
     </div>
 
-    <div style="margin-top:24px">
-      <div class="trc">
-        <div class="trc-h">
-          <h3>What the first field test showed</h3>
-          <p>Mae La, Thailand · 6 refugees from Myanmar · July 2026</p>
-          <div class="trc-leg"><span><i class="pp ok"></i>Understood</span><span><i class="pp ask"></i>Asked what it meant</span><span><i class="pp mis"></i>Misread the question</span><span><i class="pp neu"></i>Other answer</span></div>
-        </div>
-        <div class="trc-grid">
-          <div class="trc-rows"><div class="tr-row"><div class="tr-q"><b>Forced to flee</b><small>Fled a home due to threats</small></div><span class="ppl"><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i></span><p>All six gave a valid reason straight after the introduction, before the threats were read out.</p></div><div class="tr-row"><div class="tr-q"><b>Country fled · always lived there</b><small>FleeLoc, LocLiv</small></div><span class="ppl"><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i></span><p>Easily understood.</p></div><div class="tr-row"><div class="tr-q"><b>Citizen when fled</b><small>CitLoc</small></div><span class="ppl"><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp mis" title="Misread the question"></i><i class="pp mis" title="Misread the question"></i><i class="pp mis" title="Misread the question"></i><i class="pp mis" title="Asked what “citizen” means"></i></span><p>Four read it as a question about documents: “I don’t have a passport”. Many Karen people are stateless.</p></div><div class="tr-row"><div class="tr-q"><b>Applied for international protection</b><small>Apply, IntApply, Outcome</small></div><span class="ppl"><i class="pp ask" title="Asked what it meant"></i><i class="pp ask" title="Asked what it meant"></i><i class="pp ask" title="Asked what it meant"></i><i class="pp mis" title="Misread the question"></i><i class="pp mis" title="Misread the question"></i><i class="pp neu" title="Said no"></i></span><p>Nobody understood “international protection”. Three asked what it meant; two described visits to UNHCR for food aid. All understood “refugee status”.</p></div><div class="tr-row"><div class="tr-q"><b>Document held</b><small>Legal</small></div><span class="ppl"><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i><i class="pp ok" title="Understood"></i></span><p>Understood; respondents fetched and showed their documents.</p></div></div>
-          <div class="trc-side">
-            <div class="trc-box"><h4>Threats people named</h4><p class="trc-sub">Respondents could name more than one</p><div class="th-r"><span>Armed conflict or widespread violence</span><span class="th-b"><i style="width:83%"></i></span><b>5</b></div><div class="th-r"><span>Persecution or human rights violations</span><span class="th-b"><i style="width:33%"></i></span><b>2</b></div><div class="th-r"><span>Natural or man-made disasters</span><span class="th-b"><i style="width:0%"></i></span><b>0</b></div><div class="th-r"><span>A different threat (forced recruitment)</span><span class="th-b"><i style="width:33%"></i></span><b>2</b></div></div>
-            <div class="trc-box"><h4>Time for the identification questions</h4>
-              <div class="tm"><span class="tm-bar"><i class="tm-range" style="left:35.8%;width:51.8%"></i><i class="tm-avg" style="left:56.0%"></i></span><div class="tm-ax"><span>0</span><span>1</span><span>2</span><span>3</span><span>4</span><span>5 min</span></div></div>
-              <p class="trc-sub"><b>2.8 minutes</b> on average, from 1.8 to 4.4. Most of each interview went on consent and introductions.</p></div>
-            <blockquote class="trc-q">“I don’t have a passport.”<cite>A respondent, answering whether they were a citizen</cite></blockquote>
-          </div>
-        </div>
-      </div>
-    </div>
     <p class="src">Testing in Nigeria and the remote interviews are still running. Their results will be brought to the final workshop in the first quarter of 2027.</p>
   </div>
 </section>
@@ -1228,27 +1267,29 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
     </div>
 
     <div class="flow" aria-label="Route through the revised module">
-      <div class="fstep full"><div class="fs-h"><span class="c">FrcFl</span><span class="fs-r">Ask all</span></div><p class="fs-q">The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><p class="fs-o">…Threat of armed conflict or widespread violence? · …Threat of persecution or human rights violations? · …Natural or man-made disasters? · …A different threat to your safety? · None of the above</p><p class="fs-i">Read out. Code all that apply. A different threat → FrcOth</p></div>
-      <div class="fstep full"><div class="fs-h"><span class="c">FrcOth</span><span class="fs-r">If a different threat</span></div><p class="fs-q">What was the other threat to your safety that meant you had to leave a home?</p><p class="fs-o">Risk of conscription or forced recruitment by armed groups · Eviction · Fear of violent crime · Political insecurity, public disorder or civil unrest · Food insecurity or famine · Lack of medical facilities · Family violence, forced marriage or domestic abuse · Lack of employment opportunities · Lack of local infrastructure · Marital, relationship or family breakdown · Other reason</p><p class="fs-i">Do not show list. Code all that apply</p></div>
-      <div class="fstep full"><div class="fs-h"><span class="c">FleeLoc</span><span class="fs-r">If a valid reason to flee</span></div><p class="fs-q">In which country was the home you had to flee from?</p><p class="fs-o">[Survey country] → IDP route · Other country (specify) → refugee route</p><p class="fs-i">Optional read-out: if you fled more than once, please tell me where the first home you fled from was</p></div>
-      <div class="fstep full"><div class="fs-h"><span class="c">LocLiv</span><span class="fs-r">If a valid reason to flee</span></div><p class="fs-q">Before you fled this home, had you always lived in {country from FleeLoc}? Please do not think of short or temporary absence or travels.</p><p class="fs-o">Yes · No</p></div>
-      <div class="fstep full"><div class="fs-h"><span class="c">CitLoc</span><span class="fs-r">If LocLiv = No</span></div><p class="fs-q">Were you a citizen of {country from FleeLoc} when you fled your home there?</p><p class="fs-o">Yes · No</p><p class="fs-i">By this we mean someone who was born in {country} who was entitled to have a {country} identity card</p></div>
-      <div class="fbr">
+      <p class="route-l">Asked of everyone</p>
+      <div class="fstep full"><div class="fs-h"><span class="c">FrcFl</span><span class="fs-r">Ask all</span></div><p class="fs-q">The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><p class=fs-i>Read out each item</p><div class="ans yn-t"><div class="yn-h"><span></span><span>Yes</span><span>No</span></div><div class="yn-r"><span>…Threat of armed conflict or widespread violence?</span><span class="yn">Yes</span><span class="yn">No</span></div><div class="yn-r"><span>…Threat of persecution or human rights violations?</span><span class="yn">Yes</span><span class="yn">No</span></div><div class="yn-r"><span>…Natural or man-made disasters?</span><span class="yn">Yes</span><span class="yn">No</span></div><div class="yn-r"><span>…A different threat to your safety? <em>→ FrcOth</em></span><span class="yn">Yes</span><span class="yn">No</span></div></div><p class="fs-n">None of the above if every answer is No</p></div>
+      <div class="fstep full"><div class="fs-h"><span class="c">FrcOth</span><span class="fs-r">If a different threat</span></div><p class="fs-q">What was the other threat to your safety that meant you had to leave a home?</p><p class=fs-i>Do not show list · code all that apply</p><div class="ans ck"><label><i class="cb"></i>Risk of conscription or forced recruitment by armed groups</label><label><i class="cb"></i>Eviction</label><label><i class="cb"></i>Fear of violent crime</label><label><i class="cb"></i>Political insecurity, public disorder or civil unrest</label><label><i class="cb"></i>Food insecurity or famine</label><label><i class="cb"></i>Lack of medical facilities</label><label><i class="cb"></i>Family violence, forced marriage or domestic abuse</label><label><i class="cb"></i>Lack of employment opportunities</label><label><i class="cb"></i>Lack of local infrastructure</label><label><i class="cb"></i>Marital, relationship or family breakdown</label><label><i class="cb"></i>Other reason</label></div></div>
+      <div class="fstep full"><div class="fs-h"><span class="c">FleeLoc</span><span class="fs-r">If a valid reason to flee</span></div><p class="fs-q">In which country was the home you had to flee from?</p><p class=fs-i>Optional read-out: if you fled more than once, please tell me where the first home you fled from was</p><div class="ans rd"><label><i class="rb"></i>[Survey country]<em>IDP route</em></label><label><i class="rb"></i>Other country (specify) ________<em>refugee route</em></label></div></div>
+      <div class="fstep full"><div class="fs-h"><span class="c">LocLiv</span><span class="fs-r">If a valid reason to flee</span></div><p class="fs-q">Before you fled this home, had you always lived in {country from FleeLoc}? Please do not think of short or temporary absence or travels.</p><div class="ans rd"><label><i class="rb"></i>Yes</label><label><i class="rb"></i>No<em>→ CitLoc</em></label></div></div>
+      <div class="fstep full"><div class="fs-h"><span class="c">CitLoc</span><span class="fs-r">If LocLiv = No</span></div><p class="fs-q">Were you a citizen of {country from FleeLoc} when you fled your home there?</p><p class=fs-i>By this we mean someone who was born in {country} who was entitled to have a {country} identity card</p><div class="ans rd"><label><i class="rb"></i>Yes</label><label><i class="rb"></i>No</label></div></div>
+      <div class="fbr" id="latest-fbr">
         <div class="fcol">
-          <h4>Home fled was in another country</h4>
-          <div class="fstep full"><div class="fs-h"><span class="c ref">Apply</span><span class="fs-r">If FleeLoc = other country, or FleeCross = Yes</span></div><p class="fs-q">While living abroad did you ever apply for refugee status?</p><p class="fs-o">Yes → Outcome · No → IntApply</p></div>
-          <div class="fstep full"><div class="fs-h"><span class="c ref">IntApply</span><span class="fs-r">If Apply = No</span></div><p class="fs-q">Did you ever plan to apply for refugee status?</p><p class="fs-o">Yes · No</p></div>
-          <div class="fstep full"><div class="fs-h"><span class="c ref">Outcome</span><span class="fs-r">If Apply = Yes</span></div><p class="fs-q">What was the response to your application for refugee status?</p><p class="fs-o">Refugee status granted · Refugee status denied · Outcome still being decided · I withdrew my application</p><p class="fs-i">Prompt and code</p></div>
+          <h4 class="route-h ref"><b>Refugee route</b><span>FleeLoc: home fled was in another country</span></h4>
+          <div class="fstep full"><div class="fs-h"><span class="c ref">Apply</span><span class="fs-r">If FleeLoc = other country, or FleeCross = Yes</span></div><p class="fs-q">While living abroad did you ever apply for refugee status?</p><div class="ans rd"><label><i class="rb"></i>Yes<em>→ Outcome</em></label><label><i class="rb"></i>No<em>→ IntApply</em></label></div></div>
+          <div class="fstep full"><div class="fs-h"><span class="c ref">IntApply</span><span class="fs-r">If Apply = No</span></div><p class="fs-q">Did you ever plan to apply for refugee status?</p><div class="ans rd"><label><i class="rb"></i>Yes</label><label><i class="rb"></i>No</label></div></div>
+          <div class="fstep full"><div class="fs-h"><span class="c ref">Outcome</span><span class="fs-r">If Apply = Yes</span></div><p class="fs-q">What was the response to your application for refugee status?</p><p class=fs-i>Prompt and code</p><div class="ans rd"><label><i class="rb"></i>Refugee status granted</label><label><i class="rb"></i>Refugee status denied</label><label><i class="rb"></i>Outcome still being decided</label><label><i class="rb"></i>I withdrew my application</label></div></div>
         </div>
         <div class="fcol">
-          <h4>Home fled was in [survey country]</h4>
-          <div class="fstep full"><div class="fs-h"><span class="c idp">IDPLoc</span><span class="fs-r">If FleeLoc = survey country</span></div><p class="fs-q">Please tell me where you were living right before you were forced to flee home for the first time.</p><p class="fs-i">Complete as many details as possible. If you fled more than once, the first home you fled from. Record village or town · county · province</p></div>
-          <div class="fstep full"><div class="fs-h"><span class="c idp">FleeCross</span><span class="fs-r">If FleeLoc = survey country</span></div><p class="fs-q">After you fled your home, did you ever move to another country even if this was only temporary?</p><p class="fs-o">Yes → 12Mnths · No → IDPPost</p></div>
-          <div class="fstep full"><div class="fs-h"><span class="c idp">IDPPost</span><span class="fs-r">If FleeCross = No</span></div><p class="fs-q">When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.</p><p class="fs-i">Complete as many details as possible. Record village or town · county · province</p></div>
-          <div class="fstep full"><div class="fs-h"><span class="c idp">12Mnths</span><span class="fs-r">If FleeCross = Yes</span></div><p class="fs-q">How long did you stay abroad after fleeing your home?</p><p class="fs-o">Less than 12 months · 12 months or more</p><p class="fs-i">Prompt and code. Then Apply</p></div>
+          <h4 class="route-h idp"><b>IDP route</b><span>FleeLoc: home fled was in [survey country]</span></h4>
+          <div class="fstep full"><div class="fs-h"><span class="c idp">IDPLoc</span><span class="fs-r">If FleeLoc = survey country</span></div><p class="fs-q">Please tell me where you were living right before you were forced to flee home for the first time.</p><p class=fs-i>Complete as many details as possible · if fled more than once, the first home</p><div class="ans rec"><label><span>Village or town</span><i class="ln"></i></label><label><span>County</span><i class="ln"></i></label><label><span>Province</span><i class="ln"></i></label></div></div>
+          <div class="fstep full"><div class="fs-h"><span class="c idp">FleeCross</span><span class="fs-r">If FleeLoc = survey country</span></div><p class="fs-q">After you fled your home, did you ever move to another country even if this was only temporary?</p><div class="ans rd"><label><i class="rb"></i>Yes<em>→ 12Mnths</em></label><label><i class="rb"></i>No<em>→ IDPPost</em></label></div></div>
+          <div class="fstep full"><div class="fs-h"><span class="c idp">IDPPost</span><span class="fs-r">If FleeCross = No</span></div><p class="fs-q">When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.</p><div class="ans rec"><label><span>Village or town</span><i class="ln"></i></label><label><span>County</span><i class="ln"></i></label><label><span>Province</span><i class="ln"></i></label></div></div>
+          <div class="fstep full"><div class="fs-h"><span class="c idp">12Mnths</span><span class="fs-r">If FleeCross = Yes</span></div><p class="fs-q">How long did you stay abroad after fleeing your home?</p><p class=fs-i>Prompt and code</p><div class="ans rd"><label><i class="rb"></i>Less than 12 months<em>→ Apply</em></label><label><i class="rb"></i>12 months or more<em>→ Apply</em></label></div></div>
         </div>
       </div>
-      <div class="fstep full"><div class="fs-h"><span class="c">Legal</span><span class="fs-r">Ask all</span></div><p class="fs-q">Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><p class="fs-o">No documents · Visas (tourist, student, work, humanitarian, family, other) · Regional free movement agreement (e.g. Mercosur, EU, SADC, EAC, ECOWAS) · Permanent resident document · [survey country] ID card · passport · other citizenship document · Asylum applicant document · refugee document · recognised stateless person document · complementary and subsidiary protection · temporary protection · Enrolment document · Other (specify)</p><p class="fs-i">Do not read out. Prompt and code all that apply</p></div>
+      <p class="route-l">Both routes end with</p>
+      <div class="fstep full"><div class="fs-h"><span class="c">Legal</span><span class="fs-r">Ask all</span></div><p class="fs-q">Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><p class=fs-i>Do not read out · prompt and code all that apply</p><div class="ans grp"><div class="gp"><span class="gh">No documents</span><label><i class="cb"></i>No documents</label></div><div class="gp"><span class="gh">Visas</span><label><i class="cb"></i>Tourist visa</label><label><i class="cb"></i>Student visa</label><label><i class="cb"></i>Work visa</label><label><i class="cb"></i>Humanitarian visa</label><label><i class="cb"></i>Family visa</label><label><i class="cb"></i>Other visa (specify)</label></div><div class="gp"><span class="gh">International agreements</span><label><i class="cb"></i>Regional free movement agreement (e.g. Mercosur, EU, SADC, EAC, ECOWAS)</label></div><div class="gp"><span class="gh">Permanent residency or citizenship</span><label><i class="cb"></i>Permanent resident document</label><label><i class="cb"></i>[Survey country] ID card</label><label><i class="cb"></i>[Survey country] passport</label><label><i class="cb"></i>Other citizenship document</label></div><div class="gp"><span class="gh">Protected status</span><label><i class="cb"></i>Asylum applicant document</label><label><i class="cb"></i>Refugee document</label><label><i class="cb"></i>Recognised stateless person document</label><label><i class="cb"></i>Complementary and subsidiary protection</label><label><i class="cb"></i>Temporary protection</label></div><div class="gp"><span class="gh">Enrolment · other</span><label><i class="cb"></i>Enrolment document</label><label><i class="cb"></i>Other (specify)</label></div></div></div>
     </div>
 
     <div class="iter">
@@ -1273,29 +1314,16 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
         <div class="card">
           <div class="who"><span class="code-pill">FrcFl2</span><span class="lab-s">Long flee question · ask all</span></div>
           <p class="qtext" id="frcfl2-def">The next questions are about whether you have ever had to flee a home. By this we mean being unable to continue to live in a house or land due to risks to you or your family. In your lifetime, have you ever left a home due to…</p>
-          <table class="ev">
-            <thead><tr><th>Read out · all that apply</th><th>Evidence in displacement data</th></tr></thead>
-            <tbody>
-              <tr><td>Threat of armed conflict or war</td><td><span class="evl s">Strong</span></td></tr>
-              <tr><td>Widespread violence or breakdown of public order</td><td><span class="evl g">Good</span></td></tr>
-              <tr><td>Discrimination or persecution, e.g. due to your ethnic group, nationality, religion, political beliefs, sexual orientation or other group membership</td><td><span class="evl i">Indirect</span></td></tr>
-              <tr><td>Threat of human rights violations by authorities, e.g. detention, torture, confiscation of property</td><td><span class="evl i">Partial</span></td></tr>
-              <tr><td>Other threats of violence against you</td><td><span class="evl r">Residual</span></td></tr>
-              <tr><td>Natural disasters, e.g. floods, droughts, landslides, earthquakes, hurricanes</td><td><span class="evl s">Strong</span></td></tr>
-              <tr><td>Man-made events, e.g. eviction for infrastructure projects, pollution events</td><td><span class="evl t">Thin in data, large in reality</span></td></tr>
-              <tr><td>A different threat to you or your family’s safety</td><td><span class="evl r">Residual</span></td></tr>
-              <tr><td>None of the above</td><td></td></tr>
-            </tbody>
-          </table>
+          <div class="ans yn-t ev4"><div class="yn-h"><span>Read out each item</span><span>Yes</span><span>No</span><span>Evidence in displacement data</span></div><div class="yn-r"><span>…Threat of armed conflict or war?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl s">Strong</span></div><div class="yn-r"><span>…Widespread violence or breakdown of public order?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl g">Good</span></div><div class="yn-r"><span>…Discrimination or persecution, e.g. due to your ethnic group, nationality, religion, political beliefs, sexual orientation or other group membership?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl i">Indirect</span></div><div class="yn-r"><span>…Threat of human rights violations by authorities, e.g. detention, torture, confiscation of property?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl i">Partial</span></div><div class="yn-r"><span>…Other threats of violence against you?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl r">Residual</span></div><div class="yn-r"><span>…Natural disasters, e.g. floods, droughts, landslides, earthquakes, hurricanes?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl s">Strong</span></div><div class="yn-r"><span>…Man-made events, e.g. eviction for infrastructure projects, pollution events?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl t">Thin in data, large in reality</span></div><div class="yn-r"><span>…A different threat to you or your family’s safety?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl r">Residual</span></div></div>
           <p class="small-note">The causes stay the same in every country, so results can be compared. What changes by country is the local examples interviewers are given.</p>
         </div>
         <div style="display:flex;flex-direction:column;gap:20px">
-          <div class="card sunk" id="short-var"><div class="who"><span class="code-pill">FrcFLShort2</span><span class="lab-s">One-question version</span></div><p class="qtext">Have you ever had to leave a home for any of the following reasons: armed conflict, widespread violence, persecution, a natural disaster or a different threat to you or your family’s safety?</p><p class="small-note">A single yes or no. Tried in earlier drafts; not used in the Nigeria testing.</p></div>
+          <div class="card sunk" id="short-var"><div class="who"><span class="code-pill">FrcFLShort2</span><span class="lab-s">One-question version</span></div><p class="qtext">Have you ever had to leave a home for any of the following reasons: armed conflict, widespread violence, persecution, a natural disaster or a different threat to you or your family’s safety?</p><div class="ans rd"><label><i class="rb"></i>Yes</label><label><i class="rb"></i>No</label></div><p class="small-note">A single yes or no. Tried in earlier drafts; not used in the Nigeria testing.</p></div>
           <div class="card">
             <div class="who"><span class="code-pill">CoOr → CitYN → ResMig · ArOr → ResMov</span><span class="lab-s">Migration route</span></div>
             <p class="qtext">Have you always lived in [survey country]? If not: are you a citizen of [survey country]? If not: why did you leave your country of origin to come to [survey country]?</p>
             <p class="qtext" style="margin-top:6px">For citizens: while living in [survey country], have you always lived in [local area]? If not: why did you first move to [local area]?</p>
-            <p class="small-note">Both “why” questions code all that apply from a showcard: six ordinary reasons (work, study, marriage, family, medical treatment, quality of life) and four forced ones (conflict or violence; persecution or human rights violations; natural or man-made disaster; other threats to safety).</p>
+            <p class="fs-i" style="margin-top:8px">Showcard · code all that apply</p><div class="ans ck"><label><i class="cb"></i>For work, either for a job or looking for work</label><label><i class="cb"></i>For study</label><label><i class="cb"></i>To enter a new marriage or relationship</label><label><i class="cb"></i>Family reunification</label><label><i class="cb"></i>For medical treatment</label><label><i class="cb"></i>For improved quality of life</label><label><i class="cb"></i>Threat of armed conflict or violence</label><label><i class="cb"></i>Threat of persecution or human rights violations</label><label><i class="cb"></i>Natural or man-made disaster</label><label><i class="cb"></i>Other threats to safety</label><label><i class="cb"></i>Other reason (specify)</label></div>
           </div>
         </div>
       </div>
