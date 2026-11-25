@@ -922,15 +922,32 @@ tr.au .ob i{background:var(--gold)}
   .js .hl.in .hl-ln{stroke-dashoffset:0}
   .js .hl.in .hl-ln.d{opacity:.75}
 }
-@media (max-width:900px){
-  .hl{grid-template-columns:minmax(0,1fr) 64px minmax(0,1fr);grid-template-rows:auto auto}
-  .hl-side.eg{grid-column:1;grid-row:1}.hl-side.th{grid-column:3;grid-row:1}
+@media (max-width:1180px){
+  .hl{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto 130px auto auto;margin-inline:calc(50% - 50vw + 14px)}
+  .hl-side{flex-direction:row;align-items:baseline;gap:10px;justify-content:flex-start}
+  .hl-side.eg{grid-column:1;grid-row:1;margin-bottom:8px}
+  .hl-row.eg{grid-column:1;grid-row:2}
+  .hl-svg{grid-column:1;grid-row:3}
+  .hl-row.th{grid-column:1;grid-row:4}
+  .hl-side.th{grid-column:1;grid-row:5;margin-top:8px}
+  .hl-row{gap:4px}
+  .hl-c{padding:7px 4px;min-height:84px}
+  .hl-key{margin-left:0}
+}
+@media (max-width:1000px){
+  .hl-c .tc{font-size:10px;letter-spacing:-.03em}
+  .hl-s{font-size:12px;hyphens:auto;-webkit-hyphens:auto}
+}
+@media (max-width:600px){
+  .hl{grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);grid-template-rows:auto auto;margin-inline:0}
+  .hl-side.eg{grid-column:1;grid-row:1;flex-direction:column}.hl-side.th{grid-column:3;grid-row:1;flex-direction:column;margin-top:0}
   .hl-row{grid-template-columns:minmax(0,1fr)}
   .hl-row.eg{grid-column:1;grid-row:2}.hl-row.th{grid-column:3;grid-row:2;align-self:start}
   .hl-svg{grid-column:2;grid-row:2}
   .hl-c{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:baseline;border-radius:8px!important;border-top-width:1px!important;border-left:4px solid var(--gc)}
-  .hl-key{margin-left:0}.hl-det{grid-template-columns:minmax(0,1fr)}
+  .hl-det{grid-template-columns:minmax(0,1fr)}
 }
+
 .grp-leg{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}
 .gl{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:99px;padding:5px 12px 5px 8px}
 .gl::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--gc)}
@@ -1134,6 +1151,23 @@ details.fold>summary:hover{background:#f3fbfb;border-radius:12px}
 details.fold[open]{padding-bottom:16px}
 details.fold>:not(summary){margin-left:20px;margin-right:20px}
 details.fold.big{margin-top:40px}
+
+.hl-play{display:flex;align-items:center;gap:10px;margin:18px 0 0;padding:10px 12px;background:var(--navy);border-radius:12px;color:#fff}
+.hp-b{all:unset;cursor:pointer;font:700 14px var(--head);padding:8px 14px;border-radius:8px;background:rgba(255,255,255,.1)}
+.hp-b:hover{background:rgba(255,255,255,.2)}
+.hp-b:focus-visible{outline:2px solid var(--teal)}
+.hp-go{background:var(--teal);color:var(--navy);min-width:132px;text-align:center}
+.hp-go:hover{background:#7fd8dc}
+.hp-prev,.hp-next{font:700 18px var(--mono);padding:4px 12px}
+.hp-n{font:12px var(--mono);color:#cfe0f5}.hp-n b{color:#fff}
+.hp-bar{flex:1;height:4px;background:rgba(255,255,255,.15);border-radius:4px;overflow:hidden}
+.hp-bar i{display:block;height:100%;width:0;background:var(--teal);transition:width .4s ease}
+.hl-det{transition:opacity .35s ease,transform .35s ease}
+.hl-det.swap{opacity:0;transform:translateY(6px)}
+.hl-dot{filter:drop-shadow(0 0 4px rgba(76,195,201,.9))}
+.hl-ln.on.redraw{animation:hlDraw .9s ease forwards}
+@keyframes hlDraw{from{stroke-dashoffset:var(--len)}to{stroke-dashoffset:0}}
+.hl-c.on{transition:opacity .3s,transform .3s,box-shadow .3s}
 </style>
 </head>
 <body>
@@ -1197,7 +1231,6 @@ details.fold.big{margin-top:40px}
     <div class="partners">
       <p class="pt-intro">Led by EGRISS Technical Subgroup 2 (TSG2) and its task team on identification questions, with national statistical offices and testing partners; supported by UNHCR’s Data Innovation Fund.</p>
       <ul class="pt-strip"><li class="pt" title="UNHCR: Statistics and survey teams; hosts the EGRISS Secretariat"><span class="pt-logo"><img src="logos/unhcr.svg" alt="UNHCR logo" loading="lazy"></span><b>UNHCR</b></li><li class="pt" title="World Bank: LSMS surveys and the EHCVM"><span class="pt-logo"><img src="logos/world-bank.svg" alt="World Bank logo" loading="lazy"></span><b>World Bank</b></li><li class="pt" title="UNICEF: MICS displacement module"><span class="pt-logo"><img src="logos/unicef.svg" alt="UNICEF logo" loading="lazy"></span><b>UNICEF</b></li><li class="pt" title="IOM: Displacement Tracking Matrix"><span class="pt-logo"><img src="logos/iom.jpg" alt="IOM logo" loading="lazy"></span><b>IOM</b></li><li class="pt" title="ILO: Labour force surveys"><span class="pt-logo"><img src="logos/ilo.svg" alt="ILO logo" loading="lazy"></span><b>ILO</b></li><li class="pt" title="JIPS: Joint IDP Profiling Service"><span class="pt-logo"><img src="logos/jips.svg" alt="JIPS logo" loading="lazy"></span><b>JIPS</b></li><li class="pt" title="IDMC: Internal Displacement Monitoring Centre"><span class="pt-logo"><img src="logos/idmc.svg" alt="IDMC logo" loading="lazy"></span><b>IDMC</b></li><li class="pt" title="Joint Data Center: World Bank–UNHCR Joint Data Center on Forced Displacement"><span class="pt-logo"><img src="logos/jdc.png" alt="Joint Data Center logo" loading="lazy"></span><b>JDC</b></li><li class="pt" title="Samuel Hall: Research on migration and displacement"><span class="pt-logo"><img class="tint" src="logos/samuel-hall.png" alt="Samuel Hall logo" loading="lazy"></span><b>Samuel Hall</b></li><li class="pt" title="Statistics South Africa: National statistical office"><span class="pt-logo"><span class="pt-word">Stats SA</span></span><b>Stats SA</b></li><li class="pt" title="INEGI: National statistical office, Mexico"><span class="pt-logo"><img src="logos/inegi.png" alt="INEGI logo" loading="lazy"></span><b>INEGI</b></li><li class="pt" title="Haut-Commissariat au Plan: National statistical office, Morocco"><span class="pt-logo"><img src="logos/hcp.png" alt="Haut-Commissariat au Plan logo" loading="lazy"></span><b>HCP Morocco</b></li><li class="pt" title="National Bureau of Statistics: Nigeria · cognitive testing"><span class="pt-logo"><img src="logos/nbs-nigeria.png" alt="NBS Nigeria logo" loading="lazy"></span><b>NBS Nigeria</b></li><li class="pt" title="University of Copenhagen: AI interviewer for remote cognitive testing"><span class="pt-logo"><img src="logos/ucph.svg" alt="University of Copenhagen logo" loading="lazy"></span><b>Univ. of Copenhagen</b></li></ul>
-      <p class="pt-note">Logos from Wikimedia Commons and the organisations’ own websites.</p>
     </div>
   </div>
 </section>
@@ -1531,6 +1564,7 @@ details.fold.big{margin-top:40px}
 <button type="button" class="hl-c g-app" data-k="RF8B"><span class="hl-n">10</span><span class="tc">RF8B</span><span class="hl-s">Outcome of application</span></button>
 <button type="button" class="hl-c g-doc" data-k="RF9"><span class="hl-n">11</span><span class="tc">RF9</span><span class="hl-s">Primary document</span></button>
 </div></div>
+<div class="hl-play" id="hl-play"><button type="button" class="hp-b hp-go" aria-label="Play through">▶ Play through</button><button type="button" class="hp-b hp-prev" aria-label="Previous">‹</button><span class="hp-n">Step <b>1</b> of 13</span><button type="button" class="hp-b hp-next" aria-label="Next">›</button><span class="hp-bar"><i></i></span></div>
 <div class="hl-key"><span><i class="k1"></i>replaces</span><span><i class="k0"></i>partly replaces</span><span><i class="k2"></i>no line: IDP route only</span><span class="hl-tip">Point at any question to read both versions in full</span></div>
 <div class="hl-det" id="hl-det" aria-live="polite"></div>
   </div>
@@ -1861,7 +1895,7 @@ function escH(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&am
     });
   }
   function draw() {
-    if (window.matchMedia('(max-width:900px)').matches) { svg.innerHTML = ''; return; }
+    if (window.matchMedia('(max-width:600px)').matches) { svg.innerHTML = ''; return; }
     var r0 = svg.getBoundingClientRect(); var w = r0.width, h = root.getBoundingClientRect().height;
     svg.setAttribute('viewBox', '0 0 ' + w + ' ' + h); svg.style.height = h + 'px';
     var hi = sel ? KD.filter(function (k) { return k.n === sel; })[0] : null;
@@ -2250,7 +2284,7 @@ document.querySelectorAll('.ff').forEach(function (box) {
   function el(side, k) { return box.querySelector('.hl-row.' + side + ' [data-k="' + k + '"]'); }
   function draw() {
     var r0 = svg.getBoundingClientRect(), s = '';
-    var vert = window.matchMedia('(max-width:900px)').matches;
+    var vert = window.matchMedia('(max-width:600px)').matches;
     D.L.forEach(function (l, i) {
       var a = el('eg', l[0]).getBoundingClientRect(), b = el('th', l[1]).getBoundingClientRect(), d;
       if (!vert) {
@@ -2292,8 +2326,47 @@ document.querySelectorAll('.ff').forEach(function (box) {
     c.addEventListener('focus', function () { show(side, k); });
     c.addEventListener('click', function () { show(side, k); });
   });
-  draw(); show('eg', 'FrcFl'); cur = null; mark();
-  box.addEventListener('mouseleave', function () { cur = null; mark(); });
+  draw(); show('eg', 'FrcFl'); 
+
+  // play-through for presenting
+  var ORDER = Object.keys(D.eg), step = -1, timer = null, play = document.getElementById('hl-play');
+  var goB = play.querySelector('.hp-go'), nEl = play.querySelector('.hp-n b'), bar = play.querySelector('.hp-bar i');
+  function flow() {
+    svg.querySelectorAll('.hl-dot').forEach(function (d) { d.remove(); });
+    svg.querySelectorAll('.hl-ln.on').forEach(function (p) {
+      p.classList.remove('redraw'); p.style.strokeDasharray = p.classList.contains('d') ? '' : p.style.getPropertyValue('--len');
+      void p.getBBox(); p.classList.add('redraw');
+      var c = document.createElementNS('http://www.w3.org/2000/svg', 'circle');
+      c.setAttribute('r', '5'); c.setAttribute('class', 'hl-dot'); c.setAttribute('fill', p.style.stroke);
+      var m = document.createElementNS('http://www.w3.org/2000/svg', 'animateMotion');
+      m.setAttribute('dur', '1.1s'); m.setAttribute('fill', 'freeze'); m.setAttribute('path', p.getAttribute('d'));
+      c.appendChild(m); svg.appendChild(c); m.beginElement && m.beginElement();
+    });
+  }
+  function go(i) {
+    step = (i + ORDER.length) % ORDER.length;
+    det.classList.add('swap');
+    setTimeout(function () { show('eg', ORDER[step]); det.classList.remove('swap'); flow(); }, 180);
+    nEl.textContent = step + 1; bar.style.width = ((step + 1) / ORDER.length * 100) + '%';
+  }
+  function stop() { clearInterval(timer); timer = null; goB.textContent = '▶ Play through'; }
+  function start() {
+    goB.textContent = '❚❚ Pause';
+    if (step < 0 || step === ORDER.length - 1) go(0); else go(step + 1);
+    timer = setInterval(function () { if (step === ORDER.length - 1) { stop(); return; } go(step + 1); }, 4200);
+  }
+  goB.addEventListener('click', function () { timer ? stop() : start(); });
+  play.querySelector('.hp-next').addEventListener('click', function () { stop(); go(step + 1); });
+  play.querySelector('.hp-prev').addEventListener('click', function () { stop(); go(step < 0 ? 0 : step - 1); });
+  document.addEventListener('keydown', function (e) {
+    if (e.key !== 'ArrowRight' && e.key !== 'ArrowLeft') return;
+    var r = box.getBoundingClientRect(); if (r.bottom < 0 || r.top > innerHeight) return;
+    e.preventDefault(); stop(); go(e.key === 'ArrowRight' ? step + 1 : (step < 0 ? 0 : step - 1));
+  });
+  // a manual hover or click stops the play-through and keeps that question
+  box.querySelectorAll('.hl-c').forEach(function (c) { c.addEventListener('click', stop); });
+  cur = null; mark();
+  box.addEventListener('mouseleave', function () { if (timer || step >= 0) { show('eg', ORDER[Math.max(step,0)]); return; } cur = null; mark(); });
   window.addEventListener('resize', draw);
   if (document.fonts && document.fonts.ready) document.fonts.ready.then(draw);
   if ('IntersectionObserver' in window) {
