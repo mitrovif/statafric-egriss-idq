@@ -385,8 +385,8 @@ details.more[open]>summary::after{content:"−"}
 .map-top .ms-stats div{display:flex;flex-direction:column;gap:6px}
 .mapcard .map-wrap{padding:8px 16px}
 .mapcard .mleg{flex-direction:row;flex-wrap:wrap;gap:12px 28px;padding:8px 32px 26px;border-top:1px solid var(--b4);padding-top:18px;margin:0 0 0}
-.mleg .k.cen{width:14px;height:14px;flex-basis:14px;margin:3px 2px 0;border-radius:3px;background:#fff;border:2px solid var(--teal)}
-.dmap .cen rect{fill:#fff;stroke:var(--teal);stroke-width:2}
+.mleg .k.cen{width:14px;height:14px;flex-basis:14px;margin:3px 2px 0;border-radius:2px;background:var(--b2);border:1.5px solid var(--navy)}
+.dmap .cen rect{fill:var(--b2);stroke:var(--navy);stroke-width:1.5}
 .dmap .lb{font-size:12px!important}
 .js .dmap .cen{transform-box:fill-box;transform-origin:center;transform:scale(0);opacity:0;transition:transform .5s cubic-bezier(.2,0,.1,1),opacity .5s ease}
 .js .mapcard.in .dmap .cen{transform:none;opacity:1}
@@ -471,7 +471,7 @@ details.more[open]>summary::after{content:"−"}
 .qp-tabs button[aria-selected="true"]{background:#fff;color:var(--navy);border-color:#fff}
 .qp-tabs button[aria-selected="true"] b{color:var(--navy)}
 .qpanel .ql-k{width:10px;height:10px;border-radius:99px;background:var(--teal);flex:0 0 auto}
-.qpanel .ql-k.cen{border-radius:2px;background:#fff;border:2px solid var(--teal)}
+.qpanel .ql-k.cen{border-radius:2px;background:var(--b2);border:1px solid var(--navy)}
 .qp-list{overflow-y:auto;min-height:0;flex:1;padding-right:6px}
 .qp-list::-webkit-scrollbar{width:6px}.qp-list::-webkit-scrollbar-thumb{background:var(--b4);border-radius:99px}
 .qp-def{font-size:12.5px;line-height:1.45;color:var(--b2);margin-bottom:6px}
@@ -686,20 +686,82 @@ tr.au .ob i{background:var(--gold)}
   .js .scn.in .lane-r{opacity:1;transform:none}
 }
 /* partners */
-.partners{margin-top:36px;border-top:1px solid var(--line);padding-top:24px}
-.pt-intro{font-size:15px;color:var(--ink);margin-bottom:16px}
-.pt-group{display:flex;flex-direction:column;gap:10px;margin-bottom:18px}
-.pt-gl{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
-.pt-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:10px}
-.pt-two{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,1.2fr);gap:24px}
-.pt{display:flex;flex-direction:column;gap:4px;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px;transition:border-color .15s,box-shadow .15s}
-.pt:hover{border-color:#b9c7dc;box-shadow:var(--shadow)}
-.pt-logo{height:56px;display:flex;align-items:center;justify-content:center;margin-bottom:4px}
-.pt-logo img{max-height:52px;max-width:100%;object-fit:contain}
-.pt-word{font:800 17px var(--head);color:var(--navy);letter-spacing:.02em;border:2px solid var(--navy);border-radius:6px;padding:6px 10px;text-align:center;line-height:1.1}
-.pt b{font:700 13px var(--head);color:var(--navy)}
-.pt span:not(.pt-word){font-size:12px;color:var(--muted);line-height:1.35}
-.pt-note{font-size:11.5px;color:var(--muted)}
+.partners{margin-top:32px;border-top:1px solid var(--line);padding-top:20px}
+.pt-intro{font-size:14px;color:var(--muted);margin-bottom:12px}
+.pt-strip{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:8px}
+.pt{display:flex;flex-direction:column;align-items:center;gap:4px;background:var(--white);border:1px solid var(--line);border-radius:8px;padding:8px 6px;text-align:center}
+.pt-logo{height:34px;display:flex;align-items:center;justify-content:center;width:100%}
+.pt-logo img{max-height:32px;max-width:100%;object-fit:contain}
+.pt-logo img.tint{filter:brightness(0) saturate(100%) invert(12%) sepia(40%) saturate(2200%) hue-rotate(205deg)}
+.pt-word{font:800 12px var(--head);color:var(--navy);border:1.5px solid var(--navy);border-radius:4px;padding:3px 6px;white-space:nowrap}
+.pt b{font:600 11px var(--body);color:var(--navy);line-height:1.2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;max-width:100%}
+.pt-note{font-size:11px;color:var(--muted);margin-top:8px}
+@media (max-width:640px){.pt-strip{grid-template-columns:repeat(4,minmax(0,1fr))}}
+/* two cases */
+.cs-leg{display:flex;gap:16px;flex-wrap:wrap;font-size:13px;margin-bottom:14px}
+.cs-leg span{display:flex;gap:6px;align-items:center}
+.oc.nc{background:#9fb0c8}
+.case{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);margin-bottom:20px;overflow:hidden}
+.case-h{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 14px;padding:14px 20px;background:var(--navy)}
+.case-n{font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.08em;color:var(--teal)}
+.case-h h4{color:#fff;font-size:19px}
+.case-h p{font-size:13.5px;color:var(--b1)}
+.case-w{overflow-x:auto;padding:6px 6px 4px}
+.csv .vg{stroke:var(--tint);stroke-width:1}
+.csv .ch{font:500 12px var(--body);fill:var(--navy)}
+.csv .ch.b{font-weight:700}
+.csv .rl{font:400 12.5px var(--body);fill:var(--muted)}
+.csv .rl .rc{font-weight:600;fill:var(--navy)}
+.csv .hl{fill:#f3fbfb}
+.csv .top.AU .hl{fill:#fff8ea}
+.csv .sep{stroke:var(--line);stroke-dasharray:3 3}
+.csv .cl{fill:none;stroke-width:2.2;stroke-linejoin:round;stroke-linecap:round;opacity:.85}
+.csv .cd{fill:#fff;stroke-width:2.2}
+.csv .co text{font:700 11px var(--mono);fill:var(--navy)}
+.csv .top .co text{font-size:11.5px}
+@media (prefers-reduced-motion: no-preference){
+  .js .csv .cl{stroke-dasharray:1;stroke-dashoffset:1}
+  .js .csv .cd,.js .csv .co{opacity:0}
+  .js .case.in .csv .cl{animation:draw .9s cubic-bezier(.2,0,.1,1) forwards;animation-delay:var(--d)}
+  .js .case.in .csv .cd{opacity:1;transition:opacity .3s ease;transition-delay:var(--d)}
+  .js .case.in .csv .co{opacity:1;transition:opacity .4s ease;transition-delay:calc(var(--d) + 700ms)}
+}
+.csv .crow{animation-delay:var(--d)}
+/* eight differences */
+.dsum{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-bottom:22px}
+.ds{background:var(--navy);border-radius:12px;padding:16px 18px;color:var(--b1);display:flex;flex-direction:column;gap:6px}
+.ds b{font:600 34px var(--mono);color:#fff;line-height:1}
+.ds p{font-size:13.5px}
+.dtag{align-self:flex-start;display:inline-block;font:700 11px var(--mono);text-transform:uppercase;letter-spacing:.06em;border-radius:99px;padding:3px 10px}
+.dtag.who{background:var(--teal);color:var(--navy)}.dtag.ask{background:var(--gold);color:var(--navy)}.dtag.route{background:var(--b2);color:var(--navy)}
+.diffs{display:flex;flex-direction:column;gap:18px;margin-bottom:28px}
+.drow{background:var(--white);border:1px solid var(--line);border-radius:12px;box-shadow:var(--shadow);overflow:hidden}
+.dh{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line)}
+.dn{flex:0 0 30px;height:30px;border-radius:99px;background:var(--coral);color:#fff;font:700 14px var(--mono);display:flex;align-items:center;justify-content:center}
+.dh h3{font-size:18px;flex:1}
+.dgrid{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,.9fr) minmax(0,1fr);align-items:stretch}
+.dside{padding:14px 16px;display:flex;flex-direction:column;gap:8px}
+.dl{font:600 11px var(--mono);text-transform:uppercase;letter-spacing:.05em;color:var(--muted)}
+.paper-s{background:#fffdf7;font-family:"Times New Roman",Georgia,serif;color:#222;border-right:1px solid var(--line)}
+.paper-s .pi{border-bottom:1px solid #e4dccb;padding:8px 2px}
+.paper-s .pi:last-child{border-bottom:0}
+.tab-s{background:#1b2a55;border-left:1px solid var(--line)}
+.tab-s .dl{color:var(--b2)}
+.tab-s .ti{box-shadow:none}
+.d-none{font-size:13.5px;font-style:italic;color:var(--muted);padding:10px;border:1px dashed var(--line);border-radius:8px;font-family:var(--body)}
+.tab-s .d-none{color:var(--b1);border-color:#33498a}
+.dmid{padding:14px 16px;display:flex;flex-direction:column;gap:8px;justify-content:center;background:var(--paper)}
+.dm-b,.dm-a{border-radius:8px;padding:10px 12px}
+.dm-b{background:#fff;border:1px solid var(--line)}
+.dm-a{background:#e2f6f6;border:1px solid var(--teal)}
+.dm-b span,.dm-a span{font:700 10.5px var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+.dm-a span{color:#1f7f84}
+.dm-b p,.dm-a p{font-size:14px;line-height:1.5;margin-top:3px}
+.dm-arrow{align-self:center;color:var(--teal);font:700 18px var(--mono);transform:rotate(90deg)}
+@media (prefers-reduced-motion: no-preference){
+  .js .drow .dm-a{opacity:0;transform:translateY(8px);transition:opacity .5s ease .4s,transform .5s ease .4s}
+  .js .drow.in .dm-a{opacity:1;transform:none}
+}
 /* testing */
 .mission{display:flex;flex-direction:column;gap:14px}
 .mission .tag{align-self:flex-start;font-family:var(--mono);font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--tint);color:var(--navy);border:1px solid var(--tint2)}
@@ -788,7 +850,8 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   .hero h1{font-size:38px}
   .hero-grid,.three{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kf-cover{grid-column:1/-1}
-  .pt-two{grid-template-columns:minmax(0,1fr)}
+  .dgrid,.dsum{grid-template-columns:minmax(0,1fr)}
+  .paper-s{border-right:0}.tab-s{border-left:0}
   .iter-s{grid-template-columns:repeat(2,minmax(0,1fr));row-gap:14px}
   .trc-grid,.scn-lanes{grid-template-columns:minmax(0,1fr)}
   .lane.eg{border-left:0;border-top:1px solid var(--line)}
@@ -839,6 +902,7 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   .sec-head h2{font-size:30px}
 }
 @media print{
+  .csv .cl{stroke-dasharray:none!important;stroke-dashoffset:0!important}.csv .cd,.csv .co{opacity:1!important}
   .trc .pp,.th-b i,.tm-range,.scn .st,.scn .ar,.scn .lane-r,.cz-t .here{opacity:1!important;transform:none!important}
   .wh .st,.wh .ar,.wh .wh-out{opacity:1!important;transform:none!important}
   .rv,.steps li,.cz-t tbody tr,.fmx .fr,.dmap .rev,.dmap .pipe,.dmap .tst,.cb,.track .fill,.track .live{opacity:1!important;transform:none!important}
@@ -910,13 +974,9 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       </ol>
     </div>
     <div class="partners">
-      <p class="pt-intro">The work is led by EGRISS Technical Subgroup 2 (TSG2) and its task team on identification questions, and is supported by UNHCR’s Data Innovation Fund.</p>
-      <div class="pt-group"><span class="pt-gl">Task team and partners</span><div class="pt-grid"><div class="pt"><div class="pt-logo"><img src="logos/unhcr.svg" alt="UNHCR logo" loading="lazy"></div><b>UNHCR</b><span>Statistics and survey teams; hosts the EGRISS Secretariat</span></div><div class="pt"><div class="pt-logo"><img src="logos/world-bank.svg" alt="World Bank logo" loading="lazy"></div><b>World Bank</b><span>LSMS surveys and the EHCVM</span></div><div class="pt"><div class="pt-logo"><img src="logos/unicef.svg" alt="UNICEF logo" loading="lazy"></div><b>UNICEF</b><span>MICS displacement module</span></div><div class="pt"><div class="pt-logo"><img src="logos/iom.jpg" alt="IOM logo" loading="lazy"></div><b>IOM</b><span>Displacement Tracking Matrix</span></div><div class="pt"><div class="pt-logo"><img src="logos/ilo.svg" alt="ILO logo" loading="lazy"></div><b>ILO</b><span>Labour force surveys</span></div><div class="pt"><div class="pt-logo"><span class="pt-word">JIPS</span></div><b>JIPS</b><span>Joint IDP Profiling Service</span></div><div class="pt"><div class="pt-logo"><span class="pt-word">IDMC</span></div><b>IDMC</b><span>Internal Displacement Monitoring Centre</span></div><div class="pt"><div class="pt-logo"><span class="pt-word">JDC</span></div><b>Joint Data Center</b><span>World Bank–UNHCR Joint Data Center on Forced Displacement</span></div><div class="pt"><div class="pt-logo"><span class="pt-word">Samuel Hall</span></div><b>Samuel Hall</b><span>Research on migration and displacement</span></div></div></div>
-      <div class="pt-two">
-        <div class="pt-group"><span class="pt-gl">National statistical offices</span><div class="pt-grid"><div class="pt"><div class="pt-logo"><span class="pt-word">Stats SA</span></div><b>Statistics South Africa</b><span>National statistical office</span></div><div class="pt"><div class="pt-logo"><img src="logos/inegi.png" alt="INEGI logo" loading="lazy"></div><b>INEGI</b><span>National statistical office, Mexico</span></div><div class="pt"><div class="pt-logo"><img src="logos/hcp.png" alt="Haut-Commissariat au Plan logo" loading="lazy"></div><b>Haut-Commissariat au Plan</b><span>National statistical office, Morocco</span></div><div class="pt"><div class="pt-logo"><span class="pt-word">NBS Nigeria</span></div><b>National Bureau of Statistics</b><span>Nigeria · cognitive testing</span></div></div></div>
-        <div class="pt-group"><span class="pt-gl">Testing</span><div class="pt-grid"><div class="pt"><div class="pt-logo"><img src="logos/ucph.svg" alt="University of Copenhagen logo" loading="lazy"></div><b>University of Copenhagen</b><span>AI interviewer for remote cognitive testing</span></div></div></div>
-      </div>
-      <p class="pt-note">Logos from Wikimedia Commons; organisations without an openly licensed logo there are shown by name.</p>
+      <p class="pt-intro">Led by EGRISS Technical Subgroup 2 (TSG2) and its task team on identification questions, with national statistical offices and testing partners; supported by UNHCR’s Data Innovation Fund.</p>
+      <ul class="pt-strip"><li class="pt" title="UNHCR: Statistics and survey teams; hosts the EGRISS Secretariat"><span class="pt-logo"><img src="logos/unhcr.svg" alt="UNHCR logo" loading="lazy"></span><b>UNHCR</b></li><li class="pt" title="World Bank: LSMS surveys and the EHCVM"><span class="pt-logo"><img src="logos/world-bank.svg" alt="World Bank logo" loading="lazy"></span><b>World Bank</b></li><li class="pt" title="UNICEF: MICS displacement module"><span class="pt-logo"><img src="logos/unicef.svg" alt="UNICEF logo" loading="lazy"></span><b>UNICEF</b></li><li class="pt" title="IOM: Displacement Tracking Matrix"><span class="pt-logo"><img src="logos/iom.jpg" alt="IOM logo" loading="lazy"></span><b>IOM</b></li><li class="pt" title="ILO: Labour force surveys"><span class="pt-logo"><img src="logos/ilo.svg" alt="ILO logo" loading="lazy"></span><b>ILO</b></li><li class="pt" title="JIPS: Joint IDP Profiling Service"><span class="pt-logo"><img src="logos/jips.svg" alt="JIPS logo" loading="lazy"></span><b>JIPS</b></li><li class="pt" title="IDMC: Internal Displacement Monitoring Centre"><span class="pt-logo"><img src="logos/idmc.svg" alt="IDMC logo" loading="lazy"></span><b>IDMC</b></li><li class="pt" title="Joint Data Center: World Bank–UNHCR Joint Data Center on Forced Displacement"><span class="pt-logo"><img src="logos/jdc.png" alt="Joint Data Center logo" loading="lazy"></span><b>JDC</b></li><li class="pt" title="Samuel Hall: Research on migration and displacement"><span class="pt-logo"><img class="tint" src="logos/samuel-hall.png" alt="Samuel Hall logo" loading="lazy"></span><b>Samuel Hall</b></li><li class="pt" title="Statistics South Africa: National statistical office"><span class="pt-logo"><span class="pt-word">Stats SA</span></span><b>Stats SA</b></li><li class="pt" title="INEGI: National statistical office, Mexico"><span class="pt-logo"><img src="logos/inegi.png" alt="INEGI logo" loading="lazy"></span><b>INEGI</b></li><li class="pt" title="Haut-Commissariat au Plan: National statistical office, Morocco"><span class="pt-logo"><img src="logos/hcp.png" alt="Haut-Commissariat au Plan logo" loading="lazy"></span><b>HCP Morocco</b></li><li class="pt" title="National Bureau of Statistics: Nigeria · cognitive testing"><span class="pt-logo"><img src="logos/nbs-nigeria.png" alt="NBS Nigeria logo" loading="lazy"></span><b>NBS Nigeria</b></li><li class="pt" title="University of Copenhagen: AI interviewer for remote cognitive testing"><span class="pt-logo"><img src="logos/ucph.svg" alt="University of Copenhagen logo" loading="lazy"></span><b>Univ. of Copenhagen</b></li></ul>
+      <p class="pt-note">Logos from Wikimedia Commons and the organisations’ own websites.</p>
     </div>
   </div>
 </section>
@@ -1081,36 +1141,13 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
 
     <div class="flows-block">
       <div class="sec-head" style="margin:72px 0 22px">
-        <h3 style="font-size:28px">How four people run through each questionnaire</h3>
-        <p class="lede" style="font-size:17px">A refugee, an IDP, an international migrant and an internal migrant, each followed through your four migration and displacement modules and through the revised EGRISS module. The routes follow the printed skips, so you can see how many questions each person is asked and where they come out.</p>
+        <h3 style="font-size:28px">A refugee and an IDP, through every questionnaire</h3>
+        <p class="lede" style="font-size:17px">For each questionnaire, the line runs through the questions that bear on that person, in the order they are asked, and ends with what the questionnaire identifies them as. The revised EGRISS module and your module are at the top.</p>
       </div>
-      <div class="scns"><div class="scn">
-        <div class="scn-h"><span class="wh-n">1</span><div><h4>Refugee</h4><p>Fled conflict in a neighbouring country five years ago; recognised as a refugee here</p></div></div>
-        <div class="scn-lanes">
-          <div class="lane st"><div class="lane-h">Your modules, in the order of your placement guidance</div><div class="sc-mod"><span class="sc-mn">Immigration</span><div class="sc-st"><span class="st">M3</span><span class="ar">›</span><span class="st">M3A</span><span class="ar">›</span><span class="st">M4A</span><span class="ar">›</span><span class="st">M4B</span><span class="ar">›</span><span class="st">M4C</span><span class="ar">›</span><span class="st">M4D</span><span class="ar">›</span><span class="st">M4E</span></div><span class="sc-me">Reason 13: political instability, conflict, persecution</span></div><div class="sc-mod"><span class="sc-mn">Internal migration</span><div class="sc-st"><span class="st">M5A</span></div><span class="sc-me">Ends: never moved within the country</span></div><div class="sc-mod"><span class="sc-mn">Refugee module</span><div class="sc-st"><span class="st">RF1</span><span class="ar">›</span><span class="st">RF2</span><span class="ar">›</span><span class="st">RF3B</span><span class="ar">›</span><span class="st">RF4</span><span class="ar">›</span><span class="st">RF5</span><span class="ar">›</span><span class="st">RF7</span><span class="ar">›</span><span class="st">RF8B</span></div><span class="sc-me">Ends at RF8B: granted</span></div><div class="sc-mod"><span class="sc-mn">IDP module</span><div class="sc-st"><span class="st">ID1</span></div><span class="sc-me">Ends: fled abroad</span></div><div class="lane-r"><i class="oc ok"></i><b>Refugee</b><span>16 questions across four modules</span></div></div>
-          <div class="lane eg"><div class="lane-h">EGRISS revised module</div><div class="sc-mod"><span class="sc-mn">One module</span><div class="sc-st"><span class="st">FrcFl</span><span class="ar">›</span><span class="st">FleeLoc</span><span class="ar">›</span><span class="st">LocLiv</span><span class="ar">›</span><span class="st">Apply</span><span class="ar">›</span><span class="st">Outcome</span><span class="ar">›</span><span class="st">Legal</span></div></div><div class="lane-r"><i class="oc ok"></i><b>Refugee</b><span>6 questions</span></div></div>
-        </div>
-      </div><div class="scn">
-        <div class="scn-h"><span class="wh-n">2</span><div><h4>IDP</h4><p>Fled violence in another part of the country; never left it</p></div></div>
-        <div class="scn-lanes">
-          <div class="lane st"><div class="lane-h">Your modules, in the order of your placement guidance</div><div class="sc-mod"><span class="sc-mn">Immigration</span><div class="sc-st"><span class="st">M3</span><span class="ar">›</span><span class="st">M3A</span><span class="ar">›</span><span class="st">M3B</span><span class="ar">›</span><span class="st">M4A</span></div><span class="sc-me">Ends: never lived abroad</span></div><div class="sc-mod"><span class="sc-mn">Internal migration</span><div class="sc-st"><span class="st">M5A</span><span class="ar">›</span><span class="st">M5B</span><span class="ar">›</span><span class="st">M5C</span><span class="ar">›</span><span class="st">M5D</span><span class="ar">›</span><span class="st">M5E</span></div><span class="sc-me">Reason 13 or 14: conflict, crime</span></div><div class="sc-mod"><span class="sc-mn">Refugee module</span><div class="sc-st"><span class="st">RF1</span><span class="ar">›</span><span class="st">RF2</span><span class="ar">›</span><span class="st">RF3A</span><span class="ar">›</span><span class="st">RF4</span><span class="ar">›</span><span class="st">RF5</span></div><span class="sc-me">Ends at RF5: did not cross a border</span></div><div class="sc-mod"><span class="sc-mn">IDP module</span><div class="sc-st"><span class="st">ID1</span><span class="ar">›</span><span class="st">ID2</span><span class="ar">›</span><span class="st">ID3</span><span class="ar">›</span><span class="st">ID4</span><span class="ar">›</span><span class="st">ID6</span></div><span class="sc-me">Place before and first place recorded</span></div><div class="lane-r"><i class="oc ok"></i><b>IDP</b><span>19 questions across four modules</span></div></div>
-          <div class="lane eg"><div class="lane-h">EGRISS revised module</div><div class="sc-mod"><span class="sc-mn">One module</span><div class="sc-st"><span class="st">FrcFl</span><span class="ar">›</span><span class="st">FleeLoc</span><span class="ar">›</span><span class="st">IDPLoc</span><span class="ar">›</span><span class="st">LocLiv</span><span class="ar">›</span><span class="st">FleeCross</span><span class="ar">›</span><span class="st">IDPPost</span><span class="ar">›</span><span class="st">Legal</span></div></div><div class="lane-r"><i class="oc ok"></i><b>IDP</b><span>7 questions</span></div></div>
-        </div>
-      </div><div class="scn">
-        <div class="scn-h"><span class="wh-n">3</span><div><h4>International migrant</h4><p>Came from another country for work; never had to flee</p></div></div>
-        <div class="scn-lanes">
-          <div class="lane st"><div class="lane-h">Your modules, in the order of your placement guidance</div><div class="sc-mod"><span class="sc-mn">Immigration</span><div class="sc-st"><span class="st">M3</span><span class="ar">›</span><span class="st">M3A</span><span class="ar">›</span><span class="st">M4A</span><span class="ar">›</span><span class="st">M4B</span><span class="ar">›</span><span class="st">M4C</span><span class="ar">›</span><span class="st">M4D</span><span class="ar">›</span><span class="st">M4E</span></div><span class="sc-me">Reason 02: look for paid work</span></div><div class="sc-mod"><span class="sc-mn">Internal migration</span><div class="sc-st"><span class="st">M5A</span></div><span class="sc-me">Ends: never moved within the country</span></div><div class="sc-mod"><span class="sc-mn">Refugee module</span><div class="sc-st"><span class="st">RF1</span><span class="ar">›</span><span class="st">RF2</span><span class="ar">›</span><span class="st">RF3B</span></div><span class="sc-me">Ends at RF3B: never fled</span></div><div class="sc-mod"><span class="sc-mn">IDP module</span><div class="sc-st"><span class="st">ID1</span></div><span class="sc-me">Ends: never fled</span></div><div class="lane-r"><i class="oc na"></i><b>International migrant, not displaced</b><span>12 questions across four modules</span></div></div>
-          <div class="lane eg"><div class="lane-h">EGRISS revised module</div><div class="sc-mod"><span class="sc-mn">One module</span><div class="sc-st"><span class="st">FrcFl</span><span class="ar">›</span><span class="st">Legal</span></div></div><div class="lane-r"><i class="oc na"></i><b>Not displaced; document shows a work visa</b><span>2 questions; the migration route adds CoOr › CitYN › ResMig</span></div></div>
-        </div>
-      </div><div class="scn">
-        <div class="scn-h"><span class="wh-n">4</span><div><h4>Internal migrant</h4><p>Moved to the capital for work; never had to flee</p></div></div>
-        <div class="scn-lanes">
-          <div class="lane st"><div class="lane-h">Your modules, in the order of your placement guidance</div><div class="sc-mod"><span class="sc-mn">Immigration</span><div class="sc-st"><span class="st">M3</span><span class="ar">›</span><span class="st">M3A</span><span class="ar">›</span><span class="st">M3B</span><span class="ar">›</span><span class="st">M4A</span></div><span class="sc-me">Ends: never lived abroad</span></div><div class="sc-mod"><span class="sc-mn">Internal migration</span><div class="sc-st"><span class="st">M5A</span><span class="ar">›</span><span class="st">M5B</span><span class="ar">›</span><span class="st">M5C</span><span class="ar">›</span><span class="st">M5D</span><span class="ar">›</span><span class="st">M5E</span></div><span class="sc-me">Reason 02: look for paid work</span></div><div class="sc-mod"><span class="sc-mn">Refugee module</span><div class="sc-st"><span class="st">RF1</span><span class="ar">›</span><span class="st">RF2</span><span class="ar">›</span><span class="st">RF3A</span></div><span class="sc-me">Ends at RF3A: never fled</span></div><div class="sc-mod"><span class="sc-mn">IDP module</span><div class="sc-st"><span class="st">ID1</span></div><span class="sc-me">Ends: never fled</span></div><div class="lane-r"><i class="oc na"></i><b>Internal migrant, not displaced</b><span>13 questions across four modules</span></div></div>
-          <div class="lane eg"><div class="lane-h">EGRISS revised module</div><div class="sc-mod"><span class="sc-mn">One module</span><div class="sc-st"><span class="st">FrcFl</span><span class="ar">›</span><span class="st">Legal</span></div></div><div class="lane-r"><i class="oc na"></i><b>Not displaced; document is a national ID card</b><span>2 questions; the migration route adds ArOr › ResMov</span></div></div>
-        </div>
-      </div>
-      </div>
-      <p class="src">Your modules: Draft 0, in the order your placement guidance gives (international immigration, internal migration, refugees, IDPs), without the household roster questions. Reasons for migration are coded from your list. The EGRISS migration route is a variant being tested for surveys that already ask why people moved.</p>
+      <div class="cs-leg"><span><i class="oc ok"></i>Identified</span><span><i class="oc part"></i>Partly identified</span><span><i class="oc out"></i>Not identified</span><span><i class="oc nc"></i>Not assessed in the desk review</span><span><i class="oc na"></i>Outside the questionnaire’s scope</span></div>
+      <div class="case" id="case-ref"><div class="case-h"><span class="case-n">Case 1</span><h4>A refugee</h4><p>Fled conflict in another country; applied and was recognised as a refugee here</p></div><div class="case-w"></div></div>
+      <div class="case" id="case-idp"><div class="case-h"><span class="case-n">Case 2</span><h4>An IDP</h4><p>Fled violence inside the country; never left it</p></div><div class="case-w"></div></div>
+      <p class="src">Questions: EGRISS identification questions question bank (November 2026), matched to the revised items. Outcomes: the task team’s coding in the desk review (January 2026) of whether each survey identifies refugees, or IDPs in their place of displacement; point at a result to read the reviewer’s note. For your module and the EGRISS module, the line follows the printed routing for this person.</p>
     </div>
   </div>
 </section>
@@ -1270,11 +1307,15 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">5 · Side by side</div>
-      <h2>Your questionnaire and ours, page against page</h2>
+      <h2>Eight differences, side by side</h2>
       <div class="rule"></div>
-      <p class="lede">Your modules as printed in Draft 0, beside the latest EGRISS module as an interviewer would see it on a tablet. The lines join questions that cover the same point; the numbers mark the main differences. Select a number to follow it on both sides.</p>
+      <p class="lede">Each difference shows your question as printed in Draft 0, the EGRISS question that replaces it, and what the change means for who is counted.</p>
     </div>
 
+    <div class="dsum" id="dsum"></div>
+    <div class="diffs" id="diffs"></div>
+
+    <details class="more" id="sbs-more"><summary>See both questionnaires in full, with every link</summary>
     <div class="sbs-tools">
       <div class="fl-filter" role="group" aria-label="Your module" id="sbs-mod">
         <button type="button" data-m="rf" aria-pressed="true">Your refugee module</button>
@@ -1337,6 +1378,8 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
     </div>
 
     <div class="kd" id="kd"></div>
+
+    </details>
 
     <div class="where">
       <div class="sec-head" style="margin:72px 0 22px">
@@ -2060,12 +2103,97 @@ document.querySelectorAll('.ff').forEach(function (box) {
     });
   });
 });
+
+/* ---------- two cases through every questionnaire ---------- */
+(function () {
+  var D = {"ref":{"cols":["CoOr","CitYN","FrcFl","FrcOth","FleeLoc","LocLiv","CitLoc","ResMig","FleeCross","12Mnths","Apply","IntApply","Outcome","Legal"],"rows":[{"id":"25bis_EMOP_MLI","c":"Mali","n":"EMOP 2026, MDF module and edition 15","s":[["ResMig",["MDF01"]],["Apply",["MDF03"]],["Outcome",["MDF04"]],["Legal",["MDF05"]],["FrcFl",["MDF06","MDF07","MDF08","MDF09"]],["FleeCross",["MDF10"]],["12Mnths",["MDF11"]],["Apply",["MDF12"]],["Outcome",["MDF13"]],["CitYN",["E15-M07a"]],["FrcFl",["E15-IDP01","E15-IDP02"]],["CoOr",["E15-Q1"]],["CitYN",["E15-Q2"]],["FrcFl",["E15-Q3","E15-Q4","E15-Q5"]],["FleeCross",["E15-Q7"]],["12Mnths",["E15-Q8a"]],["Legal",["E15-Q8b"]],["Apply",["E15-Q10"]],["IntApply",["E15-Q11"]],["Outcome",["E15-Q12"]]],"o":"yes","t":"YES"},{"id":"32_EHCVM","c":"10 countries","n":"EHCVM 2026","s":[["CitYN",["1.15"]],["FrcFl",["1.54A","1.54B","1.55"]],["Legal",["1.57"]],["FleeCross",["1.58b"]],["12Mnths",["1.59"]],["FrcFl",["1.61"]],["Legal",["1.62"]],["Apply",["1.72"]],["IntApply",["1.73"]],["Outcome",["1.74"]]],"o":"yes","t":"Yes via the documentation question. (0.02) Quelle est la principale pièce d'identité que possède [NOM] ?"},{"id":"11_KIHBS_KEN","c":"Kenya","n":"KIHBS 2025/26","s":[["ResMig",["B21"]],["CitYN",["B21B"]],["CoOr",["B22"]],["FrcFl",["B26","B26A","B27","B28"]],["FleeCross",["B29"]],["12Mnths",["B30"]],["Apply",["B31","B32"]],["Outcome",["B33"]],["Legal",["B34"]]],"o":"yes","t":"Yes. B34 (\"What is the primary document that allows [NAME] to stay in Kenya?\") code 9=Refugee Identity Card and B33 (\"What is the outcome of [NAME]'s application for international "},{"id":"28bis_MICS_BFA","c":"Burkina Faso","n":"MICS displacement module","s":[["CitYN",["WCA1"]],["Legal",["WCA2"]],["FrcFl",["WCA3","WCA4"]],["Legal",["WCA5"]],["FleeCross",["WCA6"]],["12Mnths",["WCA7"]],["Apply",["WCA8A"]],["Outcome",["WCA8B"]]],"o":"yes","t":"Yes"},{"id":"10_SESRE_ETH","c":"Ethiopia","n":"SESRE 2022/23","s":[["CitYN",["1109"]],["Apply",["1111","1112"]],["Outcome",["1113"]],["IntApply",["1114"]],["ResMig",["1117"]],["CoOr",["1306"]],["Legal",["6901"]]],"o":"yes","t":"Yes — for both in-camp and out-of-camp strata: Q10 = 3 (in-camp) or Q10 = 2 (out-of-camp) establishes the refugee stratum. Q1109 (foreign citizenship, i.e., non-Ethiopian) confirms"},{"id":"12_HBS_SSD","c":"South Sudan","n":"Household Budget Survey 2025","s":[["CitYN",["B09_2"]],["Apply",["B09_4"]],["FrcFl",["B09_5"]],["FrcOth",["B09_6"]],["FleeLoc",["B09_7"]],["FleeCross",["B09_8"]],["Apply",["B09_10"]]],"o":"yes","t":"Yes"},{"id":"01_ENAHOPV","c":"Peru","n":"ENAHOPV 2024","s":[["Legal",["1001","1002"]],["Apply",["1004"]],["IntApply",["1005"]]],"o":"yes","t":"Yes — Q1004: \"¿Usted, ha solicitado la condicion de refugiado?\" [Have you applied for refugee status?] code 3 = \"Si, soy refugiado reconocido (Recibi Resolucion positiva de la CEPR"},{"id":"14_UNHS_UGA","c":"Uganda","n":"UNHS 2023/24 (data documentation)","s":[["CitYN",["R09a_1","R13"]],["CoOr",["R13a_1"]],["Legal",["R15"]]],"o":"yes","t":"Yes"},{"id":"19_PHC_RWA","c":"Rwanda","n":"Census 2022","s":[["CoOr",["P10B"]],["CitYN",["P12A"]],["Legal",["P25","P27 / P28"]]],"o":"yes","t":"Yes"},{"id":"08_EICVMB_BDI","c":"Burundi","n":"EICVMB 2019/20","s":[["CitYN",["1.15"]],["FrcFl",["(I,21c1)"]]],"o":"yes","t":"Yes — Q1.21c1 code 2 (Réfugié [Refugee]) directly identifies recognized or self-identified refugees at the individual level, applied to all household members in the roster. This is"},{"id":"18_PHC_KEN","c":"Kenya","n":"Census 2019","s":[["CitYN",["P-16"]]],"o":"yes","t":"Yes. 'Why did NAME move to the current place of residence?' code 8 = Refugee."},{"id":"34_GPHC_CMR","c":"Cameroon","n":"Census 2026","s":[["CitYN",["P08"]]],"o":"yes","t":"Yes via the question on the main reason for coming to Cameroon; one of the response option is 'forceful displacement of a refugee'. So it's a self-assessment. "},{"id":"02_ECH_CR","c":"Costa Rica","n":"ECH migration module (cognitive test, form B)","s":[["CitYN",["MI2a1 (Form A)","ACNUR MI2a1"]],["ResMig",["MI5"]],["Legal",["DM6a"]]],"o":"partial","t":"Not explicitly captured. No code in DM6a corresponds to a recognized refugee's document. The quota category 'Persona refugiada' [Recognized refugee] selects recognized refugees for"},{"id":"16_PHC_BDI","c":"Burundi","n":"Census 2024","s":[["FrcFl",["M09B"]],["CitYN",["P09"]],["ResMig",["P18"]]],"o":"partial","t":"Partially. M09=2 \"Refugee camp households\" + P10=2 (foreign nationality) approximates, but this is site-based, not legal-status-based. Does not distinguish recognized refugees from"},{"id":"FDS_PAK_2024","c":"Pakistan","n":"Forced Displacement Survey 2024 (online, labels)","s":[["CoOr",["HH_00"]],["CitYN",["ID_00"]],["FrcFl",["ID_01a","ID_01a_2","ID_01b","ID_02"]],["FleeCross",["ID_03"]],["12Mnths",["ID_04"]],["Apply",["ID_05"]],["IntApply",["ID_06"]],["Outcome",["ID_06b"]],["Legal",["ID_09"]]],"o":"nc","t":""},{"id":"FDS_SSD_2023","c":"South Sudan","n":"Forced Displacement Survey 2023 (online)","s":[["CoOr",["HH_00"]],["CitYN",["ID_00"]],["FrcFl",["ID_01a","ID_01b","ID_02"]],["FleeCross",["ID_03"]],["12Mnths",["ID_04"]],["Apply",["ID_05"]],["IntApply",["ID_06"]],["Outcome",["ID_06b"]],["Legal",["ID_09"]]],"o":"nc","t":""},{"id":"38_MEDHIMS_MOR","c":"Morocco (regional model)","n":"MED-HIMS model questionnaire","s":[["CitYN",["HH108"]],["CoOr",["HH302"]],["ResMig",["HH405","FM105"]],["Apply",["FM112","FM113"]],["Outcome",["FM115","FM203"]],["Legal",["FM204","FM205"]]],"o":"nc","t":""},{"id":"17_PHC_DJI","c":"Djibouti","n":"Census RGPH3","s":[["CitYN",["P07"]],["Legal",["P11"]],["Outcome",["P14.a"]],["Apply",["P14.b"]],["Outcome",["P15"]]],"o":"nc","t":""},{"id":"00_IDP_AFG","c":"Afghanistan","n":"IDP module draft (UNHCR/IOM)","s":[["FrcFl",["IDP04","IDP05"]],["FleeCross",["IDP09"]],["12Mnths",["IDP10"]],["Outcome",["IDP11"]]],"o":"nc","t":""},{"id":"37_RGPH2024_MOR","c":"Morocco","n":"Census 2024","s":[["CitYN",["2.4"]],["CoOr",["5.11"]],["ResMig",["5.12"]]],"o":"nc","t":""},{"id":"41_UKR_IDP","c":"Ukraine","n":"IDP add-on questionnaire","s":[["FrcFl",["1","2","3"]],["FleeCross",["3.3"]],["12Mnths",["3.5"]]],"o":"nc","t":""},{"id":"20_PHC_UGA","c":"Uganda","n":"Census 2024","s":[["CitYN",["P10"]],["Outcome",["P28"]]],"o":"nc","t":""},{"id":"22_DS_MOZ","c":"Mozambique","n":"Urban DS profiling, Pemba","s":[["Legal",["S2Q9"]],["FrcFl",["S3Q3","S3Q4","S3Q9"]]],"o":"nc","t":""},{"id":"26_PHC_MLI","c":"Mali","n":"Census RGPH5","s":[["CitYN",["P09A"]],["FrcFl",["P33"]]],"o":"nc","t":""},{"id":"40_SSESR_MOR","c":"Morocco","n":"Socio-economic survey of refugees 2022","s":[["ResMig",["1.23"]],["Legal",["2.4"]]],"o":"nc","t":"Only 'Forced displaced' as one of the main reasons for leaving country of origin; no disaggragation (refugee vs asylum seeker. etc)"},{"id":"28_SEPS_BFA","c":"Burkina Faso","n":"IDP socio-economic and protection survey 2024 (online, labels)","s":[["FrcFl",["s01q16"]],["Legal",["s01q07e"]]],"o":"nc","t":""},{"id":"05_ENVIPE_MEX","c":"Mexico","n":"ENVIPE 2023 and 2025","s":[["FrcFl",["4.11-10","4.11 (AP4_11_10)"]]],"o":"nc","t":""},{"id":"06_ENADID_MEX","c":"Mexico","n":"ENADID 2023","s":[["CitYN",["3.11"]]],"o":"nc","t":""},{"id":"07_LEONA_MMR","c":"Myanmar","n":"LEONA 2025 (excerpt)","s":[["FrcFl",["B.02"]]],"o":"nc","t":""},{"id":"25_EMOP_MLI","c":"Mali","n":"EMOP 2025, passages 1 and 2","s":[["CitYN",["M07a","M07a"]],["Legal",["PDI.1"]],["FrcFl",["PDI.4"]],["FleeCross",["PDI.6"]],["12Mnths",["PDI.7"]],["Apply",["PDI.8"]]],"o":"na","t":"NA"},{"id":"21_DS_CMR","c":"Cameroon","n":"PESoP profiling 2024/25","s":[["CitYN",["S2Q4"]],["Legal",["S2Q5"]],["FleeLoc",["S2AQ2"]],["Legal",["S2Q12"]]],"o":"na","t":"N/A — IRIS only survey."},{"id":"03_EPHPM_HON","c":"Honduras","n":"EPHPM 2024","s":[["Legal",["DOC01"]],["12Mnths",["RE01"]],["FrcFl",["FD01","FD02","FD03"]]],"o":"na","t":"N/A"}],"top":[{"id":"EG","c":"EGRISS","n":"Revised module","s":[["FrcFl",["FrcFl"]],["FleeLoc",["FleeLoc"]],["LocLiv",["LocLiv"]],["Apply",["Apply"]],["Outcome",["Outcome"]],["Legal",["Legal"]]],"o":"yes","t":"Fled a home in another country, applied, granted: refugee."},{"id":"AU","c":"STATAFRIC","n":"Refugee module (Draft 0)","s":[["CoOr",["RF1"]],["CitYN",["RF2"]],["FrcFl",["RF3B","RF4"]],["FleeCross",["RF5"]],["Apply",["RF7"]],["Outcome",["RF8B"]]],"o":"yes","t":"RF1 no, RF2 other country, RF3B, RF4, RF5, RF7, RF8B granted: refugee. Ends before RF9."}]},"idp":{"cols":["ArOr","FrcFl","FrcOth","FleeLoc","IDPLoc","ResMov","FleeCross","IDPPost","12Mnths","AbleRet","Legal"],"rows":[{"id":"25_EMOP_MLI","c":"Mali","n":"EMOP 2025, passages 1 and 2","s":[["ArOr",["M11"]],["ResMov",["M14"]],["IDPLoc",["M14a"]],["Legal",["PDI.1"]],["ArOr",["M11"]],["IDPLoc",["M13a/M13c"]],["FrcFl",["PDI.4"]],["ResMov",["M14"]],["FleeCross",["PDI.6"]],["12Mnths",["PDI.7"]]],"o":"yes","t":"Yes "},{"id":"03_EPHPM_HON","c":"Honduras","n":"EPHPM 2024","s":[["ArOr",["CD03"]],["ResMov",["CD05"]],["Legal",["DOC01"]],["12Mnths",["RE01"]],["FrcFl",["FD01","FD02","FD03"]],["IDPLoc",["FD05a"]],["IDPPost",["FD05b"]],["AbleRet",["FD08"]]],"o":"yes","t":"Yes"},{"id":"22_DS_MOZ","c":"Mozambique","n":"Urban DS profiling, Pemba","s":[["Legal",["S2Q9"]],["ArOr",["S3Q2"]],["FrcFl",["S3Q3","S3Q4"]],["IDPLoc",["S3Q5"]],["FrcFl",["S3Q9"]],["IDPPost",["S3Q11","S3Q12"]],["AbleRet",["S12Q2","S12Q5"]]],"o":"yes","t":"Yes — S3Q6=no + strata identify displacement locations"},{"id":"21_DS_CMR","c":"Cameroon","n":"PESoP profiling 2024/25","s":[["Legal",["S2Q5"]],["ArOr",["S2AQ1"]],["FleeLoc",["S2AQ2"]],["ResMov",["S2AQ3"]],["IDPLoc",["S2AQ6-8"]],["AbleRet",["S2AQ10","S2AQ11"]],["Legal",["S2Q12"]]],"o":"yes","t":"Yes — is_idp_hh = Yes identifies IDP households at their current location regardless of settlement type. Because the survey is not site-based, IDPs living in host community househo"},{"id":"16_PHC_BDI","c":"Burundi","n":"Census 2024","s":[["FrcFl",["M09B"]],["ArOr",["P11a"]],["ResMov",["P13"]]],"o":"yes","t":"Yes — M09=3 \"IDP site households\" directly identifies. Limited to designated sites only; IDPs in non-site locations (host communities, urban self-settled) are missed (classified M0"},{"id":"08_EICVMB_BDI","c":"Burundi","n":"EICVMB 2019/20","s":[["ArOr",["1.18","1.19"]],["FrcFl",["(I,21c1)"]],["AbleRet",["(I,21d)"]],["IDPPost",["(I,21e)","(I,21f)"]],["ResMov",["1.22","F4"]]],"o":"partial","t":"Partial — the F series captures internal household movement. Households with F00=1 (migrated in past 7 years) and F4 codes 7 or 8 (conflict/insecurity or land conflicts) are at a c"},{"id":"20_PHC_UGA","c":"Uganda","n":"Census 2024","s":[["ArOr",["P19"]],["ResMov",["P21"]]],"o":"partial","t":"Partial"},{"id":"18_PHC_KEN","c":"Kenya","n":"Census 2019","s":[["ResMov",["P-23"]]],"o":"partial","t":"Partial. Persons selecting 'Why did NAME move to the current place of residence?' code 7 = Conflict/Disaster displacement, enumerated at a location different from 'Where was NAME l"},{"id":"25bis_EMOP_MLI","c":"Mali","n":"EMOP 2026, MDF module and edition 15","s":[["Legal",["MDF05"]],["FrcFl",["MDF06","MDF07","MDF08","MDF09"]],["FleeCross",["MDF10"]],["12Mnths",["MDF11"]],["FrcFl",["E15-IDP01","E15-IDP02","E15-Q3","E15-Q4","E15-Q5"]],["IDPLoc",["E15-Q6"]],["FleeCross",["E15-Q7"]],["12Mnths",["E15-Q8a"]],["Legal",["E15-Q8b"]],["IDPPost",["E15-Q9"]]],"o":"no","t":"NO. Impossible to say, no detailed info on several movements."},{"id":"32_EHCVM","c":"10 countries","n":"EHCVM 2026","s":[["ArOr",["1.20"]],["ResMov",["1.23"]],["FrcFl",["1.54A","1.54B","1.55"]],["Legal",["1.57"]],["FleeCross",["1.58b"]],["12Mnths",["1.59"]],["IDPLoc",["1.60"]],["FrcFl",["1.61"]],["Legal",["1.62"]],["AbleRet",["1.70","1.71"]]],"o":"no","t":"Not possible to know if the person is still in the place of displacement or he/she experienced several displacements: They ask if the person has definitely left his/her place of re"},{"id":"28bis_MICS_BFA","c":"Burkina Faso","n":"MICS displacement module","s":[["Legal",["WCA2"]],["FrcFl",["WCA3","WCA4"]],["Legal",["WCA5"]],["FleeCross",["WCA6"]],["12Mnths",["WCA7"]],["AbleRet",["WCA10"]]],"o":"no","t":"No, not clear. We only know if they returned to their place of origin."},{"id":"34_GPHC_CMR","c":"Cameroon","n":"Census 2026","s":[["ArOr",["P14"]],["ResMov",["P15"]]],"o":"no","t":"No precise info on the displacement history."},{"id":"12_HBS_SSD","c":"South Sudan","n":"Household Budget Survey 2025","s":[["FrcFl",["B09_5"]],["FrcOth",["B09_6"]],["FleeLoc",["B09_7"]],["FleeCross",["B09_8"]],["ArOr",["B10"]],["ResMov",["B12"]]],"o":"nc","t":""},{"id":"41_UKR_IDP","c":"Ukraine","n":"IDP add-on questionnaire","s":[["FrcFl",["1","2"]],["IDPLoc",["2.2"]],["FrcFl",["3"]],["IDPLoc",["3.2"]],["FleeCross",["3.3"]],["12Mnths",["3.5"]]],"o":"nc","t":""},{"id":"11_KIHBS_KEN","c":"Kenya","n":"KIHBS 2025/26","s":[["ArOr",["B23"]],["IDPLoc",["B24"]],["FrcFl",["B26","B26A","B27","B28"]],["FleeCross",["B29"]],["12Mnths",["B30"]],["Legal",["B34"]]],"o":"nc","t":""},{"id":"FDS_PAK_2024","c":"Pakistan","n":"Forced Displacement Survey 2024 (online, labels)","s":[["FrcFl",["ID_01a","ID_01a_2","ID_01b","ID_02"]],["FleeCross",["ID_03"]],["12Mnths",["ID_04"]],["AbleRet",["ID_07"]],["Legal",["ID_09"]]],"o":"nc","t":""},{"id":"FDS_SSD_2023","c":"South Sudan","n":"Forced Displacement Survey 2023 (online)","s":[["FrcFl",["ID_01a","ID_01b","ID_02"]],["FleeCross",["ID_03"]],["12Mnths",["ID_04"]],["AbleRet",["ID_07"]],["Legal",["ID_09"]]],"o":"nc","t":""},{"id":"00_IDP_AFG","c":"Afghanistan","n":"IDP module draft (UNHCR/IOM)","s":[["FrcFl",["IDP04","IDP05"]],["IDPLoc",["IDP07"]],["FleeCross",["IDP09"]],["12Mnths",["IDP10"]]],"o":"nc","t":""},{"id":"26_PHC_MLI","c":"Mali","n":"Census RGPH5","s":[["ArOr",["P12A"]],["FrcFl",["P33"]],["IDPLoc",["P35"]],["AbleRet",["P36"]]],"o":"nc","t":""},{"id":"17_PHC_DJI","c":"Djibouti","n":"Census RGPH3","s":[["Legal",["P11"]],["ArOr",["P18"]],["ResMov",["P20"]]],"o":"nc","t":""},{"id":"38_MEDHIMS_MOR","c":"Morocco (regional model)","n":"MED-HIMS model questionnaire","s":[["AbleRet",["HH406"]],["Legal",["FM204","FM205"]],["AbleRet",["FM301","FM303"]]],"o":"nc","t":""},{"id":"28_SEPS_BFA","c":"Burkina Faso","n":"IDP socio-economic and protection survey 2024 (online, labels)","s":[["FrcFl",["s01q16"]],["Legal",["s01q07e"]],["AbleRet",["s12q01"]]],"o":"nc","t":""},{"id":"14_UNHS_UGA","c":"Uganda","n":"UNHS 2023/24 (data documentation)","s":[["ResMov",["R14c"]],["Legal",["R15"]]],"o":"nc","t":""},{"id":"19_PHC_RWA","c":"Rwanda","n":"Census 2022","s":[["ArOr",["P10A"]],["Legal",["P25","P27 / P28"]]],"o":"nc","t":""},{"id":"40_SSESR_MOR","c":"Morocco","n":"Socio-economic survey of refugees 2022","s":[["Legal",["2.4"]],["AbleRet",["7.4"]]],"o":"nc","t":""},{"id":"05_ENVIPE_MEX","c":"Mexico","n":"ENVIPE 2023 and 2025","s":[["FrcFl",["4.11-10","4.11 (AP4_11_10)"]]],"o":"nc","t":""},{"id":"06_ENADID_MEX","c":"Mexico","n":"ENADID 2023","s":[["ResMov",["3.18","3.26"]]],"o":"nc","t":""},{"id":"07_LEONA_MMR","c":"Myanmar","n":"LEONA 2025 (excerpt)","s":[["FrcFl",["B.02"]]],"o":"nc","t":""},{"id":"37_RGPH2024_MOR","c":"Morocco","n":"Census 2024","s":[["ArOr",["5.7"]]],"o":"nc","t":""},{"id":"10_SESRE_ETH","c":"Ethiopia","n":"SESRE 2022/23","s":[["AbleRet",["1116","1116A"]],["ArOr",["1305"]],["ResMov",["1311"]],["AbleRet",["6601 / 6604"]],["Legal",["6901"]]],"o":"na","t":"N/A — this is not an IDP survey. IDPs in displacement locations are not a defined statistical category. Section 1.3 collects migration history for Ethiopians but does not classify "},{"id":"01_ENAHOPV","c":"Peru","n":"ENAHOPV 2024","s":[["Legal",["1001","1002"]],["AbleRet",["1007","1008"]]],"o":"na","t":"N/A — IRIS only category. This is an IRRS survey."},{"id":"02_ECH_CR","c":"Costa Rica","n":"ECH migration module (cognitive test, form B)","s":[["AbleRet",["ACNUR_EC1","ACNUR_EC2"]],["Legal",["DM6a"]]],"o":"na","t":"N/A — IRIS only category. This is an IRRS survey."}],"top":[{"id":"EG","c":"EGRISS","n":"Revised module","s":[["FrcFl",["FrcFl"]],["FleeLoc",["FleeLoc"]],["IDPLoc",["IDPLoc"]],["FleeCross",["FleeCross"]],["IDPPost",["IDPPost"]],["Legal",["Legal"]]],"o":"yes","t":"Fled inside the country, never left: IDP, with place before and first place."},{"id":"AU","c":"STATAFRIC","n":"IDP module (Draft 0)","s":[["FrcFl",["ID1","ID2"]],["IDPLoc",["ID3"]],["FleeCross",["ID4"]],["IDPPost",["ID6"]]],"o":"yes","t":"ID1, ID2, ID3, ID4 no, ID6: IDP, with place before and first place."}]}};
+  if (!D) return;
+  var LAB = {CoOr:'Always lived here',CitYN:'Citizen',FrcFl:'Flee',FrcOth:'Other threat',FleeLoc:'Country fled',LocLiv:'Always lived there',CitLoc:'Citizen then',ResMig:'Why came',ArOr:'Always lived in area',ResMov:'Why moved',IDPLoc:'Place before',FleeCross:'Moved abroad',IDPPost:'First place','12Mnths':'Time abroad',Apply:'Applied',IntApply:'Planned to apply',Outcome:'Outcome',AbleRet:'Can return',Legal:'Document'};
+  var OUT = {yes:['ok','Identified'],partial:['part','Partly'],no:['out','Not identified'],nc:['nc','Not assessed'],na:['na','Out of scope']};
+  var COL = {ok:'#4cc3c9',part:'#e0a93b',out:'#f06667',nc:'#9fb0c8',na:'#c9d3e2'};
+  function draw(key) {
+    var c = D[key], rows = c.top.concat(c.rows), cols = c.cols;
+    var X0 = 330, CW = 46, RH = 26, TOP = 120, XO = X0 + (cols.length - 1) * CW + 70, W = XO + 150, H = TOP + rows.length * RH + 14;
+    function cx(m) { return X0 + cols.indexOf(m) * CW; }
+    var s = '<svg class="csv" viewBox="0 0 ' + W + ' ' + H + '" style="width:100%;min-width:' + Math.round(W * 0.8) + 'px" role="img" aria-label="Questions asked and outcome, by questionnaire">';
+    cols.forEach(function (m) { var x = cx(m);
+      s += '<line class="vg" x1="' + x + '" x2="' + x + '" y1="' + (TOP - 6) + '" y2="' + (H - 8) + '"/><text class="ch" transform="translate(' + (x + 4) + ',' + (TOP - 12) + ') rotate(-50)">' + LAB[m] + '</text>'; });
+    s += '<text class="ch b" x="' + XO + '" y="' + (TOP - 12) + '">Identified as</text>';
+    rows.forEach(function (r, i) {
+      var y = TOP + 10 + i * RH, o = OUT[r.o], col = COL[o[0]], top = r.id === 'EG' || r.id === 'AU';
+      var pts = r.s.map(function (q) { return cx(q[0]) + ',' + y; }); pts.push((XO - 14) + ',' + y);
+      s += '<g class="crow' + (top ? ' top ' + r.id : '') + '" style="--d:' + (i * 70) + 'ms">';
+      if (top) s += '<rect class="hl" x="0" y="' + (y - RH / 2) + '" width="' + W + '" height="' + RH + '"/>';
+      if (i === 2) s += '<line class="sep" x1="0" x2="' + W + '" y1="' + (y - RH / 2) + '" y2="' + (y - RH / 2) + '"/>';
+      s += '<text class="rl" x="' + (X0 - 24) + '" y="' + (y + 4) + '" text-anchor="end"><tspan class="rc">' + escH(r.c) + '</tspan> · ' + escH(r.n.length > 34 ? r.n.slice(0, 33) + '…' : r.n) + '</text>';
+      s += '<polyline class="cl" pathLength="1" points="' + pts.join(' ') + '" stroke="' + col + '"/>';
+      r.s.forEach(function (q) { s += '<circle class="cd" cx="' + cx(q[0]) + '" cy="' + y + '" r="5.5" stroke="' + col + '"><title>' + escH(q[1].join(', ')) + ' → ' + LAB[q[0]] + '</title></circle>'; });
+      s += '<g class="co"><rect x="' + (XO - 8) + '" y="' + (y - 9) + '" width="132" height="18" rx="9" fill="' + col + '"/><text x="' + (XO + 58) + '" y="' + (y + 4) + '" text-anchor="middle">' + o[1] + '</text>' + (r.t ? '<title>' + escH(r.t) + '</title>' : '') + '</g></g>';
+    });
+    document.querySelector('#case-' + key + ' .case-w').innerHTML = s + '</svg>';
+  }
+  draw('ref'); draw('idp');
+})();
+
+/* ---------- eight differences, row by row ---------- */
+(function () {
+  var box = document.getElementById('diffs'); if (!box) return;
+  var TAG = {who:'Who is counted', ask:'How it is asked', route:'Routing'};
+  var D = [
+    {n:1,t:'Where the module starts',tag:'route',l:['RF1','RF2'],r:['FrcFl'],
+     before:'Starts with residence and citizenship. Stateless respondents, and anyone answering “don’t know”, leave at RF2.',
+     after:'Starts with the flee question, asked of everyone, so they stay in.'},
+    {n:2,t:'The flee question and its causes',tag:'ask',l:['RF3A','RF4'],r:['FrcFl','FrcOth'],
+     before:'A yes or no tied to one country, then one main reason. Eviction and personal reasons end the module.',
+     after:'Fleeing is defined, the threats are read out and every one that applies is coded. Eviction is followed up.'},
+    {n:3,t:'Which country the home was in',tag:'who',l:[],r:['FleeLoc'],
+     before:'No question: the country is fixed by citizenship (RF3A, RF3B).',
+     after:'Asked directly. It sends people down the refugee or the IDP route, so one module serves both.'},
+    {n:4,t:'Crossing a border',tag:'ask',l:['RF5','ID4'],r:['FleeCross'],
+     before:'“Cross an international border”. In other surveys, 2–51% of displaced people living abroad answered no.',
+     after:'“Move to another country, even if this was only temporary”, asked only of people who fled a home in this country.'},
+    {n:5,t:'Applying for protection',tag:'ask',l:['RF7','RF8B'],r:['Apply','Outcome'],
+     before:'“International protection”: no respondent understood it in Thailand. Recognised refugees end the module.',
+     after:'“Refugee status”, understood by everyone. Recognised refugees go on to the document question.'},
+    {n:6,t:'The document question',tag:'who',l:['RF9','ID5B'],r:['Legal'],
+     before:'Reached on some routes only; ID5B asks about a document held abroad.',
+     after:'Asked of everyone, with citizenship documents added. It cross-checks status and finds refugees who never fled themselves.'},
+    {n:7,t:'Two modules, one route',tag:'route',l:['ID1','ID2','ID4','ID5A'],r:['FrcFl','FleeCross','12Mnths'],
+     before:'Used together, the two modules ask fleeing, its reason, crossing and time abroad twice.',
+     after:'Each is asked once; the answer to FleeLoc decides the route.'},
+    {n:8,t:'Don’t know and refused',tag:'route',l:['RF1','RF3A'],r:[],
+     before:'“Don’t know” and “refused” end the module at almost every question.',
+     after:'No such codes are printed; each survey decides how to treat them, so people are not lost early.'}
+  ];
+  function clone(sel, key) {
+    var el = document.querySelector(sel + '[data-k="' + key + '"]'); if (!el) return '';
+    var c = el.cloneNode(true); c.querySelectorAll('.nb').forEach(function (b) { b.remove(); });
+    c.classList.remove('rv','in','hl','fade','unused','nomatch'); c.removeAttribute('style');
+    return c.outerHTML;
+  }
+  var count = {who:0, ask:0, route:0};
+  box.innerHTML = D.map(function (d) {
+    count[d.tag]++;
+    var L = d.l.length ? d.l.map(function (k) { return clone('.pi', k); }).join('') : '<div class="d-none">No equivalent question in your modules</div>';
+    var R = d.r.length ? d.r.map(function (k) { return clone('.ti', k); }).join('') : '<div class="d-none">No “don’t know” or “refused” codes printed</div>';
+    return '<article class="drow" data-tag="' + d.tag + '"><header class="dh"><span class="dn">' + d.n + '</span><h3>' + d.t + '</h3><span class="dtag ' + d.tag + '">' + TAG[d.tag] + '</span></header>' +
+      '<div class="dgrid"><div class="dside paper-s"><span class="dl">Your module</span>' + L + '</div>' +
+      '<div class="dmid"><div class="dm-b"><span>Now</span><p>' + d.before + '</p></div><div class="dm-arrow" aria-hidden="true">→</div><div class="dm-a"><span>Revised</span><p>' + d.after + '</p></div></div>' +
+      '<div class="dside tab-s"><span class="dl">EGRISS revised</span>' + R + '</div></div></article>';
+  }).join('');
+  document.getElementById('dsum').innerHTML =
+    '<div class="ds"><b>' + count.who + '</b><span class="dtag who">Who is counted</span><p>Which people the module can reach at all</p></div>' +
+    '<div class="ds"><b>' + count.ask + '</b><span class="dtag ask">How it is asked</span><p>Wording respondents misread</p></div>' +
+    '<div class="ds"><b>' + count.route + '</b><span class="dtag route">Routing</span><p>Where people leave the module early</p></div>';
+  var more = document.getElementById('sbs-more');
+  if (more) more.addEventListener('toggle', function () { window.dispatchEvent(new Event('resize')); });
+})();
 /* ---------- motion ---------- */
 (function () {
   document.documentElement.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // reveal groups with a stagger
-  var groups = ['.kf','.pt','.ins2','.mission','.ins','.wg','.kdi','.disc .card','#draft .card','.closing .card','.missing .card','.evo-s','.crit','.causes','.mapcard','.vbar','.flow .fstep','.paper','.tablet'];
+  var groups = ['.kf','.drow','.ds','.pt','.ins2','.mission','.ins','.wg','.kdi','.disc .card','#draft .card','.closing .card','.missing .card','.evo-s','.crit','.causes','.mapcard','.vbar','.flow .fstep','.paper','.tablet'];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el, i) {
       el.classList.add('rv'); el.style.transitionDelay = Math.min(i % 6, 5) * 90 + 'ms';
@@ -2102,7 +2230,7 @@ document.querySelectorAll('.ff').forEach(function (box) {
   }
   if (!('IntersectionObserver' in window)) { document.querySelectorAll('.rv,.tline,.mapcard,.crit,.cz-t,.sbs,.fmx,.wh').forEach(onIn); return; }
   var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { onIn(e.target); io.unobserve(e.target); } }); }, { threshold: 0.15 });
-  function watch() { document.querySelectorAll('.rv:not(.in),.tline:not(.in),.mapcard:not(.in),.crit:not(.in),.cz-t:not(.in),.sbs:not(.in),.fmx:not(.in),.wh:not(.in),.trc:not(.in),.scn:not(.in),.kf [data-count]').forEach(function (el) { io.observe(el); }); }
+  function watch() { document.querySelectorAll('.rv:not(.in),.tline:not(.in),.mapcard:not(.in),.crit:not(.in),.cz-t:not(.in),.sbs:not(.in),.fmx:not(.in),.wh:not(.in),.trc:not(.in),.scn:not(.in),.case:not(.in),.kf [data-count]').forEach(function (el) { io.observe(el); }); }
   watch();
   // the matrix is re-rendered on filter changes: show it at once afterwards
   var fl = document.getElementById('flows');
