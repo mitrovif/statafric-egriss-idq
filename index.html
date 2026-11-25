@@ -817,6 +817,95 @@ tr.au .ob i{background:var(--gold)}
 #latest .route-h.ref{background:#7df3f7}
 #latest .route-h.idp{background:var(--gold)}
 @media (min-width:640px){#latest .fbr{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+/* colour-matched side by side */
+/* horizontal sheet */
+.hs-tools{display:flex;align-items:center;justify-content:flex-end;gap:8px;margin:-6px 0 10px}
+.hs-hint{font:12px var(--mono);color:var(--muted);margin-right:auto}
+.hs-nav{width:36px;height:36px;border-radius:50%;border:1px solid var(--line);background:var(--white);color:var(--navy);font:700 16px var(--mono);cursor:pointer}
+.hs-nav:hover{border-color:var(--teal);color:var(--teal)}
+.hs-scroll{overflow-x:auto;padding-bottom:12px;margin-inline:calc(50% - 50vw);padding-inline:max(32px,calc((100vw - 1116px) / 2));scroll-padding-inline:max(32px,calc((100vw - 1116px) / 2));scroll-behavior:smooth;-webkit-mask-image:linear-gradient(90deg,#000 92%,transparent);mask-image:linear-gradient(90deg,#000 92%,transparent)}
+.hs-scroll:focus-visible{outline:2px solid var(--teal);outline-offset:4px}
+.hs{display:grid;grid-template-columns:128px repeat(12,190px);column-gap:0;width:max-content;position:relative}
+.hs-lab{position:sticky;left:0;z-index:3;padding:12px 14px;display:flex;flex-direction:column;gap:3px}
+.hs-lab b{font:700 15px var(--head)}
+.hs-lab span{font:11.5px/1.4 var(--mono)}
+.hs-lab em{font:11px var(--mono);font-style:normal;opacity:.7;margin-top:6px}
+.hs-lab.eg{background:var(--navy);color:#fff;border-radius:12px 0 0 12px}
+.hs-lab.eg span{color:#9fe3e6}
+.hs-lab.ch{background:var(--bg,#f5f7fa);justify-content:center}
+.hs-lab.ch span{color:var(--muted)}
+.hs-lab.th{background:#fdfaf1;color:#3a3326;border:1px solid #d9d0b8;border-right:0;border-radius:4px 0 0 4px;font-family:Georgia,serif}
+.hs-lab.th b{font:700 15px Georgia,serif}
+.hs-lab.th span{color:#6b604a}
+.hs-eg{background:var(--navy);color:#fff;padding:12px 12px 14px;border-left:1px solid rgba(255,255,255,.08);border-top:5px solid var(--gc);display:flex;flex-direction:column;gap:6px}
+.hs-eg.g-doc{border-radius:0 12px 12px 0}
+.hs-eh{display:flex;align-items:center;justify-content:space-between}
+.hs-eg .tc{font:700 12px var(--mono);background:var(--gc);color:#fff;padding:2px 7px;border-radius:4px}
+.hs-eg.g-new .tc{background:var(--teal);color:var(--navy)}
+.hs-no{font:700 12px var(--mono);color:#9fe3e6}
+.hs-ro{font:11px var(--mono);color:#aebbd6}
+.hs-eg p{margin:0;font-size:13.5px;line-height:1.45}
+.hs-ans{margin-top:auto;font-size:12px;line-height:1.55;color:#d7e0f0;background:rgba(255,255,255,.07);border-radius:6px;padding:7px 9px}
+.hs-ans span{display:block;font:11px var(--mono);color:#9fe3e6;margin-top:4px}
+.hs-eg.g-new{box-shadow:inset 0 0 0 2px var(--teal)}
+.hs-ch{display:flex;flex-direction:column;align-items:center;gap:4px;padding:6px 8px 10px;text-align:center}
+.hs-ar{display:block;width:2px;height:26px;background:var(--gc);position:relative;transform-origin:top}
+.hs-ar::after{content:"";position:absolute;left:50%;bottom:-6px;transform:translateX(-50%);border:6px solid transparent;border-top:7px solid var(--gc);border-bottom:0}
+.hs-ch span{font-size:12px;font-weight:600;color:var(--navy);background:color-mix(in srgb,var(--gc) 14%,#fff);border:1px solid color-mix(in srgb,var(--gc) 45%,#fff);border-radius:99px;padding:3px 10px;margin-top:4px}
+.hs-xl{background:#fdfaf1;border:1px solid #d9d0b8;border-radius:0 4px 4px 0}
+.hs-let{font:11px var(--mono);color:#8b8068;text-align:center;padding:4px 0;background:#f1ebdb;border-right:1px solid #ded5bd;border-bottom:1px solid #d9d0b8;z-index:1}
+.hs-gh{font:700 11.5px/1.3 var(--mono);letter-spacing:.04em;color:#3a3326;text-align:center;padding:7px 6px;border-right:1px solid #d9d0b8;border-bottom:1px solid #d9d0b8;background:#f7f1e2;z-index:1}
+.hs-gh.blank{background:transparent}
+.hs-top{font:700 11px/1.3 var(--mono);color:#3a3326;padding:8px 10px;border-right:1px solid #e4dcc6;border-bottom:1px solid #e4dcc6;border-top:4px solid var(--gc);background:color-mix(in srgb,var(--gc) 8%,#fdfaf1);z-index:1}
+.hs-q{font:14px/1.45 Georgia,serif;color:#2a2418;padding:10px;border-right:1px solid #e4dcc6;border-bottom:1px solid #e4dcc6;z-index:1}
+.hs-q b{font-family:var(--mono);font-size:12.5px}
+.hs-v{font:11.5px/1.55 var(--mono);color:#6b604a;margin-top:8px}
+.hs-v b{color:#c0392b}
+.hs-ref{font:11px var(--mono);color:#8b8068;padding:6px 10px;border-right:1px solid #e4dcc6;z-index:1}
+.hs-none{margin:8px;border:2px dashed var(--teal);border-radius:8px;background:#e9f8f8;color:var(--navy);font-size:13px;line-height:1.5;padding:12px;z-index:1;align-self:start}
+.hs-none span{display:block;font-weight:700;margin-bottom:4px}
+.hs .hot{outline:2px solid var(--gc);outline-offset:-2px}
+@media (prefers-reduced-motion:no-preference){
+  .js .hs-eg,.js .hs-ch{opacity:0;transform:translateY(-8px);transition:opacity .45s ease,transform .45s ease;transition-delay:calc(var(--i) * 70ms)}
+  .js .hs-ar{transform:scaleY(0);transition:transform .4s ease;transition-delay:calc(var(--i) * 70ms + 250ms)}
+  .js .hs-scroll.in .hs-eg,.js .hs-scroll.in .hs-ch{opacity:1;transform:none}
+  .js .hs-scroll.in .hs-ar{transform:scaleY(1)}
+}
+.grp-leg{display:flex;flex-wrap:wrap;gap:8px;margin:4px 0 22px}
+.gl{display:inline-flex;align-items:center;gap:7px;font-size:13px;color:var(--ink);background:var(--white);border:1px solid var(--line);border-radius:99px;padding:5px 12px 5px 8px}
+.gl::before{content:"";width:12px;height:12px;border-radius:3px;background:var(--gc)}
+.g-res{--gc:#3b71b9}.g-flee{--gc:#2aa5ab}.g-new{--gc:#14234c}.g-cross{--gc:#d69a1e}.g-time{--gc:#8a63c9}.g-app{--gc:#e0575a}.g-doc{--gc:#2e9e7b}.g-idp{--gc:#b9c7dc}
+#sbs .pi[class*="g-"]{border-left:5px solid var(--gc);background:color-mix(in srgb,var(--gc) 9%,#fffdf7);padding-left:10px;margin-bottom:2px}
+#sbs .ti[class*="g-"]{border-left:6px solid var(--gc)}
+#sbs .ti.g-idp{opacity:.45}
+#sbs .ti.g-new{box-shadow:0 0 0 2px var(--teal)}
+#sbs .ti.g-new.unused{opacity:1}
+.links .ln{stroke-width:2.2;opacity:.8}
+.links .ln.dim{opacity:.8}
+/* working together */
+.together{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:40px}
+.tg{position:relative;background:var(--navy);color:var(--b1);border-radius:14px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:8px}
+.tg-n{width:34px;height:34px;border-radius:99px;background:var(--teal);color:var(--navy);font:700 15px var(--mono);display:flex;align-items:center;justify-content:center}
+.tg h4{color:#fff;font-size:19px}
+.tg p{font-size:15px;line-height:1.55}
+.disc-h{font-size:22px;margin-bottom:16px}
+/* wording changes */
+.wchanges{display:flex;flex-direction:column;gap:8px}
+.al-pos{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin-top:6px}
+.al-c{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.al-c i{display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#e2f6f6;color:var(--teal);font:700 14px var(--mono);font-style:normal;margin-bottom:8px}
+.al-c b{display:block;font:700 17px var(--head);color:var(--navy);margin-bottom:4px}
+.al-c p{margin:0;font-size:14.5px;color:var(--muted);line-height:1.5}
+.al-step{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin-top:16px;padding:12px 16px;border-radius:12px;background:var(--navy)}
+.al-l{font:700 13px var(--mono);color:var(--teal);margin-right:6px}
+.al-t{font-size:13.5px;color:#fff;background:rgba(255,255,255,.1);border-radius:999px;padding:5px 12px}
+@media(max-width:760px){.al-pos{grid-template-columns:minmax(0,1fr)}}
+.wc{display:grid;grid-template-columns:170px minmax(0,1fr) 28px minmax(0,1fr);gap:12px;align-items:center;background:var(--white);border:1px solid var(--line);border-radius:10px;padding:12px 16px}
+.wc-t b{display:block;font:700 15px var(--head);color:var(--navy)}
+.wc-t span{font:11.5px var(--mono);color:var(--muted)}
+.wc-o{font-size:14.5px;color:var(--muted);text-decoration:line-through;text-decoration-color:rgba(240,102,103,.6)}
+.wc-a{color:var(--teal);font:700 18px var(--mono);text-align:center}
+.wc-n{font-size:14.5px;color:var(--navy);font-weight:600;background:#e2f6f6;border-radius:6px;padding:6px 10px}
 /* testing */
 .mission{display:flex;flex-direction:column;gap:14px}
 .mission .tag{align-self:flex-start;font-family:var(--mono);font-size:12px;font-weight:600;padding:3px 10px;border-radius:99px;background:var(--tint);color:var(--navy);border:1px solid var(--tint2)}
@@ -905,6 +994,9 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   .hero h1{font-size:38px}
   .hero-grid,.three{grid-template-columns:repeat(2,minmax(0,1fr))}
   .kf-cover{grid-column:1/-1}
+  .wc{grid-template-columns:minmax(0,1fr)}
+  .wc-a{transform:rotate(90deg);text-align:left}
+  .together{grid-template-columns:minmax(0,1fr)}
   .rec,.grp{grid-template-columns:minmax(0,1fr)}
   .ev4 .yn-h,.ev4 .yn-r{grid-template-columns:minmax(0,1fr) 44px 44px}
   .ev4 .evl,.ev4 .yn-h span:last-child{grid-column:1/-1;margin:4px 0 0}
@@ -984,7 +1076,6 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       <a href="#testing">Testing</a>
       <a href="#latest">Revised questions</a>
       <a href="#sidebyside">Side by side</a>
-      <a href="#compare">Word for word</a>
       <a href="#discussion">Discussion</a>
     </nav>
   </div>
@@ -1305,29 +1396,6 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
       <p>Each draft was revised on the lessons from the step before. The wording above is the latest.</p>
     </div>
 
-    <div class="variants">
-      <div class="sec-head" style="margin:64px 0 20px">
-        <h3 style="font-size:26px">Versions being tested alongside</h3>
-        <p class="lede" style="font-size:16px">Testing compares the short flee question above with a long version that lists eight causes, and a route for surveys that already ask why people moved. The evidence column comes from the IDQ causes mapping, which checks how far displacement data in each country supports each cause.</p>
-      </div>
-      <div class="two" style="align-items:start">
-        <div class="card">
-          <div class="who"><span class="code-pill">FrcFl2</span><span class="lab-s">Long flee question · ask all</span></div>
-          <p class="qtext" id="frcfl2-def">The next questions are about whether you have ever had to flee a home. By this we mean being unable to continue to live in a house or land due to risks to you or your family. In your lifetime, have you ever left a home due to…</p>
-          <div class="ans yn-t ev4"><div class="yn-h"><span>Read out each item</span><span>Yes</span><span>No</span><span>Evidence in displacement data</span></div><div class="yn-r"><span>…Threat of armed conflict or war?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl s">Strong</span></div><div class="yn-r"><span>…Widespread violence or breakdown of public order?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl g">Good</span></div><div class="yn-r"><span>…Discrimination or persecution, e.g. due to your ethnic group, nationality, religion, political beliefs, sexual orientation or other group membership?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl i">Indirect</span></div><div class="yn-r"><span>…Threat of human rights violations by authorities, e.g. detention, torture, confiscation of property?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl i">Partial</span></div><div class="yn-r"><span>…Other threats of violence against you?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl r">Residual</span></div><div class="yn-r"><span>…Natural disasters, e.g. floods, droughts, landslides, earthquakes, hurricanes?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl s">Strong</span></div><div class="yn-r"><span>…Man-made events, e.g. eviction for infrastructure projects, pollution events?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl t">Thin in data, large in reality</span></div><div class="yn-r"><span>…A different threat to you or your family’s safety?</span><span class="yn">Yes</span><span class="yn">No</span><span class="evl r">Residual</span></div></div>
-          <p class="small-note">The causes stay the same in every country, so results can be compared. What changes by country is the local examples interviewers are given.</p>
-        </div>
-        <div style="display:flex;flex-direction:column;gap:20px">
-          <div class="card sunk" id="short-var"><div class="who"><span class="code-pill">FrcFLShort2</span><span class="lab-s">One-question version</span></div><p class="qtext">Have you ever had to leave a home for any of the following reasons: armed conflict, widespread violence, persecution, a natural disaster or a different threat to you or your family’s safety?</p><div class="ans rd"><label><i class="rb"></i>Yes</label><label><i class="rb"></i>No</label></div><p class="small-note">A single yes or no. Tried in earlier drafts; not used in the Nigeria testing.</p></div>
-          <div class="card">
-            <div class="who"><span class="code-pill">CoOr → CitYN → ResMig · ArOr → ResMov</span><span class="lab-s">Migration route</span></div>
-            <p class="qtext">Have you always lived in [survey country]? If not: are you a citizen of [survey country]? If not: why did you leave your country of origin to come to [survey country]?</p>
-            <p class="qtext" style="margin-top:6px">For citizens: while living in [survey country], have you always lived in [local area]? If not: why did you first move to [local area]?</p>
-            <p class="fs-i" style="margin-top:8px">Showcard · code all that apply</p><div class="ans ck"><label><i class="cb"></i>For work, either for a job or looking for work</label><label><i class="cb"></i>For study</label><label><i class="cb"></i>To enter a new marriage or relationship</label><label><i class="cb"></i>Family reunification</label><label><i class="cb"></i>For medical treatment</label><label><i class="cb"></i>For improved quality of life</label><label><i class="cb"></i>Threat of armed conflict or violence</label><label><i class="cb"></i>Threat of persecution or human rights violations</label><label><i class="cb"></i>Natural or man-made disaster</label><label><i class="cb"></i>Other threats to safety</label><label><i class="cb"></i>Other reason (specify)</label></div>
-          </div>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
 
@@ -1335,278 +1403,127 @@ footer{background:var(--g2);color:var(--b2);font-size:13px;padding:28px 0}
   <div class="wrap">
     <div class="sec-head">
       <div class="eyebrow">5 · Side by side</div>
-      <h2>Eight differences, side by side</h2>
+      <h2>Your refugee module and ours, side by side</h2>
       <div class="rule"></div>
-      <p class="lede">Each difference shows your question as printed in Draft 0, the EGRISS question that replaces it, and what the change means for who is counted.</p>
+      <p class="lede">Your refugee sheet as laid out in your workbook, with the 2027 EGRISS question that replaces each column sitting on top of it. Matching parts share a colour.</p>
     </div>
 
-    <div class="dsum" id="dsum"></div>
-    <div class="diffs" id="diffs"></div>
-
-    <details class="more" id="sbs-more"><summary>See both questionnaires in full, with every link</summary>
-    <div class="sbs-tools">
-      <div class="fl-filter" role="group" aria-label="Your module" id="sbs-mod">
-        <button type="button" data-m="rf" aria-pressed="true">Your refugee module</button>
-        <button type="button" data-m="id" aria-pressed="false">Your IDP module</button>
-      </div>
-      <div class="kd-pills" id="kd-pills" role="group" aria-label="Main differences"></div>
+    <div class="grp-leg" aria-label="Matching parts">
+      <span class="gl g-res">Residence and citizenship</span><span class="gl g-flee">Fleeing and why</span><span class="gl g-new">Country of the home fled · new</span><span class="gl g-cross">Crossing a border</span><span class="gl g-time">Time abroad</span><span class="gl g-app">Applying for refugee status</span><span class="gl g-doc">Document</span>
     </div>
-
-    <div class="sbs" id="sbs">
-      <div class="paper" id="paper">
-        <div class="pp-head">
-          <span class="pp-org">STATAFRIC · STG 8 · Draft 0</span>
-          <span class="pp-title" id="pp-title">MODULE REFUGEES</span>
-          <span class="pp-sub">All household members, whatever their age. One line per member; a parent or the best-informed adult may answer for a child or an absent person.</span>
-        </div>
-        <div class="pp-body" id="pp-rf">
-          <div class="pi" data-k="RF1"><span class="pc">RF1</span><div><p>Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.</p><p class="pv">01 Yes · 02 No · 98 Don’t know <b>→ END</b> · 99 Refused <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF2"><span class="pc">RF2</span><div><p>Of which country are you a citizen?</p><p class="pv">01 [Survey country] → RF3A · 02 Other country (specify) → RF3B · 03 Stateless <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF3A"><span class="pc">RF3A</span><div><p>While living in [survey country], have you ever had to flee home?</p><p class="pv">01 Yes → RF4 · 02 No <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF3B"><span class="pc">RF3B</span><div><p>While living in [OTHER COUNTRY], have you ever had to flee home? (Asked only if RF1 = 02)</p><p class="pv">01 Yes · 02 No <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF4"><span class="pc">RF4</span><div><p>What is the main reason why you had to flee home?</p><p class="pv">01 Security reasons, armed conflict, generalized violence · 02 Fear of persecution · 03 Human rights violation · 04 Natural or man-made disaster · 05 Eviction <b>→ END</b> · 06 Personal reasons <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF5"><span class="pc">RF5</span><div><p>After you were forced to leave home, did you cross an international border?</p><p class="pv">01 Yes · 02 No <b>→ END</b> · 98, 99 <b>→ END</b><br>CHECK: RF1 = 02 → RF7; otherwise → RF6</p></div></div>
-          <div class="pi" data-k="RF6"><span class="pc">RF6</span><div><p>How long did you stay abroad? Less than 12 months, or 12 months or more?</p><p class="pv">01 Less than 12 months · 02 12 months or more → RF9 · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF7"><span class="pc">RF7</span><div><p>While in [OTHER COUNTRY] / [survey country], did you apply for international protection?</p><p class="pv">01 Yes → RF8B · 02 No → RF8A · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF8A"><span class="pc">RF8A</span><div><p>While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?</p><p class="pv">01 Yes → RF9 · 02 No → RF9 · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="RF8B"><span class="pc">RF8B</span><div><p>What is the outcome of your application for international protection?</p><p class="pv">01 Refugee status granted <b>→ END</b> · 02 Denied · 03 Still waiting for response · 96 Other (specify) · 98, 99</p></div></div>
-          <div class="pi" data-k="RF9"><span class="pc">RF9</span><div><p>What is the primary document that allows you to stay in [survey country]?</p><p class="pv">See code list PRIMARY DOCUMENT (13 codes) <b>→ END</b></p></div></div>
-        </div>
-        <div class="pp-body" id="pp-id" hidden>
-          <div class="pi" data-k="ID1"><span class="pc">ID1</span><div><p>While living in [survey country], have you ever had to flee home?</p><p class="pv">01 Yes · 02 No <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="ID2"><span class="pc">ID2</span><div><p>What is the main reason why you had to flee home?</p><p class="pv">01 Security reasons, armed conflict, generalized violence · 02 Fear of persecution · 03 Human rights violation · 04 Natural or man-made disaster · 05 Eviction <b>→ END</b> · 06 Personal reasons <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="ID3"><span class="pc">ID3</span><div><p>Where were you living right before you were forced to flee home for the first time? Tell me the name of the region, the department, the sub-prefecture/commune and the locality (village or town).</p><p class="pv">Write the names in full; coded in the office</p></div></div>
-          <div class="pi" data-k="ID4"><span class="pc">ID4</span><div><p>After you were forced to leave home, did you cross an international border?</p><p class="pv">01 Yes → ID5A · 02 No → ID6 · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="ID5A"><span class="pc">ID5A</span><div><p>How long did you stay abroad? Less than 12 months, or 12 months or more?</p><p class="pv">01 Less than 12 months → ID5B · 02 12 months or more <b>→ END</b> · 98, 99 <b>→ END</b></p></div></div>
-          <div class="pi" data-k="ID5B"><span class="pc">ID5B</span><div><p>What was the primary document that allowed you to stay abroad?</p><p class="pv">Code list PRIMARY DOCUMENT · codes 10–13 <b>→ END</b> · other codes → ID6</p></div></div>
-          <div class="pi" data-k="ID6"><span class="pc">ID6</span><div><p>When you were forced to flee, where did you move first? Region, department, sub-prefecture/commune, locality. Please do not think about short stopovers.</p><p class="pv">Write the names in full; coded in the office <b>→ END</b></p></div></div>
-        </div>
-      </div>
-
-      <svg class="links" id="links" aria-hidden="true"></svg>
-
-      <div class="tablet">
-        <div class="tb-bar"><span class="tb-dot"></span><span>EGRISS identification module · latest (Nov 2026)</span></div>
-        <div class="tb-body">
-          <div class="ti" data-k="FrcFl"><div class="tr"><span class="tc">FrcFl</span><span class="tro">Ask all</span></div><p>The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><div class="tbox">☐ Threat of armed conflict or widespread violence<br>☐ Threat of persecution or human rights violations<br>☐ Natural or man-made disasters<br>☐ A different threat to your safety<br>☐ None of the above</div><span class="tin">Read out · code all that apply</span></div>
-          <div class="ti" data-k="FrcOth"><div class="tr"><span class="tc">FrcOth</span><span class="tro">If a different threat</span></div><p>What was the other threat to your safety that meant you had to leave a home?</p><span class="tin">Do not show list · 11 codes, incl. forced recruitment, eviction, violent crime, civil unrest, famine, family violence</span></div>
-          <div class="ti new" data-k="FleeLoc"><div class="tr"><span class="tc">FleeLoc</span><span class="tro">If a valid reason</span></div><p>In which country was the home you had to flee from?</p><div class="tbox">◯ [Survey country] → IDP route &nbsp; ◯ Other country → refugee route</div></div>
-          <div class="ti" data-k="IDPLoc"><div class="tr"><span class="tc idp">IDPLoc</span><span class="tro">If home in survey country</span></div><p>Please tell me where you were living right before you were forced to flee home for the first time.</p><span class="tin">Village or town · county · province</span></div>
-          <div class="ti" data-k="LocLiv"><div class="tr"><span class="tc">LocLiv</span><span class="tro">If a valid reason</span></div><p>Before you fled this home, had you always lived in {country fled}?</p></div>
-          <div class="ti" data-k="CitLoc"><div class="tr"><span class="tc">CitLoc</span><span class="tro">If LocLiv = No</span></div><p>Were you a citizen of {country fled} when you fled your home there?</p></div>
-          <div class="ti" data-k="FleeCross"><div class="tr"><span class="tc idp">FleeCross</span><span class="tro">If home in survey country</span></div><p>After you fled your home, did you ever move to another country even if this was only temporary?</p></div>
-          <div class="ti" data-k="IDPPost"><div class="tr"><span class="tc idp">IDPPost</span><span class="tro">If FleeCross = No</span></div><p>When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.</p></div>
-          <div class="ti" data-k="12Mnths"><div class="tr"><span class="tc">12Mnths</span><span class="tro">If FleeCross = Yes</span></div><p>How long did you stay abroad after fleeing your home?</p><div class="tbox">◯ Less than 12 months &nbsp; ◯ 12 months or more</div></div>
-          <div class="ti" data-k="Apply"><div class="tr"><span class="tc ref">Apply</span><span class="tro">If home abroad, or moved abroad</span></div><p>While living abroad did you ever apply for refugee status?</p></div>
-          <div class="ti" data-k="IntApply"><div class="tr"><span class="tc ref">IntApply</span><span class="tro">If Apply = No</span></div><p>Did you ever plan to apply for refugee status?</p></div>
-          <div class="ti" data-k="Outcome"><div class="tr"><span class="tc ref">Outcome</span><span class="tro">If Apply = Yes</span></div><p>What was the response to your application for refugee status?</p><div class="tbox">◯ Granted ◯ Denied ◯ Still being decided ◯ Withdrew</div></div>
-          <div class="ti" data-k="Legal"><div class="tr"><span class="tc">Legal</span><span class="tro">Ask all</span></div><p>Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><span class="tin">Same headings as your code list, plus national ID card, passport and other citizenship documents</span></div>
-        </div>
-      </div>
-    </div>
-
-    <div class="kd" id="kd"></div>
-
-    </details>
-
-    <div class="where">
-      <div class="sec-head" style="margin:72px 0 22px">
-        <h3 style="font-size:28px">Who ends up where</h3>
-        <p class="lede" style="font-size:17px">Six people, each followed through your two modules and the revised EGRISS module, using the routing as printed. Each cell shows the questions the person is asked, and where they come out.</p>
-      </div>
-      <div class="wh-leg"><span><i class="oc ok"></i>Identified correctly</span><span><i class="oc part"></i>Counted, but in the wrong group</span><span><i class="oc out"></i>Leaves before being identified</span><span><i class="oc na"></i>Correctly outside this module</span></div>
-      <div class="wh-wrap"><table class="wh" id="wh"></table></div>
-      <p class="src">Routes follow the printed skips of STATAFRIC Draft 0 and the latest EGRISS module. Person 4 assumes they answer “no” to RF1, having lived abroad for two years. In the revised module, CitLoc is skipped for anyone who had always lived in the country they fled.</p>
-    </div>
-
-    <div class="missing">
-      <h3>Still to settle, on both sides</h3>
-      <div class="three">
-        <div class="card sunk"><h4>Who answers</h4><p>Your modules allow a parent or another adult to answer for children and absent members. The revision is being tested with adults answering for themselves; guidance on proxy answers is still to come.</p></div>
-        <div class="card sunk"><h4>Stateless people</h4><p>Your RF2 ends the module for stateless respondents. The revision keeps them in, but has no question that identifies statelessness itself; that is covered by the statelessness recommendations (IROSS).</p></div>
-        <div class="card sunk"><h4>Translation</h4><p>Both need French and local-language versions with identical codes. The revision is now being tested in translation in Nigeria.</p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section id="compare">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">6 · Word for word</div>
-      <h2>Every question, word for word</h2>
-      <div class="rule"></div>
-      <p class="lede">Each of your questions in full, with its answer codes, beside the revised question that covers the same point, and what the difference means. Côte d’Ivoire, your worked example, is shown as [survey country].</p>
-    </div>
-    <details class="more" id="cmp-more"><summary>Open the question-by-question comparison</summary>
-    <div class="tabs" role="tablist" aria-label="Module">
-      <button role="tab" id="t-ref" aria-selected="true" aria-controls="p-ref">Refugee module · RF1–RF9</button>
-      <button role="tab" id="t-idp" aria-selected="false" aria-controls="p-idp">IDP module · ID1–ID6</button>
-    </div>
-
-    <div class="cmp on" id="p-ref" role="tabpanel" aria-labelledby="t-ref">
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF1</span><span class="l">STATAFRIC</span></div><p class="qt">Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.</p><p class="ans">01 Yes · 02 No · 98 Don’t know → END · 99 Refused → END</p><p class="asked">All household members, any age; first question of the module.</p></div>
-        <div class="side e"><div class="who"><span class="c">LocLiv</span><span class="l">EGRISS revised</span></div><p class="qt">Before you fled this home, had you always lived in {country from FleeLoc}? Please do not think of short or temporary absence or travels.</p><p class="ans">Yes · No</p><p class="asked">Asked after the flee question, of those with a valid reason.</p></div>
-        <div class="diff"><b>Difference</b><span>Same instruction on short absences. The revision asks it after fleeing and about the country of the home fled; your module asks it first, of everyone, about the survey country.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF2</span><span class="l">STATAFRIC</span></div><p class="qt">Of which country are you a citizen?</p><p class="ans">01 [Survey country] → RF3A · 02 Other country → RF3B · 03 Stateless → END · 98, 99 → END</p><p class="asked">All household members.</p></div>
-        <div class="side e"><div class="who"><span class="c">CitLoc</span><span class="l">EGRISS revised</span></div><p class="qt">Were you a citizen of {country from FleeLoc} when you fled your home there?</p><p class="ans">Yes · No</p><p class="asked" data-v01="Asked if LocLiv = No.">Asked if LocLiv = No. “Citizen” is defined for the respondent.</p></div>
-        <div class="diff"><b>Difference</b><span>Your module asks current citizenship and uses it to route the flee question, so stateless respondents leave the module. The revision asks citizenship at the time of fleeing, as a yes or no, and no longer routes on it.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF3A · RF3B</span><span class="l">STATAFRIC</span></div><p class="qt">While living in [survey country] / in [OTHER COUNTRY], have you ever had to flee home?</p><p class="ans">01 Yes → RF4 · 02 No → END · 98, 99 → END</p><p class="asked">RF3A if a citizen of the survey country; RF3B if a citizen of another country (the question cell says “asked only if RF1 = 02”).</p></div>
-        <div class="side e"><div class="who"><span class="c">FrcFl</span><span class="l">EGRISS revised</span></div><p class="qt">The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><p class="ans">Conflict or widespread violence · Persecution or human rights violations · Natural or man-made disasters · A different threat · None of the above</p><p class="asked">Asked of everyone. Read out; all that apply.</p></div>
-        <div class="diff"><b>Difference</b><span>The revision has one question for everyone, with a definition and the threats inside it, covering a whole lifetime in any country. Your module has two yes or no questions, each tied to one country.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF4</span><span class="l">STATAFRIC</span></div><p class="qt">What is the main reason why you had to flee home?</p><p class="ans">01 Security reasons, armed conflict, generalized violence · 02 Fear of persecution · 03 Human rights violation · 04 Natural or man-made disaster · 05 Eviction → END · 06 Personal reasons → END · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">FrcFl · FrcOth</span><span class="l">EGRISS revised</span></div><p class="qt">The reasons are read out inside FrcFl. A different threat leads to: What was the other threat to your safety that meant you had to leave a home?</p><p class="ans">FrcOth codes include forced recruitment, eviction, violent crime, civil unrest, famine, family violence, lack of employment, family breakdown, other.</p></div>
-        <div class="diff"><b>Difference</b><span>Your codes 01–04 match the three threats read out in the revision. The revision codes all that apply rather than one main reason, and records eviction and similar reasons as follow-up codes instead of ending the module.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><p class="none">No equivalent: the country is set by the wording of RF3A and RF3B.</p></div>
-        <div class="side e"><div class="who"><span class="c">FleeLoc</span><span class="l">EGRISS revised</span><span class="pill new">New</span></div><p class="qt">In which country was the home you had to flee from?</p><p class="ans">[Survey country] · Other country (specify)</p></div>
-        <div class="diff"><b>Difference</b><span>New in the revision. It decides the route: a home in another country leads to the refugee questions, a home in the survey country to the IDP questions.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF5</span><span class="l">STATAFRIC</span></div><p class="qt">After you were forced to leave home, did you cross an international border?</p><p class="ans">01 Yes · 02 No → END · 98, 99 → END. Check: RF1 = 02 → RF7; otherwise → RF6</p></div>
-        <div class="side e"><div class="who"><span class="c">FleeCross</span><span class="l">EGRISS revised</span></div><p class="qt">After you fled your home, did you ever move to another country even if this was only temporary?</p><p class="ans">Yes · No</p><p class="asked">Asked only if the home fled was in the survey country.</p></div>
-        <div class="diff"><b>Difference</b><span>“Move to another country” replaces “cross an international border”. People who fled a home in another country are no longer asked, since it is clear they left it.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF6</span><span class="l">STATAFRIC</span></div><p class="qt">How long did you stay abroad? Less than 12 months, or 12 months or more?</p><p class="ans">01 Less than 12 months → RF7 · 02 12 months or more → RF9 · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">12Mnths</span><span class="l">EGRISS revised</span><span class="pill same">Same codes</span></div><p class="qt">How long did you stay abroad after fleeing your home?</p><p class="ans">Less than 12 months · 12 months or more</p></div>
-        <div class="diff"><b>Difference</b><span>Nearly the same. The revision adds “after fleeing your home”, and both answers lead on to the application question.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF7</span><span class="l">STATAFRIC</span></div><p class="qt">While in [OTHER COUNTRY] / [survey country], did you apply for international protection?</p><p class="ans">01 Yes → RF8B · 02 No → RF8A · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">Apply</span><span class="l">EGRISS revised</span></div><p class="qt" data-v01="Did you ever apply for international protection, such as refugee status?">While living abroad did you ever apply for refugee status?</p><p class="ans">Yes · No</p></div>
-        <div class="diff"><b>Difference</b><span data-v01="The revision keeps “international protection” but adds “such as refugee status”, drops the fixed place, and lets countries add local examples of where people register. Your routing of “No” to the intention question matches the revision.">“Refugee status” replaces “international protection”, which respondents did not understand in testing. Your routing of “No” to the intention question matches the revision.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF8A</span><span class="l">STATAFRIC</span></div><p class="qt">While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?</p><p class="ans">01 Yes → RF9 · 02 No → RF9 · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">IntApply</span><span class="l">EGRISS revised</span></div><p class="qt" data-v01="Did you ever plan to apply for international protection, such as refugee status?">Did you ever plan to apply for refugee status?</p><p class="ans">Yes · No</p></div>
-        <div class="diff"><b>Difference</b><span data-v01="Same point: “ever plan to apply”, with “such as refugee status” as an example and no place fixed.">Same point, in plainer words: “ever plan to apply for refugee status”, with no place fixed.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF8B</span><span class="l">STATAFRIC</span></div><p class="qt">What is the outcome of your application for international protection?</p><p class="ans">01 Refugee status granted → END · 02 Denied · 03 Still waiting · 96 Other (specify) · 98, 99</p></div>
-        <div class="side e"><div class="who"><span class="c">Outcome</span><span class="l">EGRISS revised</span></div><p class="qt" data-v01="What was the outcome of your application for international protection?">What was the response to your application for refugee status?</p><p class="ans">Granted · Denied · Outcome still being decided · I withdrew my application</p></div>
-        <div class="diff"><b>Difference</b><span>The revision adds “I withdrew my application” and has no “Other”. Recognised refugees go on to the document question instead of ending the module.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">RF9</span><span class="l">STATAFRIC</span></div><p class="qt">What is the primary document that allows you to stay in [survey country]?</p><p class="ans">13 codes under No documents, Visas, International agreements, Residency, Protected status, Enrolment document, Other</p><p class="asked">Reached from RF6 = 02, RF8A, or RF8B other than granted.</p></div>
-        <div class="side e"><div class="who"><span class="c">Legal</span><span class="l">EGRISS revised</span></div><p class="qt">Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><p class="ans">Same headings, plus family and other visas, and national ID card, passport and other citizenship documents</p><p class="asked">Asked of everyone.</p></div>
-        <div class="diff"><b>Difference</b><span>Asked of everyone, so it also serves as a cross-check. The code list keeps your headings and adds citizenship documents.</span></div>
-      </div>
-    </div>
-
-    <div class="cmp" id="p-idp" role="tabpanel" aria-labelledby="t-idp">
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID1</span><span class="l">STATAFRIC</span></div><p class="qt">While living in [survey country], have you ever had to flee home?</p><p class="ans">01 Yes · 02 No → END · 98, 99 → END</p><p class="asked">All household members, any age.</p></div>
-        <div class="side e"><div class="who"><span class="c">FrcFl</span><span class="l">EGRISS revised</span></div><p class="qt">The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><p class="ans">Conflict or widespread violence · Persecution or human rights violations · Natural or man-made disasters · A different threat · None of the above</p><p class="asked">Asked of everyone.</p></div>
-        <div class="diff"><b>Difference</b><span>The revision adds a definition and reads out the threats inside the question. It is not limited to the survey country; FleeLoc then establishes where the home was.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID2</span><span class="l">STATAFRIC</span></div><p class="qt">What is the main reason why you had to flee home?</p><p class="ans">01–04 → ID3 · 05 Eviction → END · 06 Personal reasons → END · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">FrcFl · FrcOth</span><span class="l">EGRISS revised</span></div><p class="qt">Reasons read out inside FrcFl; a different threat leads to FrcOth: What was the other threat to your safety that meant you had to leave a home?</p></div>
-        <div class="diff"><b>Difference</b><span>All that apply rather than one main reason. Eviction is recorded under FrcOth rather than ending the module.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><p class="none">No equivalent: the module covers fleeing within the survey country only.</p></div>
-        <div class="side e"><div class="who"><span class="c">FleeLoc</span><span class="l">EGRISS revised</span><span class="pill new">New</span></div><p class="qt">In which country was the home you had to flee from?</p></div>
-        <div class="diff"><b>Difference</b><span>One route serves refugees and IDPs; a home in the survey country leads to the IDP questions.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID3</span><span class="l">STATAFRIC</span></div><p class="qt">Where were you living right before you were forced to flee home for the first time? Tell me the name of the region, the department, the sub-prefecture/commune and the locality (village or town).</p><p class="ans">Four administrative levels, coded in the office</p></div>
-        <div class="side e"><div class="who"><span class="c">IDPLoc</span><span class="l">EGRISS revised</span><span class="pill same">Same question</span></div><p class="qt">Please tell me where you were living right before you were forced to flee home for the first time.</p><p class="ans">Village or town · county · province</p></div>
-        <div class="diff"><b>Difference</b><span>Same question. Your module asks for four administrative levels; the revision records three, adapted to the country.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><p class="none">Not asked in the IDP module.</p></div>
-        <div class="side e"><div class="who"><span class="c">LocLiv · CitLoc</span><span class="l">EGRISS revised</span></div><p class="qt">Before you fled this home, had you always lived in {country}? Were you a citizen of {country} when you fled your home there?</p></div>
-        <div class="diff"><b>Difference</b><span>The revision asks these on both routes, so returnees and former refugees can be told apart from IDPs.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID4</span><span class="l">STATAFRIC</span></div><p class="qt">After you were forced to leave home, did you cross an international border?</p><p class="ans">01 Yes → ID5A · 02 No → ID6 · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">FleeCross</span><span class="l">EGRISS revised</span></div><p class="qt">After you fled your home, did you ever move to another country even if this was only temporary?</p><p class="ans">Yes → 12Mnths · No → IDPPost</p></div>
-        <div class="diff"><b>Difference</b><span>“Move to another country, even if this was only temporary” replaces “cross an international border”. The routing is the same.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID5A</span><span class="l">STATAFRIC</span></div><p class="qt">How long did you stay abroad? Less than 12 months, or 12 months or more?</p><p class="ans">01 Less than 12 months → ID5B · 02 12 months or more → END · 98, 99 → END</p></div>
-        <div class="side e"><div class="who"><span class="c">12Mnths</span><span class="l">EGRISS revised</span><span class="pill same">Same codes</span></div><p class="qt">How long did you stay abroad after fleeing your home?</p><p class="ans">Less than 12 months · 12 months or more → Apply</p></div>
-        <div class="diff"><b>Difference</b><span>Same categories. In the revision both answers go on to the refugee-status questions rather than ending or going to a document abroad.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID5B</span><span class="l">STATAFRIC</span></div><p class="qt">What was the primary document that allowed you to stay abroad?</p><p class="ans">Primary document code list · codes 10–13 → END · other codes → ID6</p><p class="asked">Your note: the End arrows in the 2023 table appear shifted, and may be meant for the protected-status codes.</p></div>
-        <div class="side e"><div class="who"><span class="c">Apply · Legal</span><span class="l">EGRISS revised</span><span class="pill gone">No direct match</span></div><p class="qt">The revision has no question on a document held abroad. Apply, IntApply and Outcome cover status abroad; Legal asks everyone about the current document.</p></div>
-        <div class="diff"><b>Difference</b><span>The skip you questioned no longer exists in the revision, because status abroad is asked directly.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><div class="who"><span class="c">ID6</span><span class="l">STATAFRIC</span></div><p class="qt">When you were forced to flee, where did you move first? Tell me the name of the region, the department, the sub-prefecture/commune and the locality (village or town). Please do not think about short stopovers.</p><p class="ans">Four administrative levels → END</p></div>
-        <div class="side e"><div class="who"><span class="c">IDPPost</span><span class="l">EGRISS revised</span></div><p class="qt">When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.</p><p class="ans">Village or town · county · province</p></div>
-        <div class="diff"><b>Difference</b><span>Nearly the same; both set aside short stopovers. Your module names four administrative levels.</span></div>
-      </div>
-      <div class="row">
-        <div class="side"><p class="none">Not asked in the IDP module.</p></div>
-        <div class="side e"><div class="who"><span class="c">Legal</span><span class="l">EGRISS revised</span></div><p class="qt">Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p></div>
-        <div class="diff"><b>Difference</b><span>Asked of everyone in the revision, IDPs included.</span></div>
-      </div>
-    </div>
-    </details>
+    <div class="hs-tools"><span class="hs-hint">Scroll sideways to follow the sheet</span><button type="button" class="hs-nav" data-d="-1" aria-label="Scroll left">←</button><button type="button" class="hs-nav" data-d="1" aria-label="Scroll right">→</button></div>
+<div class="hs-scroll" id="hs" tabindex="0" aria-label="EGRISS 2027 questions above the STATAFRIC refugee module"><div class="hs">
+<div class="hs-lab eg" style="grid-column:1;grid-row:1"><b>EGRISS</b><span>2027 edition<br>(revised)</span><em>#&nbsp;= order asked</em></div>
+<div class="hs-eg g-res" style="grid-column:2 / span 1;grid-row:1;--i:0"><div class="hs-eh"><span class="tc">LocLiv</span><span class="hs-no">#5</span></div><span class="hs-ro">If a valid reason</span><p>Before you fled this home, had you always lived in {country fled}? Please do not think of short or temporary absence or travels.</p><div class="hs-ans">◯ Yes → Apply &nbsp;◯ No → CitLoc</div></div>
+<div class="hs-eg g-res" style="grid-column:3 / span 1;grid-row:1;--i:1"><div class="hs-eh"><span class="tc">CitLoc</span><span class="hs-no">#6</span></div><span class="hs-ro">If LocLiv = No</span><p>Were you a citizen of {country fled} when you fled your home there?</p><div class="hs-ans">◯ Yes &nbsp;◯ No</div></div>
+<div class="hs-eg g-flee" style="grid-column:4 / span 2;grid-row:1;--i:2"><div class="hs-eh"><span class="tc">FrcFl</span><span class="hs-no">#1</span></div><span class="hs-ro">Ask all</span><p>The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to…</p><div class="hs-ans">☐ Threat of armed conflict or widespread violence<br>☐ Threat of persecution or human rights violations<br>☐ Natural or man-made disasters<br>☐ A different threat to your safety<br>☐ None of the above<span>Read out · code all that apply</span></div></div>
+<div class="hs-eg g-flee" style="grid-column:6 / span 1;grid-row:1;--i:3"><div class="hs-eh"><span class="tc">FrcOth</span><span class="hs-no">#2</span></div><span class="hs-ro">If a different threat</span><p>What was the other threat to your safety that meant you had to leave a home?</p><div class="hs-ans">11 codes, not read out: forced recruitment, eviction, violent crime, civil unrest, famine, family violence…</div></div>
+<div class="hs-eg g-new" style="grid-column:7 / span 1;grid-row:1;--i:4"><div class="hs-eh"><span class="tc">FleeLoc</span><span class="hs-no">#3</span></div><span class="hs-ro">If a valid reason</span><p>In which country was the home you had to flee from?</p><div class="hs-ans">◯ [Survey country] → IDP route<br>◯ Other country → refugee route</div></div>
+<div class="hs-eg g-cross" style="grid-column:8 / span 1;grid-row:1;--i:5"><div class="hs-eh"><span class="tc">FleeCross</span><span class="hs-no">#7</span></div><span class="hs-ro">If home in survey country</span><p>After you fled your home, did you ever move to another country even if this was only temporary?</p><div class="hs-ans">◯ Yes → 12Mnths &nbsp;◯ No → IDPPost</div></div>
+<div class="hs-eg g-time" style="grid-column:9 / span 1;grid-row:1;--i:6"><div class="hs-eh"><span class="tc">12Mnths</span><span class="hs-no">#9</span></div><span class="hs-ro">If FleeCross = Yes</span><p>How long did you stay abroad after fleeing your home?</p><div class="hs-ans">◯ Less than 12 months<br>◯ 12 months or more</div></div>
+<div class="hs-eg g-app" style="grid-column:10 / span 1;grid-row:1;--i:7"><div class="hs-eh"><span class="tc">Apply</span><span class="hs-no">#10</span></div><span class="hs-ro">If home abroad, or moved abroad</span><p>While living abroad did you ever apply for refugee status?</p><div class="hs-ans">◯ Yes → Outcome &nbsp;◯ No → IntApply</div></div>
+<div class="hs-eg g-app" style="grid-column:11 / span 1;grid-row:1;--i:8"><div class="hs-eh"><span class="tc">IntApply</span><span class="hs-no">#11</span></div><span class="hs-ro">If Apply = No</span><p>Did you ever plan to apply for refugee status?</p><div class="hs-ans">◯ Yes &nbsp;◯ No</div></div>
+<div class="hs-eg g-app" style="grid-column:12 / span 1;grid-row:1;--i:9"><div class="hs-eh"><span class="tc">Outcome</span><span class="hs-no">#12</span></div><span class="hs-ro">If Apply = Yes</span><p>What was the response to your application for refugee status?</p><div class="hs-ans">◯ Granted ◯ Denied<br>◯ Still being decided ◯ Withdrew</div></div>
+<div class="hs-eg g-doc" style="grid-column:13 / span 1;grid-row:1;--i:10"><div class="hs-eh"><span class="tc">Legal</span><span class="hs-no">#13</span></div><span class="hs-ro">Ask all</span><p>Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?</p><div class="hs-ans">Your code list headings, plus national ID card, passport and other citizenship documents</div></div>
+<div class="hs-lab ch" style="grid-column:1;grid-row:2"><span>What changes</span></div>
+<div class="hs-ch g-res" style="grid-column:2 / span 1;grid-row:2;--i:0"><i class="hs-ar"></i><span>Asked about the country fled</span></div>
+<div class="hs-ch g-res" style="grid-column:3 / span 1;grid-row:2;--i:1"><i class="hs-ar"></i><span>Citizenship when they fled</span></div>
+<div class="hs-ch g-flee" style="grid-column:4 / span 2;grid-row:2;--i:2"><i class="hs-ar"></i><span>Fleeing defined; one question</span></div>
+<div class="hs-ch g-flee" style="grid-column:6 / span 1;grid-row:2;--i:4"><i class="hs-ar"></i><span>All reasons, not the main one</span></div>
+<div class="hs-ch g-new" style="grid-column:7 / span 1;grid-row:2;--i:5"><i class="hs-ar"></i><span>New: splits the two routes</span></div>
+<div class="hs-ch g-cross" style="grid-column:8 / span 1;grid-row:2;--i:6"><i class="hs-ar"></i><span>Any move abroad, even short</span></div>
+<div class="hs-ch g-time" style="grid-column:9 / span 1;grid-row:2;--i:7"><i class="hs-ar"></i><span>Same</span></div>
+<div class="hs-ch g-app" style="grid-column:10 / span 1;grid-row:2;--i:8"><i class="hs-ar"></i><span>“Refugee status”</span></div>
+<div class="hs-ch g-app" style="grid-column:11 / span 1;grid-row:2;--i:9"><i class="hs-ar"></i><span>Same idea</span></div>
+<div class="hs-ch g-app" style="grid-column:12 / span 1;grid-row:2;--i:10"><i class="hs-ar"></i><span>Adds “withdrew”</span></div>
+<div class="hs-ch g-doc" style="grid-column:13 / span 1;grid-row:2;--i:11"><i class="hs-ar"></i><span>Asked of everyone</span></div>
+<div class="hs-lab th" style="grid-column:1;grid-row:3 / span 5"><b>STATAFRIC</b><span>STG 8 · Draft 0<br>Module Refugees</span></div>
+<div class="hs-xl" style="grid-column:2 / span 12;grid-row:3 / span 5"></div>
+<div class="hs-let" style="grid-column:2 / span 1;grid-row:3">E</div>
+<div class="hs-let" style="grid-column:3 / span 1;grid-row:3">F</div>
+<div class="hs-let" style="grid-column:4 / span 1;grid-row:3">H</div>
+<div class="hs-let" style="grid-column:5 / span 1;grid-row:3">I</div>
+<div class="hs-let" style="grid-column:6 / span 1;grid-row:3">J</div>
+<div class="hs-let" style="grid-column:7 / span 1;grid-row:3"></div>
+<div class="hs-let" style="grid-column:8 / span 1;grid-row:3">K</div>
+<div class="hs-let" style="grid-column:9 / span 1;grid-row:3">L</div>
+<div class="hs-let" style="grid-column:10 / span 1;grid-row:3">M</div>
+<div class="hs-let" style="grid-column:11 / span 1;grid-row:3">N</div>
+<div class="hs-let" style="grid-column:12 / span 1;grid-row:3">O</div>
+<div class="hs-let" style="grid-column:13 / span 1;grid-row:3">Q</div>
+<div class="hs-gh" style="grid-column:2 / span 1;grid-row:4">MIGRATION HISTORY</div>
+<div class="hs-gh" style="grid-column:3 / span 1;grid-row:4">CITIZENSHIP</div>
+<div class="hs-gh" style="grid-column:4 / span 3;grid-row:4">FORCED TO FLEE</div>
+<div class="hs-gh blank" style="grid-column:7 / span 1;grid-row:4"></div>
+<div class="hs-gh" style="grid-column:8 / span 2;grid-row:4">MIGRATION HISTORY</div>
+<div class="hs-gh" style="grid-column:10 / span 4;grid-row:4">LEGAL STATUS</div>
+<div class="hs-top g-res" style="grid-column:2 / span 1;grid-row:5">ALWAYS LIVED IN [COUNTRY]</div>
+<div class="hs-q g-res" style="grid-column:2 / span 1;grid-row:6"><b>RF1.</b> Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.<div class="hs-v">01 = Yes<br>02 = No<br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:2 / span 1;grid-row:7">IRRS Q1</div>
+<div class="hs-top g-res" style="grid-column:3 / span 1;grid-row:5">CITIZENSHIP</div>
+<div class="hs-q g-res" style="grid-column:3 / span 1;grid-row:6"><b>RF2.</b> Of which country are you a citizen?<div class="hs-v">01 = [Survey country]<br>02 = Other country (specify) → RF3B<br>03 = Stateless <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:3 / span 1;grid-row:7">IRRS Q2</div>
+<div class="hs-top g-flee" style="grid-column:4 / span 1;grid-row:5">FLED IN [COUNTRY]</div>
+<div class="hs-q g-flee" style="grid-column:4 / span 1;grid-row:6"><b>RF3A.</b> While living in [survey country], have you ever had to flee home?<div class="hs-v">01 = Yes → RF4<br>02 = No <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:4 / span 1;grid-row:7">IRRS Q3a</div>
+<div class="hs-top g-flee" style="grid-column:5 / span 1;grid-row:5">FLED IN OTHER COUNTRY</div>
+<div class="hs-q g-flee" style="grid-column:5 / span 1;grid-row:6"><b>RF3B.</b> While living in [OTHER COUNTRY], have you ever had to flee home? (Asked only if RF1 = 02)<div class="hs-v">01 = Yes<br>02 = No <b>→ END</b><br>98 = Don’t know <b>→ END</b><br>99 = Refused <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:5 / span 1;grid-row:7">IRRS Q3b</div>
+<div class="hs-top g-flee" style="grid-column:6 / span 1;grid-row:5">MAIN REASON FOR FLEEING</div>
+<div class="hs-q g-flee" style="grid-column:6 / span 1;grid-row:6"><b>RF4.</b> What is the main reason why you had to flee home?<div class="hs-v">01 = Security reasons, armed conflict, generalized violence<br>02 = Fear of persecution<br>03 = Human rights violation<br>04 = Natural or man-made disaster<br>05 = Eviction <b>→ END</b><br>06 = Personal reasons <b>→ END</b><br>98, 99 <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:6 / span 1;grid-row:7">IRRS Q4</div>
+<div class="hs-none g-new" style="grid-column:7 / span 1;grid-row:5 / span 3"><span>No column in your sheet.</span> In 2027, fleeing is asked once, then this question sends people to the refugee or IDP route.</div>
+<div class="hs-top g-cross" style="grid-column:8 / span 1;grid-row:5">CROSSED AN INTERNATIONAL BORDER</div>
+<div class="hs-q g-cross" style="grid-column:8 / span 1;grid-row:6"><b>RF5.</b> After you were forced to leave home, did you cross an international border?<div class="hs-v">01 = Yes<br>02 = No <b>→ END</b><br>98, 99 <b>→ END</b><br>CHECK: RF1 = 02 → RF7; otherwise → RF6</div></div>
+<div class="hs-ref" style="grid-column:8 / span 1;grid-row:7">IRRS Q5</div>
+<div class="hs-top g-time" style="grid-column:9 / span 1;grid-row:5">DURATION OF STAY ABROAD</div>
+<div class="hs-q g-time" style="grid-column:9 / span 1;grid-row:6"><b>RF6.</b> How long did you stay abroad? Less than 12 months, or 12 months or more?<div class="hs-v">01 = Less than 12 months<br>02 = 12 months or more → RF9<br>98, 99 <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:9 / span 1;grid-row:7">IRRS Q6</div>
+<div class="hs-top g-app" style="grid-column:10 / span 1;grid-row:5">APPLIED FOR INTERNATIONAL PROTECTION</div>
+<div class="hs-q g-app" style="grid-column:10 / span 1;grid-row:6"><b>RF7.</b> While in [OTHER COUNTRY] / [survey country], did you apply for international protection?<div class="hs-v">01 = Yes → RF8B<br>02 = No → RF8A<br>98, 99 <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:10 / span 1;grid-row:7">IRRS Q7</div>
+<div class="hs-top g-app" style="grid-column:11 / span 1;grid-row:5">INTENTION TO APPLY</div>
+<div class="hs-q g-app" style="grid-column:11 / span 1;grid-row:6"><b>RF8A.</b> While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?<div class="hs-v">01 = Yes → RF9<br>02 = No → RF9<br>98, 99 <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:11 / span 1;grid-row:7">IRRS Q8a</div>
+<div class="hs-top g-app" style="grid-column:12 / span 1;grid-row:5">OUTCOME OF APPLICATION</div>
+<div class="hs-q g-app" style="grid-column:12 / span 1;grid-row:6"><b>RF8B.</b> What is the outcome of your application for international protection?<div class="hs-v">01 = Refugee status granted <b>→ END</b><br>02 = Refugee status denied<br>03 = Still waiting for response<br>96 = Other (specify)<br>98, 99</div></div>
+<div class="hs-ref" style="grid-column:12 / span 1;grid-row:7">IRRS Q8b</div>
+<div class="hs-top g-doc" style="grid-column:13 / span 1;grid-row:5">PRIMARY DOCUMENT IN [COUNTRY]</div>
+<div class="hs-q g-doc" style="grid-column:13 / span 1;grid-row:6"><b>RF9.</b> What is the primary document that allows you to stay in [survey country]?<div class="hs-v">See code list “PRIMARY DOCUMENT” (13 codes) <b>→ END</b></div></div>
+<div class="hs-ref" style="grid-column:13 / span 1;grid-row:7">IRRS Q9</div>
+</div></div>
   </div>
 </section>
 
 <section id="draft" class="alt">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">7 · From your draft</div>
-      <h2>What your draft already does well</h2>
+      <div class="eyebrow">6 · From your draft</div>
+      <h2>Already close to the EGRISS questions</h2>
       <div class="rule"></div>
+      <p class="lede">Your modules build on the 2023 questions, so bringing them in line with the revised version is a small step.</p>
     </div>
-    <div class="three">
-      <div class="card"><h4>Two skips checked against the 2023 tables</h4><p>You found that “did not apply” went to End, leaving the intention question unreachable, and that the End arrows on the document question looked shifted. The revised routing removes both problems.</p></div>
-      <div class="card"><h4>Reasons that are not forced displacement, written as codes</h4><p>Eviction and personal reasons are listed. The revision now records reasons of this kind as follow-up codes.</p></div>
-      <div class="card"><h4>A regional free-movement code</h4><p>ECOWAS, EAC and SADC agreements matter across the continent; the revised document list keeps this code.</p></div>
-      <div class="card"><h4>Administrative levels for the place questions</h4><p>Four levels, named for the country, is a practical instruction for interviewers and coders.</p></div>
-      <div class="card"><h4>Placement guidance</h4><p>After the migration modules and never restricted to migrants, with the reasons spelled out.</p></div>
+    <div class="al-pos">
+      <div class="al-c rv"><i>✓</i><b>Same backbone</b><p>Fled, where from, crossed a border, applied, document: the same order as ours.</p></div>
+      <div class="al-c rv"><i>✓</i><b>Your additions fit</b><p>The regional free-movement code and administrative levels carry straight over.</p></div>
+      <div class="al-c rv"><i>✓</i><b>Both groups covered</b><p>Separate refugee and IDP modules already reach both populations.</p></div>
     </div>
+    <div class="al-step rv"><span class="al-l">To align, mostly rewording</span><span class="al-t">Define “flee” and read out the threats</span><span class="al-t">“Move to another country”</span><span class="al-t">“Refugee status”</span><span class="al-t">Document question for everyone</span></div>
   </div>
 </section>
 
 <section id="discussion">
   <div class="wrap">
     <div class="sec-head">
-      <div class="eyebrow">8 · For discussion</div>
-      <h2>Points to talk through</h2>
+      <div class="eyebrow">7 · For discussion</div>
+      <h2>Working together</h2>
       <div class="rule"></div>
     </div>
-    <div class="disc">
-      <div class="card"><span class="k">RF2</span><h4>Stateless respondents</h4><p>At RF2, stateless respondents leave the module. Asking the flee question first, as the revision does, would keep them in. Would that work for your surveys?</p></div>
-      <div class="card"><span class="k">RF4 · ID2</span><h4>One main reason, or all that apply</h4><p>Fleeing often has several causes. Would coding all that apply suit your data processing?</p></div>
-      <div class="card"><span class="k">RF7–RF8B</span><h4>“International protection” or “refugee status”</h4><p>Respondents in testing understood “refugee status”. Which wording fits best in the countries you work with, and which local examples would help?</p></div>
-      <div class="card"><span class="k">RF9</span><h4>The document question for everyone</h4><p>Including recognised refugees and IDPs. Would asking it of all household members be acceptable?</p></div>
-      <div class="card"><span class="k">Both modules</span><h4>One module or two</h4><p>Used together, your modules ask the flee, reason, crossing and time-abroad questions twice. Would one combined module, as in the revision, suit countries better?</p></div>
-      <div class="card"><span class="k">Translation</span><h4>French and other languages</h4><p>The revision is being tested in translation. Would STG 8 help test the French wording, keeping the question codes identical?</p></div>
+    <div class="together">
+      <div class="tg"><span class="tg-n">1</span><h4>Share the results of your testing</h4><p>If STG 8 or a member country pilots or tests your modules, the results would feed directly into the second edition, alongside Thailand, Nigeria and the remote interviews.</p></div>
+      <div class="tg"><span class="tg-n">2</span><h4>Join the task team</h4><p>The TSG2 task team on identification questions meets regularly to review drafts and test results. STATAFRIC would be welcome as a member, to follow the work and bring the African perspective.</p></div>
+      <div class="tg"><span class="tg-n">3</span><h4>Take part in the final workshop</h4><p>In the first quarter of 2027, all testing results come together and the wording is agreed. Joining it means seeing, and shaping, how the questions are finalised.</p></div>
     </div>
-  </div>
-</section>
-
-<section class="closing">
-  <div class="wrap">
-    <div class="sec-head">
-      <div class="eyebrow">Next steps</div>
-      <h2>Where would you like to take this?</h2>
-      <div class="rule"></div>
-    </div>
-    <div class="two">
-      <div class="card"><span class="k">1</span><p>Would you be willing to try the revised questions in one of your surveys, or in a pilot?</p></div>
-      <div class="card"><span class="k">2</span><p>Which of the discussion points matter most for the countries you work with?</p></div>
-      <div class="card"><span class="k">3</span><p>Is there wording in your draft that you think the revision should adopt?</p></div>
-      <div class="card"><span class="k">4</span><p>Would STG 8 like to join the final workshop in the first quarter of 2027?</p></div>
-    </div>
-    <p class="src">Sources: EGRISS methodological paper (2023); TSG2 meetings of June and September 2026; preliminary test of the identification questions in Mae La, Thailand (July 2026); revised questions prepared for translation for the Nigeria testing (November 2026); EGRISS cognitive testing pack (November 2026); STATAFRIC migration modules, Draft 0.</p>
   </div>
 </section>
 
@@ -1897,25 +1814,12 @@ function escH(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&am
     rf: [['RF1','LocLiv'],['RF2','CitLoc'],['RF3A','FrcFl'],['RF3B','FrcFl'],['RF4','FrcFl'],['RF4','FrcOth'],['RF5','FleeCross'],['RF6','12Mnths'],['RF7','Apply'],['RF8A','IntApply'],['RF8B','Outcome'],['RF9','Legal']],
     id: [['ID1','FrcFl'],['ID2','FrcFl'],['ID2','FrcOth'],['ID3','IDPLoc'],['ID4','FleeCross'],['ID5A','12Mnths'],['ID6','IDPPost']]
   };
-  var KD = [
-    {n:1, t:'Where the module starts', rf:['RF1','RF2'], id:[], e:['FrcFl'],
-     d:'Your refugee module opens with residence and citizenship, and citizenship decides which flee question is asked; stateless respondents and anyone who answers “don’t know” leave at once. The revision opens with the flee question for everyone, and asks residence and citizenship afterwards, about the country fled.'},
-    {n:2, t:'The flee question and its causes', rf:['RF3A','RF3B','RF4'], id:['ID1','ID2'], e:['FrcFl','FrcOth'],
-     d:'You ask a yes or no on fleeing, tied to one country, then one main reason. The revision defines fleeing, reads out the threats inside the question and records all that apply; eviction and other threats are followed up instead of ending the module.'},
-    {n:3, t:'Which country the home was in', rf:[], id:[], e:['FleeLoc'],
-     d:'New in the revision, with no equivalent in your modules. It sends people down the refugee or the IDP route, so one module serves both.'},
-    {n:4, t:'Crossing a border', rf:['RF5'], id:['ID4'], e:['FleeCross'],
-     d:'“Cross an international border” becomes “move to another country, even if this was only temporary”, and is asked only of people who fled a home in the survey country.'},
-    {n:5, t:'Applying for protection', rf:['RF7','RF8A','RF8B'], id:[], e:['Apply','IntApply','Outcome'],
-     d:'“International protection” becomes “refugee status”, the term respondents understood in testing. Recognised refugees continue to the document question instead of ending the module.'},
-    {n:6, t:'The document question', rf:['RF9'], id:['ID5B'], e:['Legal'],
-     d:'Your RF9 is reached on some routes only, and ID5B asks about a document held abroad. The revision asks everyone about their current document, with citizenship documents added to your code list.'},
-    {n:7, t:'Two modules, one route', rf:[], id:['ID1','ID2','ID4','ID5A'], e:['FrcFl','FleeCross','12Mnths'],
-     d:'Used together, your two modules ask fleeing, its reason, crossing and time abroad twice of the same person. The revision asks each once and branches.'},
-    {n:8, t:'Don’t know and refused', rf:['RF1','RF2','RF3A'], id:['ID1'], e:[],
-     d:'In your modules “don’t know” and “refused” end the module at almost every question. The revision prints no such codes; how to treat them is left to each survey.'}
-  ];
+  var KD = [];
   var mod = 'rf', sel = null;
+  var GRP = {RF1:'res',RF2:'res',RF3A:'flee',RF3B:'flee',RF4:'flee',RF5:'cross',RF6:'time',RF7:'app',RF8A:'app',RF8B:'app',RF9:'doc',
+    LocLiv:'res',CitLoc:'res',FrcFl:'flee',FrcOth:'flee',FleeLoc:'new',FleeCross:'cross','12Mnths':'time',Apply:'app',IntApply:'app',Outcome:'app',Legal:'doc',IDPLoc:'idp',IDPPost:'idp'};
+  var GCOL = {res:'#3b71b9',flee:'#2aa5ab',new:'#14234c',cross:'#d69a1e',time:'#8a63c9',app:'#e0575a',doc:'#2e9e7b',idp:'#b9c7dc'};
+  root.querySelectorAll('.pi,.ti').forEach(function (el) { var g = GRP[el.getAttribute('data-k')]; if (g) el.classList.add('g-' + g); });
   var svg = document.getElementById('links');
   function badge(el, n) {
     var b = document.createElement('button'); b.type = 'button'; b.className = 'nb'; b.textContent = n;
@@ -1944,8 +1848,8 @@ function escH(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&am
       var ra = a.getBoundingClientRect(), rb = b.getBoundingClientRect();
       var y1 = ra.top + Math.min(26, ra.height / 2) - r0.top, y2 = rb.top + Math.min(26, rb.height / 2) - r0.top;
       var on = hi && (hi[mod].indexOf(p[0]) >= 0) && (hi.e.indexOf(p[1]) >= 0);
-      s += '<path class="ln' + (on ? ' on' : '') + (hi && !on ? ' dim' : '') + '" d="M0 ' + y1 + ' C' + (w * 0.5) + ' ' + y1 + ' ' + (w * 0.5) + ' ' + y2 + ' ' + w + ' ' + y2 + '"/>' +
-        '<circle class="lnd' + (on ? ' on' : '') + '" cx="2" cy="' + y1 + '" r="3"/><circle class="lnd' + (on ? ' on' : '') + '" cx="' + (w - 2) + '" cy="' + y2 + '" r="3"/>';
+      s += '<path class="ln" style="stroke:' + (GCOL[GRP[p[0]]] || '#9fb3d1') + '" d="M0 ' + y1 + ' C' + (w * 0.5) + ' ' + y1 + ' ' + (w * 0.5) + ' ' + y2 + ' ' + w + ' ' + y2 + '"/>' +
+        '<circle class="lnd" style="fill:' + (GCOL[GRP[p[0]]] || '#9fb3d1') + '" cx="2" cy="' + y1 + '" r="3.5"/><circle class="lnd" style="fill:' + (GCOL[GRP[p[0]]] || '#9fb3d1') + '" cx="' + (w - 2) + '" cy="' + y2 + '" r="3.5"/>';
     });
     svg.innerHTML = s;
   }
@@ -1973,9 +1877,9 @@ function escH(s){return String(s).replace(/[&<>"]/g,function(c){return {'&':'&am
     root.querySelectorAll('.ti').forEach(function (el) { el.classList.toggle('unused', !used[el.getAttribute('data-k')]); });
     sel = null; placeBadges(); pick(null);
   }
-  document.getElementById('kd-pills').innerHTML = KD.map(function (k) { return '<button type="button" data-n="' + k.n + '" aria-pressed="false"><b>' + k.n + '</b>' + k.t + '</button>'; }).join('');
+  if (document.getElementById('kd-pills')) document.getElementById('kd-pills').innerHTML = KD.map(function (k) { return '<button type="button" data-n="' + k.n + '" aria-pressed="false"><b>' + k.n + '</b>' + k.t + '</button>'; }).join('');
   document.querySelectorAll('#kd-pills button').forEach(function (b) { b.addEventListener('click', function () { pick(+b.getAttribute('data-n')); }); });
-  document.getElementById('kd').innerHTML = KD.map(function (k) { return '<div class="kdi" data-n="' + k.n + '"><span class="kn">' + k.n + '</span><div><h4>' + k.t + '</h4><p>' + k.d + '</p></div></div>'; }).join('');
+  if (document.getElementById('kd')) document.getElementById('kd').innerHTML = KD.map(function (k) { return '<div class="kdi" data-n="' + k.n + '"><span class="kn">' + k.n + '</span><div><h4>' + k.t + '</h4><p>' + k.d + '</p></div></div>'; }).join('');
   document.querySelectorAll('#kd .kdi').forEach(function (d) { d.addEventListener('click', function () { pick(+d.getAttribute('data-n')); document.getElementById('sbs').scrollIntoView({block: 'start'}); }); });
   document.querySelectorAll('#sbs-mod button').forEach(function (b) { b.addEventListener('click', function () { setMod(b.getAttribute('data-m')); }); });
   window.addEventListener('resize', draw);
@@ -2221,7 +2125,7 @@ document.querySelectorAll('.ff').forEach(function (box) {
   document.documentElement.classList.add('js');
   var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   // reveal groups with a stagger
-  var groups = ['.kf','.drow','.ds','.pt','.ins2','.mission','.ins','.wg','.kdi','.disc .card','#draft .card','.closing .card','.missing .card','.evo-s','.crit','.causes','.mapcard','.vbar','.flow .fstep','.paper','.tablet'];
+  var groups = ['.kf','.wc','.tg','.drow','.ds','.pt','.ins2','.mission','.ins','.wg','.kdi','.disc .card','#draft .card','.closing .card','.missing .card','.evo-s','.crit','.causes','.mapcard','.vbar','.flow .fstep','.paper','.tablet'];
   groups.forEach(function (sel) {
     document.querySelectorAll(sel).forEach(function (el, i) {
       el.classList.add('rv'); el.style.transitionDelay = Math.min(i % 6, 5) * 90 + 'ms';
@@ -2284,6 +2188,32 @@ document.querySelectorAll('.ff').forEach(function (box) {
     var c = li.getAttribute('data-c').replace(' and region', '');
     li.addEventListener('mouseenter', function () { hot(c, true); });
     li.addEventListener('mouseleave', function () { hot(c, false); });
+  });
+})();
+
+/* ---------- horizontal sheet ---------- */
+(function () {
+  var sc = document.getElementById('hs'); if (!sc) return;
+  document.querySelectorAll('.hs-nav').forEach(function (b) {
+    b.addEventListener('click', function () { sc.scrollBy({left: +b.getAttribute('data-d') * 570}); });
+  });
+  if ('IntersectionObserver' in window) {
+    var io = new IntersectionObserver(function (es) { es.forEach(function (e) { if (e.isIntersecting) { sc.classList.add('in'); io.disconnect(); } }); }, {threshold: .25});
+    io.observe(sc);
+  } else sc.classList.add('in');
+  // hover a column: highlight the EGRISS card and their column under it
+  var cells = sc.querySelectorAll('.hs > div[style*="grid-column"]');
+  function span(el) { var m = /grid-column:(\d+) \/ span (\d+)/.exec(el.getAttribute('style')); return m ? [+m[1], +m[1] + +m[2] - 1] : null; }
+  cells.forEach(function (el) {
+    if (el.classList.contains('hs-xl') || el.classList.contains('hs-gh') || el.classList.contains('hs-let')) return;
+    el.addEventListener('mouseenter', function () {
+      var s = span(el); if (!s) return;
+      cells.forEach(function (c) {
+        if (c.classList.contains('hs-xl') || c.classList.contains('hs-gh') || c.classList.contains('hs-let') || c.classList.contains('hs-ref')) return;
+        var t = span(c); if (t && t[0] <= s[1] && t[1] >= s[0]) c.classList.add('hot');
+      });
+    });
+    el.addEventListener('mouseleave', function () { sc.querySelectorAll('.hot').forEach(function (c) { c.classList.remove('hot'); }); });
   });
 })();
 </script>
