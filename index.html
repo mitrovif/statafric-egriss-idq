@@ -889,6 +889,18 @@ tr.au .ob i{background:var(--gold)}
 .hl-row.eg .hl-c .tc{color:#9fe3e6}
 .hl-s{font-size:12px;line-height:1.3}
 .hl-row.th .hl-s{font-family:Georgia,serif}
+.hl-t{font-size:12px;line-height:1.35;hyphens:auto;-webkit-hyphens:auto;overflow-wrap:break-word}
+.hl-row.th .hl-t{font-family:Georgia,serif}
+.hl-o{list-style:none;margin:4px 0 0;padding:6px 0 0;border-top:1px solid rgba(255,255,255,.18);display:flex;flex-direction:column;gap:3px;font:10.5px/1.3 var(--mono);overflow-wrap:break-word}
+.hl-row.th .hl-o{border-top-color:#e4dbc4}
+.hl-o li{padding-left:9px;position:relative}
+.hl-o li::before{content:"";position:absolute;left:0;top:.45em;width:4px;height:4px;border-radius:50%;background:var(--gc)}
+.hl-o em{font-style:normal;opacity:.6}
+.hl-nt{font:italic 10.5px/1.3 var(--mono);opacity:.65;overflow-wrap:break-word}
+.hl{margin-inline:calc(50% - 50vw + 14px)}
+.hl-c.wide{grid-column:span 2}
+.hl-in{font-size:10.5px;line-height:1.35;opacity:.7}
+.hl-row.eg{grid-template-columns:repeat(calc(var(--n) + 1),minmax(0,1fr))}
 .hl-c.g-idp{opacity:.55}
 .hl-c.g-new{box-shadow:inset 0 0 0 2px var(--teal)}
 .hl-c:focus-visible{outline:2px solid var(--teal);outline-offset:2px}
@@ -941,7 +953,8 @@ tr.au .ob i{background:var(--gold)}
 @media (max-width:600px){
   .hl{grid-template-columns:minmax(0,1fr) 48px minmax(0,1fr);grid-template-rows:auto auto;margin-inline:0}
   .hl-side.eg{grid-column:1;grid-row:1;flex-direction:column}.hl-side.th{grid-column:3;grid-row:1;flex-direction:column;margin-top:0}
-  .hl-row{grid-template-columns:minmax(0,1fr)}
+  .hl-row,.hl-row.eg{grid-template-columns:minmax(0,1fr)}
+  .hl-c.wide{grid-column:auto}
   .hl-row.eg{grid-column:1;grid-row:2}.hl-row.th{grid-column:3;grid-row:2;align-self:start}
   .hl-svg{grid-column:2;grid-row:2}
   .hl-c{min-height:0;flex-direction:row;flex-wrap:wrap;align-items:baseline;border-radius:8px!important;border-top-width:1px!important;border-left:4px solid var(--gc)}
@@ -2281,6 +2294,27 @@ document.querySelectorAll('.ff').forEach(function (box) {
   var D = {"eg": {"FrcFl": {"g": "flee", "ro": "Ask all", "t": "The next questions are about whether you have ever had to flee a home. By this we mean leaving a house, or land, due to events that posed a threat to you or your family’s safety. In your lifetime, have you ever left a home due to… Threat of armed conflict or widespread violence? · Threat of persecution or human rights violations? · Natural or man-made disasters? · A different threat to your safety? · None of the above", "a": "Read out · code all that apply"}, "FrcOth": {"g": "flee", "ro": "If a different threat", "t": "What was the other threat to your safety that meant you had to leave a home?", "a": "11 codes, not read out: forced recruitment, eviction, violent crime, civil unrest, famine, family violence…"}, "FleeLoc": {"g": "new", "ro": "If a valid reason", "t": "In which country was the home you had to flee from?", "a": "[Survey country] → IDP route · Other country → refugee route"}, "IDPLoc": {"g": "idp", "ro": "If home in survey country", "t": "Please tell me where you were living right before you were forced to flee home for the first time.", "a": "Village or town · county · province"}, "LocLiv": {"g": "res", "ro": "If a valid reason", "t": "Before you fled this home, had you always lived in {country fled}? Please do not think of short or temporary absence or travels.", "a": "Yes → Apply · No → CitLoc"}, "CitLoc": {"g": "res", "ro": "If LocLiv = No", "t": "Were you a citizen of {country fled} when you fled your home there?", "a": "Yes · No"}, "FleeCross": {"g": "cross", "ro": "If home in survey country", "t": "After you fled your home, did you ever move to another country even if this was only temporary?", "a": "Yes → 12Mnths · No → IDPPost"}, "IDPPost": {"g": "idp", "ro": "If FleeCross = No", "t": "When you first fled your home, where did you move to first? Please do not think about short stays or stopovers.", "a": "Village or town · county · province"}, "12Mnths": {"g": "time", "ro": "If FleeCross = Yes", "t": "How long did you stay abroad after fleeing your home?", "a": "Less than 12 months · 12 months or more"}, "Apply": {"g": "app", "ro": "If home abroad, or moved abroad", "t": "While living abroad did you ever apply for refugee status?", "a": "Yes → Outcome · No → IntApply"}, "IntApply": {"g": "app", "ro": "If Apply = No", "t": "Did you ever plan to apply for refugee status?", "a": "Yes · No"}, "Outcome": {"g": "app", "ro": "If Apply = Yes", "t": "What was the response to your application for refugee status?", "a": "Granted · Denied · Still being decided · Withdrew"}, "Legal": {"g": "doc", "ro": "Ask all", "t": "Thinking about your current situation, what is the main document that shows you are allowed to stay in [survey country]?", "a": "Your code list headings, plus national ID card, passport and other citizenship documents"}}, "th": {"RF1": {"g": "res", "t": "Have you always lived in [survey country]? Please do not think about short or temporary absences or travels.", "v": "01 Yes · 02 No · 98 Don’t know → END · 99 Refused → END"}, "RF2": {"g": "res", "t": "Of which country are you a citizen?", "v": "01 [Survey country] · 02 Other country (specify) → RF3B · 03 Stateless → END · 98, 99 → END"}, "RF3A": {"g": "flee", "t": "While living in [survey country], have you ever had to flee home?", "v": "01 Yes → RF4 · 02 No → END · 98, 99 → END"}, "RF3B": {"g": "flee", "t": "While living in [OTHER COUNTRY], have you ever had to flee home? (Asked only if RF1 = 02)", "v": "01 Yes · 02 No → END · 98, 99 → END"}, "RF4": {"g": "flee", "t": "What is the main reason why you had to flee home?", "v": "01 Security reasons, armed conflict, generalized violence · 02 Fear of persecution · 03 Human rights violation · 04 Natural or man-made disaster · 05 Eviction → END · 06 Personal reasons → END · 98, 99 → END"}, "RF5": {"g": "cross", "t": "After you were forced to leave home, did you cross an international border?", "v": "01 Yes · 02 No → END · 98, 99 → END · CHECK: RF1 = 02 → RF7; otherwise → RF6"}, "RF6": {"g": "time", "t": "How long did you stay abroad? Less than 12 months, or 12 months or more?", "v": "01 Less than 12 months · 02 12 months or more → RF9 · 98, 99 → END"}, "RF7": {"g": "app", "t": "While in [OTHER COUNTRY] / [survey country], did you apply for international protection?", "v": "01 Yes → RF8B · 02 No → RF8A · 98, 99 → END"}, "RF8A": {"g": "app", "t": "While in [OTHER COUNTRY] / [survey country], did you have the intention to apply for international protection?", "v": "01 Yes → RF9 · 02 No → RF9 · 98, 99 → END"}, "RF8B": {"g": "app", "t": "What is the outcome of your application for international protection?", "v": "01 Refugee status granted → END · 02 Denied · 03 Still waiting for response · 96 Other (specify) · 98, 99"}, "RF9": {"g": "doc", "t": "What is the primary document that allows you to stay in [survey country]?", "v": "Code list PRIMARY DOCUMENT, 13 codes → END"}}, "L": [["FrcFl", "RF3A", 1], ["FrcFl", "RF3B", 1], ["FrcFl", "RF4", 1], ["FrcOth", "RF4", 1], ["FleeLoc", "RF3A", 0], ["FleeLoc", "RF3B", 0], ["LocLiv", "RF1", 1], ["CitLoc", "RF2", 1], ["FleeCross", "RF5", 1], ["12Mnths", "RF6", 1], ["Apply", "RF7", 1], ["IntApply", "RF8A", 1], ["Outcome", "RF8B", 1], ["Legal", "RF9", 1]], "note": {"FrcFl": "Fleeing is defined and the threats are read out; one question replaces fleeing here (RF3A), fleeing elsewhere (RF3B) and the main reason (RF4). Every threat that applies is coded.", "FrcOth": "Takes the reasons not read out in FrcFl; which ones count as forced displacement can be set by each country. Your RF4 keeps only the main reason.", "FleeLoc": "New. Asking where the home was replaces your split into RF3A and RF3B, and sends people to the refugee or the IDP route.", "IDPLoc": "IDP route. In your IDP module this is ID3.", "LocLiv": "Your RF1 asks about the survey country; the revised question asks about the country the person fled, and comes after fleeing.", "CitLoc": "Citizenship at the time of fleeing, instead of today. “Stateless” no longer ends the module.", "FleeCross": "IDP route. “Any move to another country, even if temporary” replaces “cross an international border”.", "IDPPost": "IDP route. In your IDP module this is ID6.", "12Mnths": "Same question, now tied to fleeing.", "Apply": "“Refugee status” replaces “international protection”.", "IntApply": "Same idea, in plainer words.", "Outcome": "Adds “I withdrew my application”.", "Legal": "“Main document that shows you are allowed to stay”, asked of everyone so it can be compared."}, "col": {"res": "#3b71b9", "flee": "#2aa5ab", "new": "#14234c", "cross": "#d69a1e", "time": "#8a63c9", "app": "#e0575a", "doc": "#2e9e7b", "idp": "#9aaac4"}};
   var svg = document.getElementById('hl-svg'), det = document.getElementById('hl-det');
   function esc(s) { return String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;'); }
+  // full question wording and answer options inside each box
+  function opt(o) {
+    var i = o.indexOf('→');
+    return '<li>' + (i < 0 ? esc(o) : esc(o.slice(0, i)) + '<em>' + esc(o.slice(i)) + '</em>') + '</li>';
+  }
+  function fill(side, k, q) {
+    var b = el(side, k); if (!b) return;
+    var t = q.t, os = (side === 'eg' ? q.a : q.v).split(' · '), note = '', intro = '';
+    var cut = t.indexOf('… ');
+    if (cut > 0 && t.indexOf(' · ', cut) > 0) {
+      note = q.a; os = t.slice(cut + 2).split(' · '); t = t.slice(0, cut + 1);
+      var p = t.lastIndexOf('. '); if (p > 0) { intro = t.slice(0, p + 1); t = t.slice(p + 2); }
+      b.classList.add('wide');
+    }
+    os = os.filter(function (o) { if (/^CHECK:/.test(o)) { note = o; return false; } return true; });
+    var s = b.querySelector('.hl-s'); if (s) s.remove();
+    b.insertAdjacentHTML('beforeend', (intro ? '<span class="hl-in">' + esc(intro) + '</span>' : '') + '<span class="hl-t">' + esc(t) + '</span><ul class="hl-o">' + os.map(opt).join('') + '</ul>' + (note ? '<span class="hl-nt">' + esc(note) + '</span>' : ''));
+    b.setAttribute('aria-label', k + ': ' + t);
+  }
+  Object.keys(D.eg).forEach(function (k) { fill('eg', k, D.eg[k]); });
+  Object.keys(D.th).forEach(function (k) { fill('th', k, D.th[k]); });
   function el(side, k) { return box.querySelector('.hl-row.' + side + ' [data-k="' + k + '"]'); }
   function draw() {
     var r0 = svg.getBoundingClientRect(), s = '';
