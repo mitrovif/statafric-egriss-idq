@@ -973,6 +973,32 @@ tr.au .ob i{background:var(--gold)}
 .links .ln{stroke-width:2.2;opacity:.8}
 .links .ln.dim{opacity:.8}
 /* working together */
+.why{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.15fr);gap:18px;margin:0 0 14px}
+.why-c{border-radius:14px;padding:22px 24px;display:flex;flex-direction:column;gap:8px}
+.why-h{background:var(--navy);color:var(--b1)}
+.why-h h4{color:#fff}
+.why-g{background:#fff;border:1px solid var(--line)}
+.why-k{font:600 11.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--teal)}
+.why-g .why-k{color:var(--muted)}
+.why-c h4{font-size:20px;margin:0}
+.why-c p{margin:0;font-size:15px;line-height:1.55}
+.gbar{list-style:none;margin:4px 0 0;padding:0;display:flex;flex-direction:column;gap:6px}
+.gbar li{display:grid;grid-template-columns:200px minmax(0,1fr) 28px;align-items:center;gap:10px;font-size:14px;color:var(--muted)}
+.gbar i{display:block;height:12px;border-radius:3px;background:#c6d2e4;width:calc(var(--v) / 25 * 100%)}
+.gbar b{font:600 13px var(--mono);color:var(--muted)}
+.gbar li.me{color:var(--navy);font-weight:600}.gbar li.me i{background:var(--coral)}.gbar li.me b{color:var(--coral-ink)}
+.why-s{color:var(--ink);border-top:1px solid var(--line);padding-top:10px;margin-top:4px!important}
+.why-s b{font-family:var(--mono);color:var(--navy)}
+.why-src{margin:0 0 26px}
+.nx{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:18px;margin-bottom:18px}
+.nx-c{border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:10px;border:1px solid var(--line)}
+.nx-t{background:#fdf6e6;border-color:#efd9a6}
+.nx-i{background:var(--tint)}
+.nx-k{font:600 11.5px var(--mono);letter-spacing:.04em;text-transform:uppercase;color:var(--muted)}
+.nx-c h4{font-size:20px;margin:0;color:var(--navy)}
+.nx-c p{margin:0;font-size:15px;line-height:1.55}
+.nx-hl{background:#fff;border-left:4px solid var(--gold);border-radius:6px;padding:10px 14px;color:var(--navy);font-weight:500}
+@media (max-width:900px){.why,.nx{grid-template-columns:minmax(0,1fr)}.gbar li{grid-template-columns:150px minmax(0,1fr) 24px;font-size:13px}}
 .together{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-bottom:40px}
 .tg{position:relative;background:var(--navy);color:var(--b1);border-radius:14px;padding:24px 24px 22px;display:flex;flex-direction:column;gap:8px}
 .tg-n{width:34px;height:34px;border-radius:99px;background:var(--teal);color:var(--navy);font:700 15px var(--mono);display:flex;align-items:center;justify-content:center}
@@ -1223,6 +1249,27 @@ details.fold.big{margin-top:40px}
       <div class="rule"></div>
       <p class="lede">The 2023 EGRISS methodological paper proposed a set of questions to identify refugees and IDPs in household surveys, in line with the International Recommendations on Refugee Statistics (IRRS) and on IDP Statistics (IRIS). That first version was published without prior testing, and its use in recent surveys showed gaps. The aim of the second edition is a tested, comparable global standard.</p>
     </div>
+    <div class="why" aria-label="Why this matters now">
+      <div class="why-c why-h">
+        <span class="why-k">EGRISS High-Level Steering Committee · March 2026</span>
+        <h4>Named a strategic priority</h4>
+        <p>At its annual meeting in New York, the Steering Committee singled out standardised identification questions for refugees, IDPs and stateless persons as a strategic priority for EGRISS’s fourth mandate. The World Bank committed to promote the resulting guidance through its survey operations, and STATAFRIC named the standardisation of tools, so that data can be compared and aggregated, among the challenges for the continent.</p>
+      </div>
+      <div class="why-c why-g">
+        <span class="why-k">GAIN survey 2025 · challenges reported by implementing examples</span>
+        <h4>Identifying people is the second most reported challenge</h4>
+        <ul class="gbar" aria-label="Challenges reported in 2025, number of examples">
+          <li><span>Resource constraints</span><i style="--v:25"></i><b>25</b></li>
+          <li class="me"><span>Identification of populations</span><i style="--v:15"></i><b>15</b></li>
+          <li><span>Timeliness and data quality</span><i style="--v:14"></i><b>14</b></li>
+          <li><span>Safety concerns</span><i style="--v:14"></i><b>14</b></li>
+          <li><span>Limited technical capacity</span><i style="--v:14"></i><b>14</b></li>
+          <li><span>Political issues</span><i style="--v:13"></i><b>13</b></li>
+        </ul>
+        <p class="why-s"><b>33</b> of 65 survey and census examples used identification questions in 2025, up from <b>14</b> in 2024, yet without a common wording.</p>
+      </div>
+    </div>
+    <p class="src why-src">Sources: EGRISS High-Level Steering Committee, Summary Report of the 2026 meeting (4 March 2026); EGRISS GAIN Tables 2025, Tables 2.6 and 3.2.</p>
     <div class="tline" aria-label="Timeline of the revision">
       <div class="phases" aria-hidden="true">
         <div class="ph done"><span>Review and redesign</span></div>
@@ -1589,6 +1636,19 @@ details.fold.big{margin-top:40px}
       <div class="eyebrow">7 · For discussion</div>
       <h2>Working together</h2>
       <div class="rule"></div>
+    </div>
+    <div class="nx">
+      <div class="nx-c nx-t">
+        <span class="nx-k">To discuss first</span>
+        <h4>Your timeline</h4>
+        <p>When do you plan to finalise the refugee and IDP modules, and will they be tested before then? Knowing your steps lets us line them up with ours: Nigeria and the remote interviews now, the final workshop in the first quarter of 2027, the second edition in the second quarter.</p>
+        <p class="nx-hl">If your work comes together in November 2026, we could use that moment to work on the final version together, building in the revised EGRISS wording as tested so far.</p>
+      </div>
+      <div class="nx-c nx-i">
+        <span class="nx-k">Beyond the second edition</span>
+        <h4>Feeding into the revised IRRS</h4>
+        <p>EGRISS is preparing the revision of its International Recommendations. The tested identification questions from this methodological work will feed into the revised International Recommendations on Refugee Statistics (IRRS), so modules aligned now stay aligned with the next version of the standard.</p>
+      </div>
     </div>
     <div class="together">
       <div class="tg"><span class="tg-n">1</span><h4>Share the results of your testing</h4><p>If STG 8 or a member country pilots or tests your modules, the results would feed directly into the second edition, alongside Thailand, Nigeria and the remote interviews.</p></div>
